@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url('../fonts/Roboto-Black.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto-BlackItalic';
+  src: url('../fonts/Roboto-BlackItalic.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/Roboto-Bold.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto-BoldItalic';
+  src: url('../fonts/Roboto-BoldItalic.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto-Italic';
+  src: url('../fonts/Roboto-Italic.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../fonts/Roboto-Light.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('../fonts/Roboto-Medium.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto-MediumItalic';
+  src: url('../fonts/Roboto-MediumItalic.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/Roboto-Regular.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('../fonts/Roboto-Thin.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto-ThinItalic';
+  src: url('../fonts/Roboto-ThinItalic.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'kalam-Bold';
+  src: url('../Fonts/Kalam-Bold.ttf');
+  font-display: swap;
+}
+
+:root {
+  --darkPrimaryColor: #1976d2;
+  --primaryColor: #2196f3;
+  --lightPrimaryColor: #bbdefb;
+  --textPrimaryColor: #ffffff;
+  --accentColor: #4caf50;
+  --primaryTextColor: #212121;
+  --secondaryTextColor: #757575;
+  --dividerColor: #bdbdbd;
+}
+
+html {
+  font-size: 62.5;
+}
+
+/* ----------------------Nav-Bar------------------------- */
+
+body {
+  font-family: 'Roboto-Regular';
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.logo {
+  width: 10rem;
+}
+
+.menu-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.nav-link {
+  display: inline-block;
+  letter-spacing: 0.1rem;
+  color: var(--darkPrimaryColor);
+  font-weight: 700;
+  border-bottom: 4px solid transparent;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--primaryColor);
+  border-bottom: 4px solid var(--primaryColor);
+}
+
+/* --------------------Landing-page----------------------- */
+
+.landing {
+  min-height: calc(100vh - 89.69px);
+  background: linear-gradient(to bottom, #fff, #bbdefb);
+}
+
+.landing h1 {
+  font-family: 'Kalam-Bold';
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: -0.2rem;
+  word-spacing: 0.5rem;
+  font-weight: 700;
+  color: var(--darkPrimaryColor);
+}
+
+.landing h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accentColor);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#4CAF50)'; /*IE 8*/
+  text-shadow: 3px 3px 5px rgba(76, 175, 80, 0.8); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#4CAF50); /*IE 5.5-7*/
+}
+
+.landing h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--accentColor);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#4CAF50)'; /*IE 8*/
+  text-shadow: 3px 3px 5px rgba(76, 175, 80, 0.8); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#4CAF50); /*IE 5.5-7*/
+}
+
+.quote {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+
+/*  X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/*  Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+/*  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .landing h1{
+    font-size: 3.25rem;
+  }
+  .landing h2{
+    font-size: 2.8rem;
+  }
+ }
+
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .landing h2{
+    font-size: 3.5rem;
+  }
+ }
+
+/*  X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
+/* XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... }
+
