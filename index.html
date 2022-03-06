@@ -1,133 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-      <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="#">
-            <img src="images/ETB-logo.webp" alt="" class="logo"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <svg class="menu-icon">
-              <use xlink:href="images/sprite.svg#menu"></use>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <img src="images/ETB-logo.webp" alt="ETB logo" class="logo">
+        <svg class="menu-icon d-md-none">
+          <use xlink:href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="nav-items d-none d-md-flex justify-content-between align-items-center">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Packages</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Destinations</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+
+      </nav>
+    </div>
+
+  </header>
+  <section class="landing">
+    <div class="container-fluid">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6 col-md-7 col-sm-10 order-lg-2">
+          <img src="images/Artboard 1.webp" alt="" class="hero-img img-fluid" />
+        </div>
+        <div class="col-lg-4 order-lg-1">
+          <h1 class="">IT'S TIME TO EXPLORE THE WORLD</h1>
+          <div class="slogan-box">
+            <svg class="quote">
+              <use xlink:href="images/sprite.svg#quote-left"></use>
             </svg>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item text-center text-center">
-                <a
-                  class="nav-link me-3 pb-0 pt-4 active"
-                  aria-current="page"
-                  href="#"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link me-3 pb-0 pt-4" href="#">Packages</a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link me-3 pb-0 pt-4" href="#">Destinations</a>
-              </li>
-              <li class="nav-item text-center dropdown">
-                <a
-                  class="nav-link me-3 pb-0 pt-4 dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Services
-                </a>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li>
-                    <a class="dropdown-item" href="#">Hotels Reservations</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Honeymoon Packages</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Car Rental Services</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#"
-                      >Leisure Travel & Cruises</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Airline Ticketing</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Transfers</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Visa Assistance</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Conference Events</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link me-3 pb-0 pt-4" href="#">About</a>
-              </li>
-              <li class="nav-item text-center">
-                <a class="nav-link me-3 pb-0 pt-4" href="#">Contact</a>
-              </li>
-            </ul>
+            <h2 class="">Spcialists</h2>
+            <h3 class="">in art of travel</h3>
+            <svg class="quote">
+              <use xlink:href="images/sprite.svg#quote-right"></use>
+            </svg>
           </div>
         </div>
-      </nav>
-    </header>
-    <section class="landing d-flex justify-content-center align-items-center">
-      <div class="container-fluid">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-6 col-md-7 col-sm-10 order-lg-2">
-            <img src="images/Artboard 1.webp" alt="" class="hero-img img-fluid" />
-          </div>
-          <div class="col-lg-4 order-lg-1">
-            <h1 class="text-center mt-3 mb-3">IT'S TIME TO EXPLORE THE WORLD</h1>
-            <div class="text-center">
-              <svg class="quote">
-                <use xlink:href="images/sprite.svg#quote-left"></use>
-              </svg>
-              <h2 class="text-center">Spcialists</h2>
-              <h3 class="text-center">in art of travel</h3>
-              <svg class="quote">
-                <use xlink:href="images/sprite.svg#quote-right"></use>
-              </svg>
+      </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <h2 class="section-header">Why Travel with ETB?</h2>
+
+      <div class="cards-container row justify-content-between align-items-center">
+        <div class="card-box col-lg-3  p-0">
+          <div class="card">
+            <img src="images/feature-2.webp" alt="" class="card-img">
+            <div class="lower-part">
+              <div class="icon-box">
+                <svg class="icon">
+                  <use xlink:href="images/sprite.svg#trust"></use>
+                </svg>
+              </div>
+              <p class="card-title">100% Trusted Tour Agency</p>
             </div>
           </div>
         </div>
-            </section>
+
+        <div class="card-box col-lg-3 p-0">
+          <div class="card">
+            <img src="images/feature-3.webp" alt="" class="card-img">
+            <div class="lower-part">
+              <div class="icon-box">
+                <svg class="icon">
+                  <use xlink:href="images/sprite.svg#airport"></use>
+                </svg>
+              </div>
+              <p class="card-title">12+ Years of Travel Experience</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-box col-lg-3 p-0">
+          <div class="card">
+            <img src="images/feature-4.webp" alt="" class="card-img">
+            <div class="lower-part">
+              <div class="icon-box">
+                <svg class="icon">
+                  <use xlink:href="images/sprite.svg#happy"></use>
+                </svg>
+              </div>
+              <p class="card-title">98% of Our Travelers are Happy</p>
+            </div>
+          </div>
+        </div>
+  </section>
+
+
+
+  <section class="section-who">
+    <div class="container">
+      <h2 class="section-header">Who We Are?</h2>
+      <p class="">ETB is a global luxury and cost efficiency travel agency,
+        combining comfort and authenticity across the most inspiring destinations
+        around the world was established in 2010.</p>
+      <div class="who-container row justify-content-lg-between align-items-center">
+
+        <div class="who-tex-box col-lg-5">
+          <svg class="who-icon">
+            <use xlink:href="images/sprite.svg#goal"></use>
+          </svg>
+          <h3>Our Goal</h3>
+          <p>Is to ensure our customers get the utmost sa
+            whilst we manage all the details whether it is
+          </p>
+          <svg class="who-icon">
+            <use xlink:href="images/sprite.svg#rocket"></use>
+          </svg>
+          <h3>Our Mission</h3>
+
+          <p>
+            ETB is committed to provide travel that enhances and changes lives
+            with our unparalleled value and expertise.
+          </p>
+
+          <p>
+            We have been at the forefront of travel for many years and the key to
+            our success has been our wisdom of the years and power of the youth
+            and adding to our experiences.
+          </p>
+          <svg class="who-icon">
+            <use xlink:href="images/sprite.svg#vision"></use>
+          </svg>
+          <h3>Our Vision</h3>
+          <p>
+            To become the leading travel agency in the region, providing the best
+            possible product to our guests, with the highest quality of services
+            and demonstrating faithfully our commitment towards social and
+            environmental responsibility.
+          </p>
+          <p>
+            We aspire that those who travel with us will remain loyal for a lifetime,
+            and that, with their help, we can always contribute to this earth's
+            diversity and beauty.
+          </p>
+        </div>
+        <div class="img-box col-lg-5"><img src="images/whojpg.webp" alt="" class="d-flex justify-content-center"></div>
       </div>
-  
-    
-   
 
-    
+      <button class="btn">Find More&rarr;</button>
     </div>
+  </section>
 
-    <footer></footer>
-    <script src="js/bootstrap.bundle.min.js"></script>
-  </body>
+
+  <footer></footer>
+</body>
+
 </html>

@@ -1,55 +1,6 @@
 @font-face {
-  font-family: 'Roboto-Black';
-  src: url('../fonts/Roboto-Black.ttf');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto-BlackItalic';
-  src: url('../fonts/Roboto-BlackItalic.ttf');
-}
-@font-face {
-  font-family: 'Roboto-Bold';
-  src: url('../fonts/Roboto-Bold.ttf');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto-BoldItalic';
-  src: url('../fonts/Roboto-BoldItalic.ttf');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto-Italic';
-  src: url('../fonts/Roboto-Italic.ttf');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto-Light';
-  src: url('../fonts/Roboto-Light.ttf');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto-Medium';
-  src: url('../fonts/Roboto-Medium.ttf');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto-MediumItalic';
-  src: url('../fonts/Roboto-MediumItalic.ttf');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto-Regular';
-  src: url('../fonts/Roboto-Regular.ttf');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto-Thin';
-  src: url('../fonts/Roboto-Thin.ttf');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto-ThinItalic';
-  src: url('../fonts/Roboto-ThinItalic.ttf');
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-VariableFont_wght.ttf');
   font-display: swap;
 }
 
@@ -60,46 +11,103 @@
 }
 
 :root {
-  --darkPrimaryColor: #1976d2;
-  --primaryColor: #2196f3;
-  --lightPrimaryColor: #bbdefb;
+  --DarkBlue:#137FDB;
+  --Blue:#6EBAF0;
+  --lightBlue:#C4E8FB;
+  --Orange: #f85b0a;
+  --oldLace:#F7F7E9;
+  --lightGreen: #9fdb7b;
+  --DarkGreen:#4bbf37;
   --textPrimaryColor: #ffffff;
-  --accentColor: #4caf50;
   --primaryTextColor: #212121;
   --secondaryTextColor: #757575;
   --dividerColor: #bdbdbd;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
-  font-size: 62.5;
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn{
+  font-size: 1.8rem;
+  padding: .75rem 1.5rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--Orange);
+  font-weight: 500;
+  border: 3px solid var(--Orange);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  margin-top: 3rem;
+}
+
+.btn:hover{
+  background-color: var(--Orange);
+  color: var(--textPrimaryColor);
 }
 
 /* ----------------------Nav-Bar------------------------- */
 
 body {
-  font-family: 'Roboto-Regular';
-  font-size: 1.2rem;
+  font-family: 'Raleway';
+  font-size: 2rem;
   line-height: 1.7;
 }
 
+.header{
+  background-color:var(--oldLace);
+
+}
+
 .logo {
-  width: 10rem;
+  width: 16rem;
 }
 
 .menu-icon {
-  width: 3rem;
-  height: 3rem;
+  display: initial;
+  width: 5rem;
+  height: 5rem;
 }
 
-.navbar .navbar-toggler:focus {
-  box-shadow: none;
+.nav {
+  padding-top: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.nav-items {
+  list-style: none;
+  column-gap: 1.6rem;
+}
+
 
 .nav-link {
   display: inline-block;
-  letter-spacing: 0.1rem;
-  color: var(--darkPrimaryColor);
-  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.16rem;
+  font-size: 1.6rem;
+  color: var(--DarkBlue);
+  font-weight: 600;
   border-bottom: 4px solid transparent;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -111,77 +119,210 @@ body {
 .nav-link:active,
 .nav-link:focus,
 .nav-link:hover {
-  color: var(--primaryColor);
-  border-bottom: 4px solid var(--primaryColor);
+  color: var(--Blue);
+  border-bottom: 4px solid var(--Blue);
 }
 
 /* --------------------Landing-page----------------------- */
 
 .landing {
   min-height: calc(100vh - 89.69px);
-  background: linear-gradient(to bottom, #fff, #bbdefb);
+  background:var(--oldLace);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .landing h1 {
-  font-family: 'Kalam-Bold';
-  font-size: 3rem;
+  font-family: 'Raleway';
+  font-size: 5rem;
   line-height: 1;
-  letter-spacing: -0.2rem;
-  word-spacing: 0.5rem;
-  font-weight: 700;
-  color: var(--darkPrimaryColor);
+  letter-spacing: -0.16rem;
+  word-spacing: 0.65rem;
+  text-align: center;
+  font-weight: 800;
+  color:var(--DarkBlue);
+  padding-bottom: 1.6rem;
 }
 
 .landing h2 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: 800;
-  color: var(--accentColor);
-  -ms-filter: 'progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#4CAF50)'; /*IE 8*/
-  text-shadow: 3px 3px 5px rgba(76, 175, 80, 0.8); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#4CAF50); /*IE 5.5-7*/
+  color: var(--Orange);
+  line-height: 1;
+  text-shadow: 3px 3px 8px rgba(248,91,10,0.5);
 }
 
 .landing h3 {
-  font-size: 1.8rem;
+  font-size: 3rem;
   font-weight: 500;
-  color: var(--accentColor);
-  -ms-filter: 'progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#4CAF50)'; /*IE 8*/
-  text-shadow: 3px 3px 5px rgba(76, 175, 80, 0.8); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#4CAF50); /*IE 5.5-7*/
+  color: var(--Orange);
+  text-shadow: 3px 3px 8px rgba(248,91,10,0.5);
+}
+
+.slogan-box {
+  text-align: center;
 }
 
 .quote {
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 3.6rem;
+  height: 3.6rem;
 }
+
+.about {
+  background-color:#fff;
+  margin-bottom: 7rem;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  box-shadow: 3px 3px 8px -3px rgba(51, 51, 51, 0.6);
+}
+
+.section-header {
+  font-size: 3.6rem;
+  color: var(--secondaryTextColor);
+  font-weight: 800;
+  text-align: center;
+  padding: 4.8rem 0;
+  margin-bottom: 1.6rem;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.section-header::before{
+  content: "";
+  position: absolute;
+  height: .2rem;
+  width: 70%;
+  background-color: var(--Orange);
+  bottom: 2.5rem;
+  left: calc(15%);
+}
+
+.card-box {
+  margin: auto;
+}
+
+.card-title {
+  display: inline-block;
+  font-size: 2.5rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 8rem 1.6rem 1.6rem 1.6rem;
+}
+
+.cards-container {
+  padding: 3.2rem;
+  row-gap: 4.8rem;
+}
+
+.card {
+  min-height: 36rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.card-img {
+  max-width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+}
+
+.lower-part {
+  position: relative;
+  text-align: center;
+}
+
+
+.icon-box {
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 40px;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.06);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+
+}
+
+.icon {
+  position: relative;
+  width: 4.8rem;
+  top: -3.2rem;
+
+}
+
+.section-who{
+  background-color: var(--oldLace);
+ padding:3.2rem 1.6rem 8rem;
+ 
+}
+
+.section-who p{
+  margin-bottom:1.6rem;
+}
+
+.section-who img{
+  margin: auto;
+}
+
+.who-icon{
+  width: 5rem;
+  height: 5rem;
+  margin-top: 3rem;
+}
+
+
+
 
 
 /*  X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap */
 
 /*  Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {  }
+/* @media (min-width: 576px) {  } */
 
 /*  Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-  .landing h1{
-    font-size: 3.25rem;
+@media (min-width: 768px) {
+  .landing h1 {
+    font-size: 5.2rem;
+    padding-bottom: 3.2rem;
   }
-  .landing h2{
+
+  .landing h2 {
     font-size: 2.8rem;
   }
- }
+}
 
 /*  Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-  .landing h2{
-    font-size: 3.5rem;
+@media (min-width: 992px) {
+  .landing h2 {
+    font-size: 5.6rem;
   }
- }
+
+}
 
 /*  X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  }
+/* @media (min-width: 1200px) {  } */
 
 /* XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) { ... }
-
