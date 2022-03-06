@@ -23,9 +23,9 @@
   --secondaryTextColor: #757575;
   --dividerColor: #bdbdbd;
 }
-
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -40,29 +40,33 @@ img {
 }
 
 .btn{
-  font-size: 1.8rem;
-  padding: .75rem 1.5rem;
-  text-transform: uppercase;
-  background-color: transparent;
-  color: var(--Orange);
+  background: #9FDB7B;
+  background-image: -o-linear-gradient(top, #9FDB7B, #4BBF37);
+  background-image: -webkit-gradient(to bottom, #9FDB7B, #4BBF37);
+  border-radius:8px;
+  Color: #FFFFFF;
+  font-size: 2.5rem;
   font-weight: 500;
-  border: 3px solid var(--Orange);
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  transition: all .5s;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -ms-transition: all .5s;
-  -o-transition: all .5s;
-  margin-top: 3rem;
+  padding: 1rem 2rem;
+  -webkit-box-shadow: 1px 1px 7px 0 #000000;
+  box-shadow: 1px 1px 7px 0 #000000;
+  text-shadow: 1px 1px 20px #000000;
+  border: solid #4BBF37 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  -ms-border-radius:8px;
+  -o-border-radius:8px;
 }
 
 .btn:hover{
-  background-color: var(--Orange);
-  color: var(--textPrimaryColor);
+    border: solid #188704 1px;
+    background: #4BBF37;
+    text-decoration: none;
+   
 }
 
 /* ----------------------Nav-Bar------------------------- */
@@ -90,14 +94,22 @@ body {
 
 .nav {
   padding-top: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav-items {
   list-style: none;
-  column-gap: 1.6rem;
+  -webkit-column-gap: 1.6rem;
+     -moz-column-gap: 1.6rem;
+          column-gap: 1.6rem;
 }
 
 
@@ -128,9 +140,15 @@ body {
 .landing {
   min-height: calc(100vh - 89.69px);
   background:var(--oldLace);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .landing h1 {
@@ -181,7 +199,8 @@ body {
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
-  box-shadow: 3px 3px 8px -3px rgba(51, 51, 51, 0.6);
+  -webkit-box-shadow: 3px 3px 8px -3px rgba(51, 51, 51, 0.6);
+          box-shadow: 3px 3px 8px -3px rgba(51, 51, 51, 0.6);
 }
 
 .section-header {
@@ -192,6 +211,8 @@ body {
   padding: 4.8rem 0;
   margin-bottom: 1.6rem;
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: auto;
 }
@@ -226,8 +247,13 @@ body {
 
 .card {
   min-height: 36rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 
 }
 
@@ -256,7 +282,8 @@ body {
   text-align: center;
   border-radius: 50%;
   font-size: 40px;
-  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.06);
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -291,7 +318,60 @@ body {
   margin-top: 3rem;
 }
 
+.who-tex-box{
+  margin-bottom: 5rem;
+}
 
+.services{
+  padding:3.2rem 1.6rem 8rem;
+}
+
+.services ul{
+  list-style: none;
+}
+
+.service svg{
+  display: inline;
+  width: 2.25rem;
+  height: 2.25rem;
+  vertical-align: middle;
+  margin-right: .5rem;
+}
+
+.footer{
+  background-color: #45526E;
+  color: var(--textPrimaryColor);
+  padding:2rem 1rem 2rem;
+}
+
+.footer .row{
+  row-gap: 5rem;
+}
+
+.footer h3{
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding-bottom: 2rem;
+ }
+
+.footer-logo{
+  width: 25rem;
+}
+
+.footer-icon svg{
+  width: 4rem;
+  height: 4rem;
+  vertical-align: middle;
+  margin-right: 2rem;
+}
+
+.footer p:nth-child(5){
+  padding-left: 6rem;
+}
+.footer p:nth-child(6){
+  padding-left: 6rem;
+}
 
 
 
