@@ -92,7 +92,7 @@ body {
 }
 
 .menu-icon {
-  display: initial;
+  display: block;
   width: 5rem;
   height: 5rem;
 }
@@ -174,6 +174,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-top: 2rem;
 }
 
 .landing h1 {
@@ -185,7 +186,7 @@ body {
   text-align: center;
   font-weight: 800;
   color: var(--Darker-Blue);
-  padding-bottom: 1.6rem;
+  margin:1rem 0;
 }
 
 .landing h2 {
@@ -205,7 +206,7 @@ body {
 
 .slogan-box {
   text-align: center;
-}
+  }
 
 .quote {
   width: 3.6rem;
@@ -217,7 +218,7 @@ body {
 }
 
 .landing-icons img{
-  width: 10rem;
+  width: 6rem;
   max-width: 100%;
   opacity: 75%;
   filter:grayscale(100);
@@ -342,13 +343,21 @@ body {
 
 }
 
+.section-who .heading-text{
+  font-weight: 600;
+}
+
 .section-who p {
   margin-bottom: 1.6rem;
 }
 
+.section-who .img-box{
+  padding: 3rem;
+}
+
 .section-who img {
   margin: auto;
-  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 5px 7px 20px 3px rgb(0 0 0 / 48%);
   border-radius: 12px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -397,9 +406,6 @@ body {
   padding: 2rem 1rem 2rem;
 }
 
-.footer .row {
-  row-gap: 5rem;
-}
 
 .footer h3 {
   font-size: 2.5rem;
@@ -422,6 +428,7 @@ body {
 
 .footer-logo {
   width: 25rem;
+  margin-bottom: 2rem;
 }
 
 .footer-icon svg {
@@ -433,7 +440,20 @@ body {
 
 .social-icon svg{
   margin-right: 1.25rem;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
 }
+
+ .social-icon svg:hover{
+   transform: scale(1.25);
+   -webkit-transform: scale(1.25);
+   -moz-transform: scale(1.25);
+   -ms-transform: scale(1.25);
+   -o-transform: scale(1.25);
+}   
 
 .contact-icon{
   margin-right: 2rem;
@@ -441,6 +461,7 @@ body {
 
 .contact-info p{
   margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 
@@ -451,42 +472,139 @@ body {
 // No media query for `xs` since this is the default in Bootstrap */
 
 /*  Small devices (landscape phones, 576px and up) */
-/* @media (min-width: 576px) {  } */
+@media (min-width: 576px) {
+  .landing h1 {
+    font-size: 5rem;
+    margin: 1rem 0;
+}
+
+
+.section-who .img-box{
+  padding: 5rem;
+}
+
+.contact-info p {
+ font-size: 2.2rem;
+}
+
+.footer .row{
+  row-gap: 4rem;
+}
+
+  }
 
 /*  Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .landing h1 {
-    font-size: 5.2rem;
-    padding-bottom: 3.2rem;
+    font-size: 5rem;
+    margin-bottom: 1rem;
   }
 
- .nav-items{
-   display:flex;
-   list-style: none;
-   column-gap: 1.5rem;
-
- }
-  
   .landing h2 {
-    font-size: 2.8rem;
-  }
+    font-size: 5.5rem;
 }
+  .landing h3 {
+    font-size: 3rem;
+}
+
+.landing-icons img {
+  width: 5.8rem;
+}
+
+ .service{
+   font-size: 2.25rem;
+    }
+  
+ }
 
 /*  Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .logo{
+  .logo {
     width: 20rem;
   }
 
-  
+
+  .nav-items{
+    display:flex;
+    list-style: none;
+    column-gap: 1.5rem;
+ 
+  }
+
+  .nav-link{
+    font-size: 1.8rem;
+  }
+
+  .landing .row{
+    margin-bottom: 5rem;
+  }
+
+  .landing h1{
+    margin: 0 0 2rem 0;
+  }
+  .landing .slogan-box{
+    margin: 0;
+  }
+
   .landing h2 {
     font-size: 5.6rem;
+     }
+
+     .landing-icons img {
+      width: 6.8rem;
   }
+
+  .landing .row {
+    margin-bottom: 11rem;
+
+}
+
+.cards-container {
+  padding: 0rem;
+ 
+}
+
+.section-who .img-box {
+  padding: 4rem;
+}
+
+.section-who .btn{
+  margin-left: 5rem;
+}
+
+.services .row{
+  margin-bottom: 5rem;
+}
+
+.services .btn{
+  margin-left: 5rem;
+}
 
 }
 
 /*  X-Large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) {  } */
+@media (min-width: 1200px) {
 
-/* XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) { ... }
+  .landing-icons img {
+    width: 8.8rem;
+}
+
+
+
+
+  }
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+
+@media (min-width: 1400px) { 
+
+  .landing .row {
+margin-bottom: 1rem;
+
+}
+.section-who .btn {
+  margin-left: 5rem;
+}
+
+
+}
