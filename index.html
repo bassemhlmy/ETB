@@ -16,32 +16,46 @@
 
 <body>
   <header class="header">
-    <div class="container">
+    <div class="back-drop hide"></div>
+     <div class="container">
       <nav class="nav">
-        <img src="images/logo.webp" alt="ETB logo" class="logo" />
-        <svg class="menu-icon d-lg-none">
+        <img src="images/logo.webp" alt="ETB logo" class="logo"/>
+        <svg class="menu-icon">
           <use xlink:href="images/sprite.svg#menu"></use>
         </svg>
         <ul class="nav-items">
           <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Packages</a></li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Destinations</a>
-          </li>
-          <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Destinations</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#who" class="nav-link">About</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </div>
+    <div class="mobile-menu">
+       <svg class="close">
+          <use xlink:href="images/sprite.svg#Close"></use>
+        </svg>
+     
+      <ul class="mobile-menu-items">
+        <li class="mobile-menu-item"><a href="#" class="mobile-menu-link">Home</a></li>
+        <li class="mobile-menu-item"><a href="#" class="mobile-menu-link">Packages</a></li>
+        <li class="mobile-menu-item"><a href="#" class="mobile-menu-link">Destinations</a></li>
+        <li class="mobile-menu-item"><a href="#services" class="mobile-menu-link">Services</a></li>
+        <li class="mobile-menu-item"><a href="#who" class="mobile-menu-link">About</a></li>
+        <li class="mobile-menu-item"><a href="#" class="mobile-menu-link">Contact</a></li>
+      </ul>
+      <div class="logo-box"><img src="images/logo.webp" alt="ETB Logo" class="mobile-menu-logo"></div>
+      </div>
   </header>
   <section class="landing">
     <div class="container-fluid">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-lg-7 col-md-8 col-sm-10 order-lg-2">
-          <img src="images/Artboard1.webp" alt="" class="hero-img" />
+      <div class="row justify-content-center align-items-center hero-img-box">
+        <div class="col-lg-6 order-lg-2">
+          <img src="images/Artboard1.webp" alt="collection of travel services photos" class="hero-img" />
         </div>
-        <div class="col-lg-5 order-lg-1">
+        <div class="col-lg-6 order-lg-1">
           <h1 class="">IT'S TIME TO EXPLORE THE WORLD</h1>
           <div class="slogan-box">
             <svg class="quote">
@@ -124,7 +138,7 @@
     </div>
   </section>
 
-  <section class="section-who">
+  <section class="section-who" id="who">
     <div class="container">
       <h2 class="section-header">Who We Are?</h2>
       <div class="who-container row justify-content-lg-between align-items-center">
@@ -185,7 +199,7 @@
     </div>
   </section>
 
-  <section class="services">
+  <section class="services" id="services">
     <h2 class="section-header">What We Do?</h2>
     <div class="container">
       <div class="row justify-content-around align-items-center">
@@ -331,6 +345,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
