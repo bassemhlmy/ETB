@@ -20,12 +20,12 @@
   --orange: #ff922b;
   --Dark-Orange: #fd7e14;
   --Darker-Orange: #e8590c;
-  --light-gray: #F2F2F2;
+  --light-gray: #f2f2f2;
   --Gray: #ced4da;
   --Dark-Gray: #adb5bd;
   --Darker-Gray: #868e96;
   --very-Dark-Gray: #495057;
-  --black: #0D0D0D;
+  --black: #0d0d0d;
 }
 
 * {
@@ -53,36 +53,34 @@ a:link {
 }
 
 .btn {
-  background: #51CF66;
-  background-image: -webkit-linear-gradient(top, #51CF66, #2B8A3E);
-  background-image: -moz-linear-gradient(top, #51CF66, #2B8A3E);
-  background-image: -ms-linear-gradient(top, #51CF66, #2B8A3E);
-  background-image: -o-linear-gradient(top, #51CF66, #2B8A3E);
-  color: #FDFBF6;
+  background: #51cf66;
+  background-image: -webkit-linear-gradient(top, #51cf66, #2b8a3e);
+  background-image: -moz-linear-gradient(top, #51cf66, #2b8a3e);
+  background-image: -ms-linear-gradient(top, #51cf66, #2b8a3e);
+  background-image: -o-linear-gradient(top, #51cf66, #2b8a3e);
+  color: #fdfbf6;
   font-size: 2.25rem;
   font-weight: 500;
-  padding: 1.10rem 2.20rem;
-  box-shadow: 2px 6px 29px 0 #000000;
-  -webkit-box-shadow: 2px 6px 29px 0 #000000;
-  -moz-box-shadow: 2px 6px 29px 0 #000000;
-  text-shadow: 1px 1px 11px #000000;
+  padding: 1.1rem 2.2rem;
+  box-shadow: 0.2rem 0.6rem 2.9rem 0 #000000;
+  text-shadow: 0.1rem 0.1rem 1.1rem #000000;
   cursor: pointer;
   text-align: center;
   border: none;
-  border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
+  border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
 }
 
 .btn:hover {
-  background: #2B8A3E;
-  background-image: -webkit-linear-gradient(top, #2B8A3E, #51CF66);
-  background-image: -moz-linear-gradient(top, #2B8A3E, #51CF66);
-  background-image: -ms-linear-gradient(top, #2B8A3E, #51CF66);
-  background-image: -o-linear-gradient(top, #2B8A3E, #51CF66);
-  background-image: -webkit-gradient(to bottom, #2B8A3E, #51CF66);
+  background: #2b8a3e;
+  background-image: -webkit-linear-gradient(top, #2b8a3e, #51cf66);
+  background-image: -moz-linear-gradient(top, #2b8a3e, #51cf66);
+  background-image: -ms-linear-gradient(top, #2b8a3e, #51cf66);
+  background-image: -o-linear-gradient(top, #2b8a3e, #51cf66);
+  background-image: -webkit-gradient(to bottom, #2b8a3e, #51cf66);
 }
 
 .hide {
@@ -99,7 +97,7 @@ body {
 
 .header {
   background-color: var(--light-gray);
-  }
+}
 
 .back-drop {
   width: 100vw;
@@ -141,8 +139,8 @@ body {
   width: 65%;
   height: 100vh;
   background: url('../images/backgroud.webp');
-  background-size:cover;
-  background-position:top center;
+  background-size: cover;
+  background-position: top center;
   position: absolute;
   z-index: 99;
   top: 0;
@@ -153,10 +151,8 @@ body {
   justify-content: flex-start;
   align-items: center;
   transform: rotateY(-90deg);
-  transition: all .5s ease-in-out;
-
+  transition: all 0.5s ease-in-out;
 }
-
 
 .show-mobile-menu {
   transform: rotateY(0deg);
@@ -166,37 +162,32 @@ body {
   -o-transform: rotateY(0deg);
 }
 
-
-
 .close {
   width: 2.5rem;
   height: 2.5rem;
-  align-self:flex-end;
-  margin: 2rem  2rem 0 0;
-  
+  align-self: flex-end;
+  margin: 2rem 2rem 0 0;
 }
 
-.mobile-menu-items{
+.mobile-menu-items {
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
   text-align: center;
 }
 
-
 .mobile-menu-link {
   font-size: 2rem;
   font-weight: 600;
   color: var(--Darker-Blue);
-  border-bottom: 3px solid #1d4b7900;
-  padding-bottom: .75rem;
-  transition: all .5s ease-in-out;
-
+  border-bottom: 0.3rem solid #1d4b7900;
+  padding-bottom: 0.75rem;
+  transition: all 0.5s ease-in-out;
 }
 
 .mobile-menu-link:hover {
   color: #0e2e4d;
-  border-bottom: 3px solid #1d4b79;
+  border-bottom: 0.3rem solid #1d4b79;
 }
 
 .logo-box {
@@ -212,9 +203,6 @@ body {
   margin: 0 1rem;
 }
 
-
-
-
 .nav-link {
   display: inline-block;
   text-decoration: none;
@@ -222,7 +210,7 @@ body {
   font-size: 1.6rem;
   color: var(--Blue);
   font-weight: 700;
-  border-bottom: 4px solid transparent;
+  border-bottom: 0.4rem solid transparent;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -234,14 +222,19 @@ body {
 .nav-link:focus,
 .nav-link:hover {
   color: var(--Dark-Blue);
-  border-bottom: 4px solid var(--Dark-Blue);
+  border-bottom: 0.4rem solid var(--Dark-Blue);
 }
 
 /* --------------------Landing-page----------------------- */
 
 .landing {
-  min-height: calc(100vh - 89.69px);
-  background: linear-gradient(to bottom, hsl(0, 0%, 95%), rgba(242, 242, 242, 0)), url('../images/backgroud.webp');
+  min-height: calc(100vh - 9rem);
+  background: linear-gradient(
+      to bottom,
+      hsl(0, 0%, 95%),
+      rgba(242, 242, 242, 0)
+    ),
+    url('../images/backgroud.webp');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -284,15 +277,15 @@ body {
   font-size: 2rem;
   font-weight: 500;
   color: var(--Darker-Orange);
-  text-shadow: 3px 3px 8px rgba(150, 54, 6, 0.5);
+  text-shadow: 0.3rem 0.3rem 0.8rem rgba(150, 54, 6, 0.5);
 }
 
 .slogan-box {
   text-align: center;
 }
 
-.hero-img-box{
-  text-align: center
+.hero-img-box {
+  text-align: center;
 }
 
 .quote {
@@ -320,8 +313,12 @@ body {
 
 .card {
   border: none;
-  border-radius: 12px;
-  box-shadow: 0px 1px 20px 10px rgb(51 51 51 / 23%)
+  border-radius: 1.2rem;
+  box-shadow: 0 0.1rem 2rem 1rem rgb(51 51 51 / 23%);
+  -webkit-border-radius: 1.2rem;
+  -moz-border-radius: 1.2rem;
+  -ms-border-radius: 1.2rem;
+  -o-border-radius: 1.2rem;
 }
 
 .section-header {
@@ -339,9 +336,9 @@ body {
 }
 
 .section-header::before {
-  content: "";
+  content: '';
   position: absolute;
-  height: .3rem;
+  height: 0.3rem;
   width: 70%;
   background-color: var(--Darker-Orange);
   bottom: 4rem;
@@ -375,14 +372,12 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-
 }
 
 .card-img {
   max-width: 100%;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
 }
 
 .lower-part {
@@ -390,33 +385,30 @@ body {
   text-align: center;
 }
 
-
 .icon-box {
   position: absolute;
   left: 50%;
-  top: -40px;
+  top: -4rem;
   transform: translateX(-50%);
-  width: 80px;
-  height: 80px;
+  width: 8rem;
+  height: 8rem;
   line-height: 80px;
   background: #fff;
   text-align: center;
   border-radius: 50%;
-  font-size: 40px;
-  box-shadow: 0px 1px 20px 10px rgb(51 51 51 / 23%);
+  font-size: 4rem;
+  box-shadow: 0 0.1rem 2rem 1rem rgb(51 51 51 / 23%);
 }
 
 .icon {
   position: relative;
   width: 4.8rem;
   top: -3.2rem;
-
 }
 
 .section-who {
   background-color: var(--light-gray);
   padding: 3.2rem 1.6rem 8rem;
-
 }
 
 .section-who .heading-text {
@@ -433,12 +425,12 @@ body {
 
 .section-who img {
   margin: auto;
-  box-shadow: 3px 2px 20px 10px rgb(51 51 51 / 23%);
-  border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
+  box-shadow: 0.3rem 0.2rem 2rem 1rem rgb(51 51 51 / 23%);
+  border-radius: 1.2rem;
+  -webkit-border-radius: 1.2rem;
+  -moz-border-radius: 1.2rem;
+  -ms-border-radius: 1.2rem;
+  -o-border-radius: 1.2rem;
 }
 
 .who-icon {
@@ -464,7 +456,7 @@ body {
   width: 2.25rem;
   height: 2.25rem;
   vertical-align: middle;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .services ul:last-child {
@@ -475,13 +467,11 @@ body {
   margin-bottom: 5rem;
 }
 
-
 .footer {
   background-color: var(--very-Dark-Gray);
   color: #74c0fc;
   padding: 2rem 1rem 2rem;
 }
-
 
 .footer h3 {
   font-size: 2.5rem;
@@ -493,12 +483,12 @@ body {
 }
 
 .footer h3::after {
-  content: "";
+  content: '';
   position: absolute;
-  height: .2rem;
+  height: 0.2rem;
   width: 95%;
   background-color: var(--Darker-Orange);
-  bottom: 1.50rem;
+  bottom: 1.5rem;
   left: 5%;
 }
 
@@ -511,16 +501,15 @@ body {
   width: 4rem;
   height: 4rem;
   vertical-align: middle;
-
 }
 
 .social-icon svg {
   margin-right: 1.25rem;
-  transition: all .5s ease-in-out;
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -ms-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .social-icon svg:hover {
@@ -540,10 +529,6 @@ body {
   font-size: 1.5rem;
 }
 
-
-
-
-
 /*  X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap */
 
@@ -558,7 +543,7 @@ body {
     margin: 1rem 0;
   }
 
-  .landing-icons img{
+  .landing-icons img {
     width: 4rem;
   }
   .section-who .img-box {
@@ -572,7 +557,6 @@ body {
   .footer .row {
     row-gap: 4rem;
   }
-
 }
 
 /*  Medium devices (tablets, 768px and up) */
@@ -581,14 +565,13 @@ body {
     font-size: 2.5rem;
   }
 
-  .hero-img{
+  .hero-img {
     width: 85%;
-   
   }
 
   .landing h1 {
     font-size: 4rem;
-   margin: 1rem;
+    margin: 1rem;
   }
 
   .landing h2 {
@@ -606,7 +589,6 @@ body {
   .service {
     font-size: 2.25rem;
   }
-
 }
 
 /*  Large devices (desktops, 992px and up) */
@@ -614,8 +596,6 @@ body {
   .logo {
     width: 20rem;
   }
-
-
 
   .mobile-menu {
     display: none;
@@ -625,13 +605,11 @@ body {
     display: none;
   }
 
-
   .nav-items {
     display: flex;
     list-style: none;
     column-gap: 1.5rem;
     width: initial;
-
   }
 
   .menu-icon {
@@ -665,43 +643,35 @@ body {
 
   .landing .row {
     margin-bottom: 11rem;
-
   }
 
   .cards-container {
     padding: 0rem;
-
   }
 
   .section-who .img-box {
     padding: 4rem;
   }
 
-  .section-who .btn, .services .btn {
+  .section-who .btn,
+  .services .btn {
     margin-left: 1rem;
   }
 
   .services .row {
     margin-bottom: 5rem;
   }
-
-
 }
 
 /*  X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
   .landing-icons img {
     width: 8.8rem;
   }
 
   .landing .row {
     margin-bottom: 8rem;
-}
-
-
-
-
+  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up)*/
@@ -709,5 +679,5 @@ body {
 @media (min-width: 1400px) {
   .landing .row {
     margin-bottom: 1rem;
-}
+  }
 }
