@@ -1,0 +1,220 @@
+@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins',
+  'abstracts/fonts';
+@import 'base/typography', 'base/utilities', 'base/base', 'base/animation';
+@import 'layout/navigation', 'layout/grid', 'layout/header', 'layout/footer',
+  'layout/breakpoints', 'layout/container';
+@import 'components/buttons', 'components/card', 'components/composition';
+@import 'pages/home';
+
+.hide {
+  display: none;
+}
+
+/* ----------------------Nav-Bar------------------------- */
+
+.back-drop {
+  width: 100vw;
+  height: 100vh;
+  background-color: $black;
+  opacity: 60%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.close-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  align-self: flex-end;
+  margin: 2rem 2rem 0 0;
+}
+
+/* --------------------Landing-page----------------------- */
+
+.hero {
+  height: 100vh;
+  align-self: center;
+  background: url(../images/blob-scene-375.svg) no-repeat;
+  background-size: cover;
+
+  @include breakpoint(small) {
+    background: url(../images/blob-scene-576.svg) no-repeat;
+    background-size: cover;
+  }
+  @include breakpoint(medium) {
+    background: url(../images/blob-scene-768.svg) no-repeat;
+    background-size: cover;
+  }
+  @include breakpoint(large) {
+    background: url(../images/blob-scene-992.svg) no-repeat;
+    background-size: cover;
+  }
+  @include breakpoint(x-large) {
+    background: url(../images/blob-scene-1200.svg) no-repeat;
+    background-size: cover;
+  }
+  @include breakpoint(xx-large) {
+    background: url(../images/blob-scene-1400.svg) no-repeat;
+    background-size: cover;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 75%;
+    filter: grayscale(100);
+    padding-top: 2rem;
+    img {
+      height: 2.5rem;
+    }
+  }
+}
+
+.about {
+  background-color: $light-gray;
+}
+
+.section-header {
+  font-size: 3.6rem;
+  color: $very-Dark-Gray;
+  font-weight: 800;
+  text-align: center;
+  padding: 4.8rem 0;
+  margin-bottom: 1.6rem;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.section-header::before {
+  content: '';
+  position: absolute;
+  height: 0.3rem;
+  width: 70%;
+  background-color: $Darker-Orange;
+  bottom: 4rem;
+  left: calc(15%);
+}
+
+.cards {
+  row-gap: 3rem;
+  margin: auto;
+}
+
+.section-who {
+  background-color: $light-gray;
+  padding: 3.2rem 1.6rem 8rem;
+}
+
+.section-who .heading-text {
+  font-weight: 600;
+}
+
+.section-who p {
+  margin-bottom: 1.6rem;
+}
+
+.section-who .img-box {
+  padding: 3rem;
+}
+
+.section-who img {
+  margin: auto;
+  box-shadow: 0.3rem 0.2rem 2rem 1rem rgb($Darker-Gray, 0.23);
+  border-radius: 1.2rem;
+}
+
+.who-icon {
+  width: 5rem;
+  height: 5rem;
+  margin-top: 3rem;
+}
+
+.who-tex-box {
+  margin-bottom: 5rem;
+}
+
+.services {
+  padding: 3.2rem 1.6rem 8rem;
+}
+
+.services ul {
+  list-style: none;
+}
+
+.service svg {
+  display: inline;
+  width: 2.25rem;
+  height: 2.25rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.services ul:last-child {
+  margin-bottom: 3rem;
+}
+
+.services .img-box {
+  margin-bottom: 5rem;
+}
+
+.footer {
+  background-color: $very-Dark-Gray;
+  color: #74c0fc;
+  padding: 2rem 1rem 2rem;
+}
+
+.footer h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  padding-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer h3::after {
+  content: '';
+  position: absolute;
+  height: 0.2rem;
+  width: 95%;
+  background-color: $Darker-Orange;
+  bottom: 1.5rem;
+  left: 5%;
+}
+
+.footer-logo {
+  width: 25rem;
+  margin-bottom: 2rem;
+}
+
+.footer-icon svg {
+  width: 4rem;
+  height: 4rem;
+  vertical-align: middle;
+}
+
+.social-icon svg {
+  margin-right: 1.25rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.social-icon svg:hover {
+  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+}
+
+.contact-icon {
+  margin-right: 2rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}

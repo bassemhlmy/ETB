@@ -224,6 +224,7 @@ XX-Large devices (larger desktops, 1400px and up)*/
   display: grid;
   justify-content: space-between;
   align-items: center;
+  gap: 3rem;
   grid-template-columns: 1fr;
 }
 .grid-2--order-1 {
@@ -240,6 +241,7 @@ XX-Large devices (larger desktops, 1400px and up)*/
   display: grid;
   justify-content: space-between;
   align-items: center;
+  gap: 3rem;
   grid-template-columns: 1fr;
 }
 @media (min-width: 48em) {
@@ -272,12 +274,12 @@ XX-Large devices (larger desktops, 1400px and up)*/
     max-width: 72rem;
   }
 }
-@media (min-width: 62em) {
+@media (min-width: 48.25em) {
   .container {
     max-width: 96rem;
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 87.5em) {
   .container {
     max-width: 114rem;
   }
@@ -354,7 +356,6 @@ XX-Large devices (larger desktops, 1400px and up)*/
 .composition {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 61rem;
 }
 .composition__photo {
   width: 100%;
@@ -398,9 +399,6 @@ XX-Large devices (larger desktops, 1400px and up)*/
   transform: scale(1.1);
   outline: 1rem solid #c1d0a5;
 }
-.composition:hover .composition__photo:not(:hover) {
-  transform: scale(0.9);
-}
 
 .hide {
   display: none;
@@ -429,36 +427,12 @@ XX-Large devices (larger desktops, 1400px and up)*/
 .hero {
   height: 100vh;
   align-self: center;
-  background: url(../images/blob-scene-375.svg) no-repeat;
+  background: url(../images/blob-scene-haikei-mob.svg) no-repeat;
   background-size: cover;
-}
-@media (min-width: 36em) {
-  .hero {
-    background: url(../images/blob-scene-576.svg) no-repeat;
-    background-size: cover;
-  }
 }
 @media (min-width: 48em) {
   .hero {
-    background: url(../images/blob-scene-768.svg) no-repeat;
-    background-size: cover;
-  }
-}
-@media (min-width: 62em) {
-  .hero {
-    background: url(../images/blob-scene-992.svg) no-repeat;
-    background-size: cover;
-  }
-}
-@media (min-width: 75em) {
-  .hero {
-    background: url(../images/blob-scene-1200.svg) no-repeat;
-    background-size: cover;
-  }
-}
-@media (min-width: 100em) {
-  .hero {
-    background: url(../images/blob-scene-1400.svg) no-repeat;
+    background: url(../images/blob-scene-haikei.svg) no-repeat;
     background-size: cover;
   }
 }
@@ -467,6 +441,7 @@ XX-Large devices (larger desktops, 1400px and up)*/
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 3rem;
   opacity: 75%;
   filter: grayscale(100);
   padding-top: 2rem;
@@ -621,4 +596,4 @@ XX-Large devices (larger desktops, 1400px and up)*/
   font-size: 1.5rem;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scss.map */

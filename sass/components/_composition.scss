@@ -1,0 +1,52 @@
+.composition {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 61rem;
+
+  &__photo {
+    width: 100%;
+    box-shadow: 0 1.4rem 4rem rgba($black, 0.4);
+    border-radius: 0px;
+    transition: all 0.5s ease-in-out;
+    outline-offset: 0.5rem;
+    &--p1 {
+      margin-top: 0;
+      margin-left: 7%;
+      z-index: 10;
+    }
+    &--p2 {
+      margin-top: 20%;
+      margin-left: -10%;
+      z-index: 9;
+    }
+    &--p3 {
+      margin-top: -30%;
+      margin-left: 0%;
+      z-index: 8;
+    }
+    &--p4 {
+      margin-top: 5%;
+      margin-left: -5%;
+      z-index: 8;
+    }
+    &--p5 {
+      margin-top: -50%;
+      margin-left: 5%;
+      z-index: 9;
+    }
+    &--p6 {
+      margin-top: 5%;
+      margin-left: -40%;
+      z-index: 7;
+    }
+
+    &:hover {
+      z-index: 25;
+      transform: scale(1.1);
+      outline: 1rem solid #c1d0a5;
+    }
+  }
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.9);
+  }
+}

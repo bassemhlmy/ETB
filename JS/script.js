@@ -1,26 +1,20 @@
-const menuIcon = document.querySelector('.menu-icon');
-const mobileMenu = document.querySelector('.mobile-menu');
-const closeIcone = document.querySelector('.close')
+const menuIcon = document.querySelector('.nav__menu-icon');
+const mobileMenu = document.querySelector('.mobile-nav');
+const closeIcon = document.querySelector('.close-icon');
 const backDrop = document.querySelector('.back-drop');
-menuIcon.addEventListener('click',function(){
-  mobileMenu.classList.toggle('show-mobile-menu');
+menuIcon.addEventListener('click', function () {
+  mobileMenu.classList.toggle('mobile-nav__show');
   backDrop.classList.toggle('hide');
 });
-closeIcone.addEventListener('click',function(){
-  mobileMenu.classList.toggle('show-mobile-menu');
+closeIcon.addEventListener('click', function () {
+  mobileMenu.classList.toggle('mobile-nav__show');
   backDrop.classList.toggle('hide');
 });
-backDrop.addEventListener('click',function(){
-  mobileMenu.classList.toggle('show-mobile-menu');
+backDrop.addEventListener('click', function () {
+  mobileMenu.classList.toggle('mobile-nav__show');
   backDrop.classList.toggle('hide');
 });
-navItem.addEventListener('click',function(){
-  mobileMenu.classList.toggle('show-mobile-menu');
+navItem.addEventListener('click', function () {
+  mobileMenu.classList.toggle('mobile-nav__show');
   backDrop.classList.toggle('hide');
 });
-
-
-
-
-
-

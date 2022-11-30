@@ -1,0 +1,74 @@
+/**
+ * Basic typography style for copy text
+ */
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+a,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.heading-primary {
+  text-align: center;
+  &__main {
+    display: block;
+    background-image: linear-gradient(to right, rgb(19, 19, 137), $Blue);
+    background-clip: text;
+    color: transparent;
+    font-family: 'Raleway';
+    font-size: 3.4rem;
+    font-weight: 666;
+    letter-spacing: -0.15rem;
+    line-height: 1.1;
+    margin: 0;
+    text-align: center;
+    word-spacing: 0.65rem;
+  }
+
+  &__sub {
+    display: block;
+  }
+}
+
+.slogan {
+  text-align: center;
+  font-size: 0.6rem;
+  letter-spacing: 0.2rem;
+
+  &__quote {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__text {
+    background-image: linear-gradient(to right, rgb(201, 11, 11), $orange);
+    background-clip: text;
+    color: transparent;
+    &-main {
+      display: block;
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 0.9;
+      text-shadow: 3px 3px 8px rgba($Darker-Orange, 0.5);
+      padding-bottom: 1rem;
+    }
+    &-sub {
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.7rem;
+      color: $Darker-Orange;
+      text-shadow: 0.3rem 0.3rem 0.8rem rgba($Darker-Orange, 0.5);
+    }
+  }
+}

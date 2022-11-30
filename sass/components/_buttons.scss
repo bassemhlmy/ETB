@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+  background: $Dark-Green;
+  color: #fdfbf6;
+  font-size: 2.25rem;
+  font-weight: 500;
+  padding: 1.1rem 2.2rem;
+  box-shadow: 0.2rem 0.6rem 2.9rem 0 #000000;
+  text-shadow: 0.1rem 0.1rem 1.1rem #000000;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 0.8rem;
+
+  &:hover {
+    background: darken($Dark-Green, 5%);
+  }
+}

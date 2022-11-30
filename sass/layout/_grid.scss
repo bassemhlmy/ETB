@@ -1,0 +1,25 @@
+@import '_breakpoints';
+
+@mixin grid {
+  margin: 0 auto;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+}
+.grid-2 {
+  @include grid;
+  grid-template-columns: 1fr;
+  &--order-1 {
+    order: 1;
+  }
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.grid-3 {
+  @include grid;
+  grid-template-columns: 1fr;
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,109 @@
+//------------------ Desktop Devices Navigation menu------------------
+
+.nav {
+  padding-top: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+
+  &__logo {
+    width: 16rem;
+  }
+
+  &__menu-icon {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__items {
+    display: none;
+
+    @media (min-width: 992px) {
+      display: flex;
+      gap: 2rem;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      letter-spacing: 0.16rem;
+      font-size: 1.6rem;
+      color: $Darker-Blue;
+      font-weight: 700;
+      border-bottom: 0.4rem solid transparent;
+      transition: all 0.5s;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: lighten($Darker-Blue, 20%);
+        border-bottom: 0.4rem solid lighten($Darker-Blue, 20%);
+      }
+    }
+  }
+}
+
+//------------------ Small Devices Navigation menu--------------------
+
+.mobile-nav {
+  max-width: 65%;
+  height: 100vh;
+  background: url('../images/backgroud.webp');
+  background-size: cover;
+  background-position: top center;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translateX(120rem);
+  transition: all 0.7s ease-in-out;
+
+  &__show {
+    transform: translateX(0);
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    text-align: center;
+
+    li {
+      a {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $Darker-Blue;
+        border-bottom: 0.3rem solid transparent;
+        padding-bottom: 0.75rem;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          color: $Dark-Blue;
+          border-bottom: 0.3rem solid $Dark-Blue;
+        }
+      }
+    }
+  }
+
+  &__logo-box {
+    text-align: center;
+    margin-top: 10rem;
+  }
+
+  &__logo {
+    width: 22rem;
+    margin: 0 1rem;
+  }
+}
