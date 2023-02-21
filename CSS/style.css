@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/Raleway-VariableFont_wght.ttf');
+  src: url('../fonts/OpenSans-VariableFont_wdth\,wght.ttf');
   font-display: swap;
 }
 
@@ -306,6 +306,65 @@ body {
   vertical-align: middle;
 }
 
+.packages{
+  background-color: var(--light-gray);
+  margin-bottom: 7rem;
+}
+
+
+
+.packages-card{
+  width: auto;
+  height:79rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+  overflow: hidden
+}
+
+.packages-card:hover{
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.packages-card-img{
+  display: block;
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+}
+
+.packages-card-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+  
+}
+
+
+
+.packages-card-title{
+  display: inline-block;
+  font-size: 2.5rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1.2rem 0;
+}
+
+.packages-card-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #3d3d3d;
+  margin-bottom: 2.5rem;
+  text-align: justify;
+  }
+
 .about {
   background-color: #fff;
   margin-bottom: 7rem;
@@ -358,6 +417,8 @@ body {
   padding: 8rem 1.6rem 1.6rem 1.6rem;
 }
 
+
+
 .cards-container {
   padding: 3.2rem;
   row-gap: 4.8rem;
@@ -373,6 +434,7 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+
 
 .card-img {
   max-width: 100%;
@@ -587,7 +649,7 @@ body {
   }
 
   .service {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 
