@@ -13,6 +13,8 @@
     <meta name="”robots”" content="index, follow" />
     <link rel="stylesheet" href="CSS/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="CSS/Animation.css">
     <title>Egyptian Travel Bureau-ETB</title>
   </head>
 
@@ -27,7 +29,7 @@
           </svg>
           <ul class="nav-items">
             <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Packages</a></li>
+            <li class="nav-item"><a href="#packages" class="nav-link">Packages</a></li>
             <li class="nav-item">
               <a href="#" class="nav-link">Destinations</a>
             </li>
@@ -35,7 +37,7 @@
               <a href="#services" class="nav-link">Services</a>
             </li>
             <li class="nav-item"><a href="#who" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -49,7 +51,7 @@
             <a href="#" class="mobile-menu-link">Home</a>
           </li>
           <li class="mobile-menu-item">
-            <a href="#" class="mobile-menu-link">Packages</a>
+            <a href="#packages" class="mobile-menu-link">Packages</a>
           </li>
           <li class="mobile-menu-item">
             <a href="#" class="mobile-menu-link">Destinations</a>
@@ -61,7 +63,7 @@
             <a href="#who" class="mobile-menu-link">About</a>
           </li>
           <li class="mobile-menu-item">
-            <a href="#" class="mobile-menu-link">Contact</a>
+            <a href="#contact" class="mobile-menu-link">Contact</a>
           </li>
         </ul>
         <div class="logo-box">
@@ -80,12 +82,12 @@
             />
           </div>
           <div class="col-lg-6 order-lg-1">
-            <h1 class="">IT'S TIME TO EXPLORE THE WORLD</h1>
-            <div class="slogan-box">
+            <h1 class="fadeInDown">IT'S TIME TO EXPLORE THE WORLD</h1>
+            <div class="slogan-box fadeInUp">
               <svg class="quote">
                 <use xlink:href="images/sprite.svg#quote-left"></use>
               </svg>
-              <h2 class="">Spcialists</h2>
+              <h2 class="">Specialists</h2>
               <h3 class="">in art of travel</h3>
               <svg class="quote">
                 <use xlink:href="images/sprite.svg#quote-right"></use>
@@ -110,12 +112,17 @@
       </div>
     </section>
 
-    <section class="packages">
-      <div class="container-fluid">
+    <section class="packages" id="packages">
+     <div class="container-fluid" data-aos="fade-up" data-aos-offset="200"
+     data-os-delay ="50"
+     data-aos-duration="1000"
+     data-aos-easing="ease-in-out"
+     data-aos-mirror="true"
+     data-aos-once="false">
         <h2 class="section-header">Hot Travel Deals.</h2>
         <div class="cards-container row">
           <div class="card-box col-lg-3 col-md-8 p-0">
-            <div class="packages-card">
+            <div class="packages-card packages-img-hover">
               <img
                 src="images/Luxor_Aswan.webp"
                 alt=""
@@ -123,62 +130,42 @@
               />
               <div class="packages-card-content">
                 <p class="packages-card-title">
-                  8 Days Cairo, Luxor, and Aswan Tour Package From $1,230
+                  8 Days Cairo, Luxor, and Aswan Tour Package.
                 </p>
                 <p class="packages-card-text">
-                  Awesome tour to Cairo, Luxor, and Aswan that includes a
-                  private visit the highlights of the three cities! We are very
-                  glad in the fact to offer this tour to all our valued clients
-                  who wish to see the real face of ancient Egypt. We ask
-                  visitors who are planning a trip to Egypt to join us on this
-                  fantastic tour to the main cities of Egypt, Cairo, Luxor, and
-                  Aswan to see the impressive Pyramids, Temples, and royal
-                  temples as well.
+                  Price Starts From $1230
                 </p>
                 <button class="btn">More Details</Details> <span>&rarr;</span></button>
               </div>
             </div>
           </div>
           <div class="card-box col-lg-3 col-md-8 p-0">
-            <div class="packages-card">
+            <div class="packages-card packages-img-hover" data-aos="fade-in" data-aos-duration="4000">
               <img
-                src="images/abusimble.webp"
+                src="images/abu-simbel.webp"
                 alt=""
                 class="packages-card-img"
               />
               <div class="packages-card-content">
                 <p class="packages-card-title">
-                  Budget Tour Cairo, Aswan, Abu Simble, and Luxor Package From
-                  $980
+                  Budget Tour Cairo, Aswan, Abu Simble, and Luxor Package 
                 </p>
                 <p class="packages-card-text">
-                  Our Budget Egypt package is specially tailored for the fans of
-                  Pharaonic monuments, Ancient Egyptian History, and culture,
-                  the Cairo, Aswan, Abu Simble & Luxor Budget Package is one of
-                  the best Egypt packages that accommodate all travelers with a
-                  certain budget and would like to see as much as they can in
-                  our beautiful country Egypt.
+                  Price Starts From $980
                 </p>
-                <button class="btn mt-4">More Details</Details> <span>&rarr;</span></button>
+                <button class="btn">More Details</Details> <span>&rarr;</span></button>
               </div>
             </div>
           </div>
           <div class="card-box col-lg-3 col-md-8 p-0">
-            <div class="packages-card">
-              <img src="images/sharm.webp" alt="" class="packages-card-img" />
+            <div class="packages-card packages-img-hover">
+              <img src="images/sharm-el-sheikh.webp" alt="" class="packages-card-img" />
               <div class="packages-card-content">
                 <p class="packages-card-title">
-                  Cairo and Sharm El Sheikh Holiday. From $995
+                  Cairo and Sharm El Sheikh Holiday.
                 </p>
                 <p class="packages-card-text">
-                  Have you ever dreamt to spend a week in heaven? Cairo and
-                  Sharm El Sheikh Holiday are considered one of the
-                  best-tailored travel packages will allow you to spend an
-                  unforgettable week in the land of the Pharaohs, where you can
-                  enjoy your stay exploring the most unique collection of the
-                  monuments of one of the most famous civilization even known in
-                  the human history followed by four days in the red sea
-                  paradise Sharm El Sheikh.
+                  Price Starts From $995
                 </p>
                 <button class="btn">More Details</Details> <span>&rarr;</span></button>
               </div>
@@ -189,7 +176,12 @@
     </section>
 
     <section class="about">
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-offset="200"
+      data-os-delay ="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false">
         <h2 class="section-header">Why Travel with ETB?</h2>
 
         <div
@@ -241,7 +233,12 @@
     </section>
 
     <section class="section-who" id="who">
-      <div class="container">
+      <div class="container"  data-aos="fade-up" data-aos-offset="200"
+      data-os-delay ="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false">
         <h2 class="section-header">Who We Are?</h2>
         <div
           class="who-container row justify-content-lg-between align-items-center"
@@ -332,8 +329,13 @@
     </section>
 
     <section class="services" id="services">
+      <div class="container" data-aos="fade-up" data-aos-offset="200"
+      data-os-delay ="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false">
       <h2 class="section-header">What We Do?</h2>
-      <div class="container">
         <div class="row justify-content-around align-items-center">
           <div
             class="img-box col-lg-4 d-flex justify-content-center order-lg-last"
@@ -452,7 +454,12 @@
       </div>
     </section>
     <footer class="footer">
-      <div class="container">
+      <div class="container" id="contact" data-aos="fade-up" data-aos-offset="200"
+      data-os-delay ="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false">
         <div class="row justify-content-between align-items-start">
           <div class="col-lg-3">
             <img src="images/logo.webp" alt="" class="footer-logo" />
@@ -511,5 +518,9 @@
       </div>
     </footer>
     <script src="JS/script.js"></script>
-  </body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+    </body>
 </html>
