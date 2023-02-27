@@ -4,22 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Egyptian Travel Bureau is a global luxury and cost efficiency travel agency,
+    <meta name="description" content="Egyptian Travel Bureau is a global luxury and cost efficiency travel agency,
     combining comfort and authenticity across the most inspiring destinations
-    around the world"
-    />
+    around the world" />
     <meta name="”robots”" content="index, follow" />
-    <link rel="stylesheet" href="CSS/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="CSS/Animation.css">
     <title>Egyptian Travel Bureau-ETB</title>
   </head>
-
   <body>
     <header class="header">
+      <div class="ribbon"></div>
       <div class="back-drop hide"></div>
       <div class="container">
         <nav class="nav">
@@ -31,7 +28,7 @@
             <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="#packages" class="nav-link">Packages</a></li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Destinations</a>
+              <a href="#" class="nav-link">Tours Style</a>
             </li>
             <li class="nav-item">
               <a href="#services" class="nav-link">Services</a>
@@ -45,7 +42,6 @@
         <svg class="close">
           <use xlink:href="images/sprite.svg#Close"></use>
         </svg>
-
         <ul class="mobile-menu-items">
           <li class="mobile-menu-item">
             <a href="#" class="mobile-menu-link">Home</a>
@@ -54,7 +50,7 @@
             <a href="#packages" class="mobile-menu-link">Packages</a>
           </li>
           <li class="mobile-menu-item">
-            <a href="#" class="mobile-menu-link">Destinations</a>
+            <a href="#" class="mobile-menu-link">Tours Style</a>
           </li>
           <li class="mobile-menu-item">
             <a href="#services" class="mobile-menu-link">Services</a>
@@ -73,7 +69,7 @@
     </header>
     <section class="landing">
       <div class="container-fluid">
-        <div class="row justify-content-center align-items-center hero-img-box">
+        <div class="row justify-content-center align-items-center hero-box">
           <div class="col-lg-6 order-lg-2">
             <img
               src="images/Artboard1.webp"
@@ -82,7 +78,9 @@
             />
           </div>
           <div class="col-lg-6 order-lg-1">
-            <h1 class="fadeInDown">IT'S TIME TO EXPLORE THE WORLD</h1>
+            <h1 class="fadeInDown">IT'S TIME</h1>
+            <h1 class="fadeInDown">TO EXPLORE</h1>
+            <h1 class="fadeInDown">THE WORLD</h1>
             <div class="slogan-box fadeInUp">
               <svg class="quote">
                 <use xlink:href="images/sprite.svg#quote-left"></use>
@@ -93,41 +91,32 @@
                 <use xlink:href="images/sprite.svg#quote-right"></use>
               </svg>
             </div>
+            <div class="landing-icons">
+              <img src="images/iata-1-logo.webp" alt="" />
+              <img src="images/British.webp" alt="" />
+              <img src="images/fiat.webp" alt="" />
+              <img src="images/carlson.webp" alt="" />
+              <img src="images/hora.webp" alt="" />
+              <img src="images/Samsung.webp" alt="" />
+              <img src="images/sanofi.webp" alt="" />
+              <img src="images/siemens.webp" alt="" />
+              <img src="images/American.webp" alt="" />
+              <img src="images/olx.webp" alt="" />
+              <img src="images/Novarts.webp" alt="" />
+              <img src="images/redsea.webp" alt="" />
+            </div>
           </div>
-        </div>
-        <div class="landing-icons">
-          <img src="images/iata-1-logo.webp" alt="" />
-          <img src="images/British.webp" alt="" />
-          <img src="images/fiat.webp" alt="" />
-          <img src="images/carlson.webp" alt="" />
-          <img src="images/hora.webp" alt="" />
-          <img src="images/Samsung.webp" alt="" />
-          <img src="images/sanofi.webp" alt="" />
-          <img src="images/siemens.webp" alt="" />
-          <img src="images/American.webp" alt="" />
-          <img src="images/olx.webp" alt="" />
-          <img src="images/Novarts.webp" alt="" />
-          <img src="images/redsea.webp" alt="" />
         </div>
       </div>
     </section>
-
     <section class="packages" id="packages">
-     <div class="container-fluid" data-aos="fade-up" data-aos-offset="200"
-     data-os-delay ="50"
-     data-aos-duration="1000"
-     data-aos-easing="ease-in-out"
-     data-aos-mirror="true"
-     data-aos-once="false">
+      <a name="packages"></a>
+      <div class="container-fluid" data-aos="fade-up" data-aos-offset="200" data-os-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
         <h2 class="section-header">Hot Travel Deals.</h2>
-        <div class="cards-container row">
-          <div class="card-box col-lg-3 col-md-8 p-0">
+        <div class="cards-container row justify-content-center align-content-center">
+          <div class="card-box col-lg-3 p-0">
             <div class="packages-card packages-img-hover">
-              <img
-                src="images/Luxor_Aswan.webp"
-                alt=""
-                class="packages-card-img"
-              />
+              <img src="images/Luxor_Aswan.webp" alt="" class="packages-card-img" />
               <div class="packages-card-content">
                 <p class="packages-card-title">
                   8 Days Cairo, Luxor, and Aswan Tour Package.
@@ -135,29 +124,25 @@
                 <p class="packages-card-text">
                   Price Starts From $1230
                 </p>
-                <button class="btn">More Details</Details> <span>&rarr;</span></button>
+                <button class="btn btn-lg btn-outline-success" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 2rem;"><a href="package_1.html">More Details</a></Details> <span>&rarr;</span></button>
               </div>
             </div>
           </div>
-          <div class="card-box col-lg-3 col-md-8 p-0">
+          <div class="card-box col-lg-3 p-0">
             <div class="packages-card packages-img-hover" data-aos="fade-in" data-aos-duration="4000">
-              <img
-                src="images/abu-simbel.webp"
-                alt=""
-                class="packages-card-img"
-              />
+              <img src="images/abu-simbel.webp" alt="" class="packages-card-img" />
               <div class="packages-card-content">
                 <p class="packages-card-title">
-                  Budget Tour Cairo, Aswan, Abu Simble, and Luxor Package 
+                  Budget Tour Cairo, Aswan, Abu Simble, and Luxor Package
                 </p>
                 <p class="packages-card-text">
                   Price Starts From $980
                 </p>
-                <button class="btn">More Details</Details> <span>&rarr;</span></button>
+                <button class="btn btn-lg btn-outline-success" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 2rem;"><a href="package_2.html">More Details</a></Details> <span>&rarr;</span></button>
               </div>
             </div>
           </div>
-          <div class="card-box col-lg-3 col-md-8 p-0">
+          <div class="card-box col-lg-3 p-0">
             <div class="packages-card packages-img-hover">
               <img src="images/sharm-el-sheikh.webp" alt="" class="packages-card-img" />
               <div class="packages-card-content">
@@ -167,26 +152,18 @@
                 <p class="packages-card-text">
                   Price Starts From $995
                 </p>
-                <button class="btn">More Details</Details> <span>&rarr;</span></button>
+                <button class="btn btn-lg btn-outline-success" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 2rem;"><a href="package_3.html">More Details</a></Details> <span>&rarr;</span></button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <section class="about">
-      <div class="container" data-aos="fade-up" data-aos-offset="200"
-      data-os-delay ="50"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false">
+      <a name="about"></a>
+      <div class="container" data-aos="fade-up" data-aos-offset="200" data-os-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
         <h2 class="section-header">Why Travel with ETB?</h2>
-
-        <div
-          class="cards-container row justify-content-between align-items-center"
-        >
+        <div class="cards-container row justify-content-between align-items-center">
           <div class="card-box col-lg-3 col-md-8 p-0">
             <div class="card">
               <img src="images/feature-2.webp" alt="" class="card-img" />
@@ -200,7 +177,6 @@
               </div>
             </div>
           </div>
-
           <div class="card-box col-lg-3 col-md-8 p-0">
             <div class="card">
               <img src="images/feature-3.webp" alt="" class="card-img" />
@@ -214,7 +190,6 @@
               </div>
             </div>
           </div>
-
           <div class="card-box col-lg-3 col-md-8 p-0">
             <div class="card">
               <img src="images/feature-4.webp" alt="" class="card-img" />
@@ -231,18 +206,11 @@
         </div>
       </div>
     </section>
-
     <section class="section-who" id="who">
-      <div class="container"  data-aos="fade-up" data-aos-offset="200"
-      data-os-delay ="50"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false">
+      <a name="who"></a>
+      <div class="container" data-aos="fade-up" data-aos-offset="200" data-os-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
         <h2 class="section-header">Who We Are?</h2>
-        <div
-          class="who-container row justify-content-lg-between align-items-center"
-        >
+        <div class="who-container row justify-content-lg-between align-items-center">
           <div class="col-lg-8">
             <p>
               ETB is a global luxury and cost efficiency travel agency,
@@ -265,11 +233,7 @@
             </p>
           </div>
           <div class="img-box col-lg-4">
-            <img
-              src="images/whojpg.webp"
-              alt=""
-              class="d-flex justify-content-center order-1"
-            />
+            <img src="images/whojpg.webp" alt="" class="d-flex justify-content-center order-1" />
           </div>
           <div class="who-tex-box col-lg-10 order-2">
             <svg class="who-icon">
@@ -284,7 +248,6 @@
               <use xlink:href="images/sprite.svg#rocket"></use>
             </svg>
             <h3>Our Mission</h3>
-
             <p>
               ETB is committed to provide travel that enhances and changes lives
               with our unparalleled value and expertise.
@@ -300,7 +263,6 @@
               as we believe that our collaboration with them is the key to our
               success of us.
             </p>
-
             <p>
               We have been at the forefront of travel for many years and the key
               to our success has been our wisdom of the years and power of the
@@ -323,116 +285,92 @@
             </p>
           </div>
         </div>
-
-        <button class="btn">Learn More &rarr;</button>
+        <button class="btn btn-lg btn-outline-success" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 2rem;">Learn More &rarr;</button>
       </div>
     </section>
-
     <section class="services" id="services">
-      <div class="container" data-aos="fade-up" data-aos-offset="200"
-      data-os-delay ="50"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false">
-      <h2 class="section-header">What We Do?</h2>
+      <a name="services"></a>
+      <div class="container" data-aos="fade-up" data-aos-offset="200" data-os-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
+        <h2 class="section-header">What We Do?</h2>
         <div class="row justify-content-around align-items-center">
-          <div
-            class="img-box col-lg-4 d-flex justify-content-center order-lg-last"
-          >
+          <div class="img-box col-lg-4 d-flex justify-content-center order-lg-last">
             <img src="images/Arround-the-world.webp" alt="" />
           </div>
           <ul class="col-lg-8">
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >Nile Cruise Bookings.
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>Nile Cruise Bookings.
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >Special Interest and A La Cart Tours
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>Special Interest and A La Cart Tours
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >Airport reception and assistance
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>Airport reception and assistance
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >Diving Safari and Adventure Tours.
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>Diving Safari and Adventure Tours.
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >Honeymoon Packages.
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>Honeymoon Packages.
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >Conventional and Deep Egypt Tours
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>Conventional and Deep Egypt Tours
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >Egypt Entry Visa Assistance.
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>Egypt Entry Visa Assistance.
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >Echo Tours and Desert Safari.
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>Echo Tours and Desert Safari.
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >Flight and Train Bookings.
-            </li>
-
-            <li class="service">
-              <span
-                ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >Conferences, Convention, and Incentive tours.
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>Flight and Train Bookings.
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >A huge transportation fleet that fits all Group Sizes.
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>Conferences, Convention, and Incentive tours.
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >Ground Handling Services for charter flight operation.
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>A huge transportation fleet that fits all Group Sizes.
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >MICE - Meeting, Incentive.
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>Ground Handling Services for charter flight operation.
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >Worldwide Hotels Reservations.
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>MICE - Meeting, Incentive.
             </li>
             <li class="service">
               <span
                 ><svg>
-                  <use xlink:href="images/sprite.svg#Done"></use></svg></span
-              >International & Domestic Travel Insurance.
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>Worldwide Hotels Reservations.
+            </li>
+            <li class="service">
+              <span
+                ><svg>
+                  <use xlink:href="images/sprite.svg#Done"></use></svg></span>International & Domestic Travel Insurance.
             </li>
             <li class="service">
               <span
@@ -450,19 +388,20 @@
             </li>
           </ul>
         </div>
-        <button class="btn">Learn More &rarr;</button>
+        <button class="btn btn-lg btn-outline-success" style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 2rem;"><i class="fa fa-arrow-right"></i>Learn More &rarr;</button>
       </div>
     </section>
     <footer class="footer">
-      <div class="container" id="contact" data-aos="fade-up" data-aos-offset="200"
-      data-os-delay ="50"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false">
+      <div class="container" id="contact" data-aos="fade-up" data-aos-offset="200" data-os-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
         <div class="row justify-content-between align-items-start">
           <div class="col-lg-3">
             <img src="images/logo.webp" alt="" class="footer-logo" />
+            <div>
+              <p class="text-center"><a href="etb_terms.html">Terms and conditions</a></p>
+            </div>
+            <div>
+              <p class="text-center"><a href="egy_visa.html">Egyptian Travel Visa</a></p>
+            </div>
           </div>
           <div class="col-lg-4">
             <h3>Social</h3>
@@ -492,35 +431,32 @@
             <p>
               <span class="footer-icon contact-icon"
                 ><svg>
-                  <use xlink:href="images/sprite.svg#address"></use></svg></span
-              >3,Nour Elidin St, Heliopolis,Cairo,Egypt.
+                  <use xlink:href="images/sprite.svg#address"></use></svg></span>3,Nour Elidin St, Heliopolis,Cairo,Egypt.
             </p>
             <p>
               <span class="footer-icon contact-icon"
                 ><svg>
-                  <use xlink:href="images/sprite.svg#email"></use></svg></span
-              >info@etb-eg.com
+                  <use xlink:href="images/sprite.svg#email"></use></svg></span><a href ="mailto:info@etb-eg.com">info@etb-eg.com</a>
             </p>
             <p>
               <span class="footer-icon contact-icon"
                 ><svg>
-                  <use xlink:href="images/sprite.svg#phone"></use></svg></span
-              >(+202)24192558 - (+202)24192559
+                  <use xlink:href="images/sprite.svg#phone"></use></svg></span>(+202)24192558 - (+202)24192559
             </p>
             <p>
               <span class="footer-icon contact-icon"
                 ><svg>
-                  <use xlink:href="images/sprite.svg#fax"></use></svg></span
-              >(+202)24150481
+                  <use xlink:href="images/sprite.svg#fax"></use></svg></span>(+202)24150481
             </p>
           </div>
         </div>
       </div>
     </footer>
     <script src="JS/script.js"></script>
+    <script src="JS/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-    </body>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
