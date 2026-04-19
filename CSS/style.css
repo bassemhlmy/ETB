@@ -1,24 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Noto+Sans+Mayan+Numerals:wght@400&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 :root {
-  /* ... existing vars ... */
-  --Blue: #1c7ed6;
-  --Dark-Blue: #1864ab;
-  --Darker-Blue: #003366;
-  --Darker-Orange: #e67e22;
-  --very-Dark-Gray: #333;
-  --White: #ffffff;
+  /* Colors - Derived from Logo */
+  --primary-blue: #3399cc;      /* Logo Main Text */
+  --accent-gold: #edc952;       /* Sun/Mountain Highlight */
+  --accent-orange: #e58c4f;     /* Travel Bureau Banner */
+  --nile-teal: #1d7373;         /* Wave/Nature Accent */
+  --desert-beige: #f0dfbb;      /* Soft Background */
+  
+  /* Neutral Colors */
+  --white: #ffffff;
+  --dark-grey: #333333;
+  --light-grey: #f4f4f4;
+
+  /* Typography */
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Lato', sans-serif;
+
+  /* Spacing & Sizing */
+  --section-padding: 60px;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
 }
 
+/* Base styles using the variables */
 
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+body {
+  font-family: var(--body-font);
+  background-color: var(--white);
+  color: var(--dark-grey);
+  line-height: 1.6;
+  font-size:large;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-blue);
+  font-weight: 700;
 }
 
 html {
@@ -46,6 +71,16 @@ a:active {
 .text-center {
   text-align: center;
 }
+.button-primary {
+  background-color: var(--accent-gold);
+  color: var(--dark-grey);
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed);
+}
+
+.button-primary:hover {
+  background-color: var(--accent-orange);
+}
 
 .hide {
   display: none !important;
@@ -53,11 +88,6 @@ a:active {
 
 /* ----------------------Nav-Bar------------------------- */
 
-body {
-  font-family: 'Noto Sans Mayan Numerals', sans-serif;
-  font-size: 1.8rem;
-  line-height: 1.7;
-}
 
 .header {
   background-color: var(--light-gray);
@@ -155,7 +185,7 @@ body.no-scroll {
   flex-direction: column;
   row-gap: 3rem;
   text-align: center;
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--heading-font);
   color: var(--Darker-Blue);
 }
 
@@ -232,32 +262,36 @@ body.no-scroll {
 }
 
 .landing h1 {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--heading-font);
   font-size: clamp(3rem, 5vw, 5rem);
   line-height: 1;
   letter-spacing: -.2rem;
   word-spacing: 0.6rem;
   text-align: center;
-  color: var(--Darker-Blue);
+  color: var(--nile-teal);
   margin: 1rem;
   font-weight: 800;
   text-shadow: 5px 0px 6px #B5CCE6;
 }
 
+.landing h1 span {
+  display: block;
+}
+
 .landing h2 {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--body-font);
   font-size: 4rem;
   font-weight: 800;
-  color: var(--Darker-Orange);
+  color: var(--dark-grey);
   line-height: 1;
   text-shadow: 3px 3px 8px rgba(150, 54, 6, 0.5);
 }
 
 .landing h3 {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--body-font);
   font-size: 3rem;
   font-weight: 500;
-  color: var(--Darker-Orange);
+  color: var(--dark-grey);
   text-shadow: 0.3rem 0.3rem 0.8rem rgba(150, 54, 6, 0.5);
 }
 
@@ -297,7 +331,7 @@ body.no-scroll {
 
 .packages-card {
   width: 100%;
-  max-width: 40rem;
+  max-width:45rem;
   min-height: 50rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background: var(--White);
@@ -340,13 +374,14 @@ body.no-scroll {
   font-weight: 700;
   text-align: center;
   padding: 1rem 0;
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--body-font);
+  color: var(--dark-grey);
 }
 
 .packages-card-text {
   font-size: 2.25rem;
   line-height: 1.6;
-  color: var(--Darker-Orange);
+  color: var(--accent-orange);
   font-weight: bold;
   margin-bottom: 2rem;
   text-align: justify;
@@ -362,7 +397,7 @@ body.no-scroll {
   background-repeat: no-repeat;
   display: block;
   width: 100%;
-  height: 40rem;
+  height: 50rem;
   padding: 3.2rem;
   display: flex;
   flex-direction: column;
@@ -383,17 +418,17 @@ body.no-scroll {
 
 .banner_1 {
   background-image: url('../images/luxor_banner.webp');
-  background-position: center center;
+  background-position: center;
 }
 
 .banner_2 {
   background-image: url('../images/Abu_Simbel_banner.webp');
-  background-position: top center;
+  background-position: center;
 }
 
 .banner_3 {
   background-image: url('../images/sharm-el-sheikh-banner.webp');
-  background-position: top center;
+  background-position:center;
 }
 
 .package_details {
@@ -411,9 +446,9 @@ body.no-scroll {
 }
 
 .section-header {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--heading-font);
   font-size: 3.6rem;
-  color: var(--very-Dark-Gray);
+  color: var(--nile-teal);
   font-weight: 800;
   text-align: center;
   padding: 4.8rem 0;
@@ -426,9 +461,9 @@ body.no-scroll {
 }
 
 .section-sub-header {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--heading-font);
   font-size: 2.5rem;
-  color: var(--very-Dark-Gray);
+  color: var(--nile-teal);
   font-weight: 800;
   text-align: left;
   width: -webkit-fit-content;
@@ -442,7 +477,7 @@ body.no-scroll {
   position: absolute;
   height: 0.5rem;
   width: 70%;
-  background-color: var(--Darker-Orange);
+  background-color: var(--nile-teal);
   bottom: 3rem;
   left: calc(15%);
 }
