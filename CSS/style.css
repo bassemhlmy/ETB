@@ -53,6 +53,9 @@
   --accent-orange: var(--color-price);
   --Darker-Orange: var(--color-footer-accent);
   --very-Dark-Gray: var(--color-footer-bg);
+  --footer-padding: 3rem 1rem;
+  --icon-social-size: 4rem;   /* Adjusted for the blue circles in your image */
+  --icon-contact-size: 3rem; /* Smaller for the contact list */
   --radius-md: 1.2rem;
   --shadow-card: 0 0.1rem 2rem 1rem rgb(51 51 51 / 23%);
   --shadow-card-hover: 0 4rem 8rem rgba(0, 0, 0, 0.5);
@@ -539,11 +542,11 @@ body.no-scroll {
 
 .card-title {
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: clamp(2rem,10vw,1rem);
   line-height: 3.2rem;
-  font-weight: 700;
+  font-weight: 800;
   text-align: center;
-  padding: 8rem 1.6rem 1.6rem 1.6rem;
+  padding: 6rem 1.6rem 1.6rem 1.6rem;
 }
 
 .cards-container {
@@ -651,9 +654,10 @@ body.no-scroll {
 .footer {
   background-color: var(--color-footer-bg);
   color: var(--color-footer-text);
-  padding: 2rem 1rem 2rem;
+  padding: 4rem 1rem; /* Increased vertical padding for a more premium feel */
 }
 
+/* 1. Header Styling */
 .footer h3 {
   font-size: 2.5rem;
   font-weight: 800;
@@ -662,6 +666,8 @@ body.no-scroll {
   position: relative;
   display: inline-block;
   font-family: var(--font-heading);
+  color: var(--color-footer-text);
+  margin-bottom: 1.5rem; /* Added margin to push content down */
 }
 
 .footer h3::after {
@@ -671,38 +677,98 @@ body.no-scroll {
   width: 95%;
   background-color: var(--color-footer-accent);
   bottom: 1.5rem;
-  left: 5%;
+  left: 0; /* Changed from 5% to 0 for better alignment with text */
+}
+/* --- Shared Variables & Reset --- */
+.footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  padding: 4rem 1rem;
 }
 
+/* --- Typography & Headers --- */
+.footer h3 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+.footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  padding: var(--footer-padding);
+}
+
+/* --- Headers with Accent Bar --- */
+.footer h3 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer h3::after {
+  content: '';
+  position: absolute;
+  bottom: 1rem; /* Moves bar below text */
+  left: 0;
+  height: 4px;
+  width: 10rem; /* Small accent bar like your image */
+  background-color: var(--color-footer-accent);
+}
+
+/* --- Branding & Links --- */
 .footer-logo {
-  width: 25rem;
-  margin-bottom: 2rem;
+  max-width: 220px;
+  margin-bottom: 1.5rem;
 }
 
-.footer-icon svg {
-  width: 4rem;
-  height: 4rem;
-  vertical-align: middle;
+.footer-links a {
+  display: block;
+  font-size: var(--text-footer);
+  margin-bottom: 0.8rem;
+  transition: color 0.3s;
 }
 
-.social-icon svg {
-  margin-right: 1.25rem;
-  transition: var(--transition-slow);
+/* --- Social Icons (The Row Fix) --- */
+.social-list {
+  display: flex;       /* Forces them into a row */
+  flex-wrap: wrap;     /* Allows wrapping on tiny screens */
+  gap: 1.5rem;         /* Space between icons */
+  padding-top: 1rem;
 }
 
-.social-icon svg:hover {
-  transform: scale(1.25);
+.social-list svg {
+  width: var(--icon-social-size);
+  height: var(--icon-social-size);
+  fill: #55acee; /* Match that sky blue from your image */
+  transition: transform 0.3s;
 }
 
-.contact-icon {
-  margin-right: 2rem;
+.social-list a:hover svg {
+  transform: translateY(-5px);
 }
 
-.contact-info p {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+/* --- Contact Info --- */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
 }
 
+.contact-item svg {
+  width: var(--icon-contact-size);
+  height: var(--icon-contact-size);
+  fill: var(--brand-accent);
+  flex-shrink: 0;
+}
 /* Mobile First i.e Smaller to Larger Devices */
 
 /* X-Small devices (portrait phones, less than 576px) */
