@@ -476,37 +476,29 @@ body.no-scroll {
 
 .about-section p {
     font-family: var(--font-body);
-    color: var(--color-text-main);
+    color: var(--text-main);
     line-height: 1.8;
 }
 
 .value-card {
-    background-color: var(--color-accent); /* Using the sand color for the background */
-    border-left: 5px solid var(--color-secondary); /* Using the palm green for accent */
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    transition: transform var(--transition-fast);
+    background: #f9f9f9;
+    padding: 3rem;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--brand-primary);
+    box-shadow: var(--shadow-card);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .value-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-bold);
+    box-shadow: var(--shadow-card-hover);
 }
 
 .about-image img {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
 }
-
-
-.value-card {
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 4px solid #005a87;
-    box-shadow: var(--shadow-card);
-    }
 
 .office-list {
     display: flex;
@@ -547,45 +539,33 @@ body.no-scroll {
     min-width: 40rem;
 }
 
-.banner_1 {
-    background-image: url("../images/luxor_banner.webp");
+.banner_1,
+.banner_2,
+.banner_3 {
     position: relative;
-  color: #fff;
+    background-position: center;
 }
 
-.banner_1::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* overlay for readability */
+.banner_1 {
+    background-image: url("../images/luxor_banner.webp");
+    color: #fff;
 }
 
 .banner_2 {
     background-image: url("../images/Abu_Simbel_banner.webp");
 }
 
-.banner_2::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* overlay for readability */
-}
-
 .banner_3 {
     background-image: url("../images/sharm-el-sheikh-banner.webp");
 }
 
+.banner_1::before,
+.banner_2::before,
 .banner_3::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* overlay for readability */
-}
-
-.banner_1,
-.banner_2,
-.banner_3 {
-    background-position: center;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* overlay for readability */
 }
 
 .banner-subtitle {
