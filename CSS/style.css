@@ -328,14 +328,14 @@ body.no-scroll {
 }
 
 /* Ensure your content stays on top of the gradient */
-.landing .container {
+.landing .container,
+.landing .container-fluid {
     position: relative;
     z-index: 2;
 }
 
 .landing {
     position: relative;
-    background-image: url("");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -350,7 +350,7 @@ body.no-scroll {
 }
 
 .landing h1 {
-    font-family: var(--brand-secondary-strong);
+    font-family: var(--font-heading);
     font-size: clamp(2rem, 5vw, 2.5rem);
     font-weight: 800;
     line-height: 1;
@@ -389,6 +389,7 @@ body.no-scroll {
     align-items: center;
 }
 
+.slogan-box h2,
 .slogan-box h3 {
     font-family: var(--body-font);
     font-weight: 400;
@@ -512,7 +513,7 @@ body.no-scroll {
     padding: 8px 15px;
     border-radius: 20px;
     font-weight: bold;
-    font-size: clamp(1rem,3vw,1.75rem)
+    font-size: clamp(1rem, 3vw, 1.75rem);
 }
 
 
@@ -536,9 +537,10 @@ body.no-scroll {
     font-weight: 600;
     line-height: 1.4;
     max-width: 100rem;
-    min-width: 40rem;
+    min-width: 0;
 }
 
+/* Shared hero overlay keeps banner copy readable across package pages. */
 .banner_1,
 .banner_2,
 .banner_3 {
@@ -607,10 +609,9 @@ body.no-scroll {
     font-size: 3rem;
     text-align: center;
     padding: 4.8rem 0;
-    margin-bottom: 1.6rem;
     position: relative;
     width: fit-content;
-    margin: auto;
+    margin: 0 auto 1.6rem;
 }
 
 .section-sub-title {
@@ -637,12 +638,13 @@ body.no-scroll {
 
 
 .offices-section{
-margin-top: 3rem;
-padding-left: 1rem;
+    margin-top: 3rem;
+    padding-left: 1rem;
 }
+
 .card-title {
     display: inline-block;
-    font-size: clamp(2rem, 10vw, 1rem);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
     line-height: 3.2rem;
     font-weight: 800;
     text-align: center;
@@ -754,64 +756,15 @@ padding-left: 1rem;
 .footer {
     background-color: var(--color-footer-bg);
     color: var(--color-footer-text);
-    padding: 4rem 1rem;
-    /* Increased vertical padding for a more premium feel */
-}
-
-/* 1. Header Styling */
-.footer h3 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    text-transform: capitalize;
-    padding-bottom: 2rem;
-    position: relative;
-    display: inline-block;
-    font-family: var(--font-heading);
-    color: var(--color-footer-text);
-    margin-bottom: 1.5rem;
-    /* Added margin to push content down */
-}
-
-.footer h3::after {
-    content: "";
-    position: absolute;
-    height: 0.2rem;
-    width: 95%;
-    background-color: var(--color-footer-accent);
-    bottom: 1.5rem;
-    left: 0;
-    /* Changed from 5% to 0 for better alignment with text */
-}
-
-/* --- Shared Variables & Reset --- */
-.footer {
-    background-color: var(--color-footer-bg);
-    color: var(--color-footer-text);
-    padding: 4rem 1rem;
-}
-
-/* --- Typography & Headers --- */
-.footer h3 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 800;
-    text-transform: capitalize;
-    margin-bottom: 2.5rem;
-    position: relative;
-    display: inline-block;
-}
-
-.footer {
-    background-color: var(--color-footer-bg);
-    color: var(--color-footer-text);
     padding: var(--footer-padding);
 }
 
-/* --- Headers with Accent Bar --- */
+/* Footer headings share one accent treatment to avoid conflicting overrides. */
 .footer h3 {
     font-family: var(--font-heading);
     font-size: 2.2rem;
     font-weight: 700;
+    text-transform: capitalize;
     margin-bottom: 0.5rem;
     position: relative;
     display: inline-block;
@@ -837,7 +790,8 @@ padding-left: 1rem;
 
 .footer-links a {
     display: block;
-    font-size: var(--text-footer);
+    color: inherit;
+    font-size: 1.6rem;
     margin-bottom: 0.8rem;
     transition: color 0.3s;
 }
