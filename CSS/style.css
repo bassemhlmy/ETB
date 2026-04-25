@@ -549,20 +549,58 @@ body.no-scroll {
 
 .banner_1 {
     background-image: url("../images/luxor_banner.webp");
+    position: relative;
+  color: #fff;
+}
+
+.banner_1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* overlay for readability */
 }
 
 .banner_2 {
     background-image: url("../images/Abu_Simbel_banner.webp");
 }
 
+.banner_2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* overlay for readability */
+}
+
 .banner_3 {
     background-image: url("../images/sharm-el-sheikh-banner.webp");
+}
+
+.banner_3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* overlay for readability */
 }
 
 .banner_1,
 .banner_2,
 .banner_3 {
     background-position: center;
+}
+
+.banner-subtitle {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 400;
+  color: #f8faf3; /* soft white (matches your palette) */
+  margin-top: 0.8rem;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.banner-subtitle strong {
+  color: #f5982f; /* Sea Buckthorn accent */
+  font-weight: 600;
 }
 
 .package_details {
