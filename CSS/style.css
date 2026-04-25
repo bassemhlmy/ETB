@@ -561,7 +561,9 @@ body.no-scroll {
 /* Shared hero overlay keeps banner copy readable across package pages. */
 .banner_1,
 .banner_2,
-.banner_3 {
+.banner_3,
+.banner_4,
+.banner_5 {
     position: relative;
     background-position: center;
 }
@@ -575,10 +577,16 @@ body.no-scroll {
     background-image: url("../images/Abu_Simbel_banner.webp");
 }
 
+
 .banner_3 {
     background-image: url("../images/sharm-el-sheikh-banner.webp");
 }
-
+.banner_4 {
+    background-image: url("../images/pyramids.webp");
+}
+.banner_5 {
+    background-image: url("../images/nile_cruse.webp");
+}
 .banner_1::before,
 .banner_2::before,
 .banner_3::before {
