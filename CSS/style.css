@@ -652,16 +652,7 @@ body.no-scroll {
 }
 
 .cards-container {
-    display: grid;
-    /* This creates as many columns as will fit, each at least 300px wide */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
     padding: 3.2rem;
-}
-
-.card-box {
-    width: 100%;
-    margin: 0;
 }
 
 .card-img {
