@@ -66,6 +66,24 @@
     --shadow-button-active: 0 2px 6px rgba(13, 27, 42, 0.2);
     --transition-base: all 0.3s ease;
     --transition-slow: all 0.5s ease-in-out;
+
+    /* --- Fluid type scale --- */
+    --font-size-body: clamp(1.6rem, 1.45rem + 0.35vw, 2rem);
+    --font-size-button: clamp(1.3rem, 1.2rem + 0.2vw, 1.5rem);
+    --font-size-nav-mobile: clamp(2rem, 1.8rem + 0.6vw, 2.5rem);
+    --font-size-hero-title: clamp(2rem, 1.5rem + 1.8vw, 3.4rem);
+    --font-size-hero-subtitle: clamp(1.5rem, 1.3rem + 0.7vw, 2.2rem);
+    --font-size-hero-copy: clamp(2.2rem, 1.9rem + 0.9vw, 3rem);
+    --font-size-card-title: clamp(1.9rem, 1.6rem + 0.9vw, 2.3rem);
+    --font-size-card-price: clamp(1.8rem, 1.55rem + 0.8vw, 2.25rem);
+    --font-size-banner-title: clamp(2.6rem, 2rem + 1.8vw, 4rem);
+    --font-size-section-title: clamp(2.4rem, 2rem + 1vw, 3rem);
+    --font-size-section-subtitle: clamp(1.8rem, 1.65rem + 0.5vw, 2.2rem);
+    --font-size-icon-box: clamp(3.2rem, 2.8rem + 1vw, 4rem);
+    --font-size-footer-title: clamp(1.9rem, 1.75rem + 0.5vw, 2.2rem);
+    --font-size-footer-link: clamp(1.4rem, 1.3rem + 0.3vw, 1.6rem);
+    --font-size-contact: clamp(1.6rem, 1.45rem + 0.5vw, 2rem);
+    --font-size-service: clamp(1.7rem, 1.55rem + 0.4vw, 2rem);
 }
 
 /* Base styles using the variables */
@@ -88,7 +106,7 @@ body {
     font-family: var(--font-body);
     background-color: var(--bg-main);
     color: var(--text-main);
-    font-size: 2rem;
+    font-size: var(--font-size-body);
 }
 
 html {
@@ -122,7 +140,7 @@ a {
 
     /* Typography */
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: var(--font-size-button);
     /* Slightly more balanced size */
     font-weight: 800;
     letter-spacing: 1.5px;
@@ -259,7 +277,7 @@ body.no-scroll {
 }
 
 .mobile-menu-link {
-    font-size: 2rem;
+    font-size: var(--font-size-nav-mobile);
     font-weight: 600;
     color: var(--brand-secondary-strong);
     border-bottom: 0.3rem solid #1d4b7900;
@@ -351,7 +369,7 @@ body.no-scroll {
 
 .landing h1 {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: var(--font-size-hero-title);
     font-weight: 800;
     line-height: 1;
     text-transform: uppercase;
@@ -374,7 +392,7 @@ body.no-scroll {
 }
 
 .landing h3 {
-    font-size: 3rem;
+    font-size: var(--font-size-hero-copy);
     font-weight: 500;
     text-shadow: 0.3rem 0.3rem 0.8rem rgba(150, 54, 6, 0.5);
 }
@@ -394,7 +412,7 @@ body.no-scroll {
     font-family: var(--body-font);
     font-weight: 400;
     /* Light weight for a high-end feel */
-    font-size: 1.5rem;
+    font-size: var(--font-size-hero-subtitle);
     line-height: 1.5;
     margin: 0;
     color: var(--dark-grey);
@@ -450,7 +468,7 @@ body.no-scroll {
 
 .packages-card-title {
     display: inline-block;
-    font-size: 2.3rem;
+    font-size: var(--font-size-card-title);
     line-height: 2.4rem;
     font-weight: 700;
     text-align: center;
@@ -458,7 +476,7 @@ body.no-scroll {
 }
 
 .packages-card-text {
-    font-size: 2.25rem;
+    font-size: var(--font-size-card-price);
     line-height: 1.6;
     color: var(--color-price);
     font-weight: bold;
@@ -532,7 +550,7 @@ body.no-scroll {
 .banner h1 {
     color: var(--text-inverse);
     font-family: var(--font-heading);
-    font-size: 2.6rem;
+    font-size: var(--font-size-banner-title);
     text-shadow: 4px 3px 18px #101010;
     font-weight: 600;
     line-height: 1.4;
@@ -606,7 +624,7 @@ body.no-scroll {
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: var(--font-size-section-title);
     text-align: center;
     padding: 4.8rem 0;
     position: relative;
@@ -615,7 +633,7 @@ body.no-scroll {
 }
 
 .section-sub-title {
-    font-size: 2rem;
+    font-size: var(--font-size-section-subtitle);
     text-align: left;
     width: fit-content;
     margin-top: 1rem;
@@ -677,7 +695,7 @@ body.no-scroll {
     background: #fff;
     text-align: center;
     border-radius: 50%;
-    font-size: 4rem;
+    font-size: var(--font-size-icon-box);
     box-shadow: 0 0.1rem 2rem 1rem rgb(51 51 51 / 23%);
 }
 
@@ -753,7 +771,7 @@ body.no-scroll {
 /* Footer headings share one accent treatment to avoid conflicting overrides. */
 .footer h3 {
     font-family: var(--font-heading);
-    font-size: 2.2rem;
+    font-size: var(--font-size-footer-title);
     font-weight: 700;
     text-transform: capitalize;
     margin-bottom: 0.5rem;
@@ -782,7 +800,7 @@ body.no-scroll {
 .footer-links a {
     display: block;
     color: inherit;
-    font-size: 1.6rem;
+    font-size: var(--font-size-footer-link);
     margin-bottom: 0.8rem;
     transition: color 0.3s;
 }
@@ -816,7 +834,7 @@ body.no-scroll {
     align-items: center;
     gap: 1.2rem;
     margin-bottom: 1.2rem;
-    font-size: 2rem;
+    font-size: var(--font-size-contact);
 }
 
 .contact-item svg {
@@ -841,18 +859,12 @@ body.no-scroll {
         max-width: 70%;
     }
 
-    .banner h1 {
-        font-size: 3.3rem;
-        font-weight: 700;
-        line-height: 1.4;
-    }
-
     .section-who .img-box {
         padding: 5rem;
     }
 
     .contact-info p {
-        font-size: 2.2rem;
+        font-size: var(--font-size-contact);
     }
 
     .footer .row {
@@ -863,22 +875,12 @@ body.no-scroll {
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
-    .mobile-menu-link {
-        font-size: 2.5rem;
-    }
-
     .hero-img {
         max-width: 54%;
     }
 
-    .banner h1 {
-        font-size: 3.6rem;
-        font-weight: 700;
-        line-height: 1.4;
-    }
-
     .service {
-        font-size: 2rem;
+        font-size: var(--font-size-service);
     }
 }
 
@@ -912,12 +914,6 @@ body.no-scroll {
         display: none;
     }
 
-    .banner h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        line-height: 1.4;
-    }
-
     .section-who .img-box {
         padding: 4rem;
     }
@@ -943,11 +939,6 @@ body.no-scroll {
         margin-bottom: 8rem;
     }
 
-    .banner h1 {
-        font-size: 3.6rem;
-        font-weight: 700;
-        line-height: 1.4;
-    }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
@@ -957,9 +948,4 @@ body.no-scroll {
         margin-bottom: 1rem;
     }
 
-    .banner h1 {
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 1.4;
-    }
 }
