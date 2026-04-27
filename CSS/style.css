@@ -129,17 +129,14 @@ a {
     color: inherit;
 }
 
-
-
 .btn {
     background-color: var(--bg-white);
-    border: 3px, solid, var(--brand-accent-strong);
+    border: 3px solid var(--brand-accent-strong);
     color: var(--brand-accent-strong);
     font-family: var(--heading-font);
     font-size: var(--font-size-button);
     font-weight: 600;
     text-transform: capitalize;
-
 }
 
 .btn:hover {
@@ -301,15 +298,7 @@ body.no-scroll {
     border-bottom: 0.4rem solid var(--color-link-hover);
 }
 
-/* --------------------Landing-page----------------------- */
-
-.hero-section {
-    position: relative;
-    background-image: url("/images/backgroud.webp");
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-}
+/* --------------------Home Page----------------------- */
 
 /* The Gradient Overlay */
 .landing::before {
@@ -344,6 +333,11 @@ body.no-scroll {
     justify-content: center;
     align-items: center;
     padding-top: 2rem;
+}
+
+.hero-img {
+    display: block;
+    margin-inline: auto;
 }
 
 .landing h1 {
@@ -671,7 +665,7 @@ body.no-scroll {
 }
 
 .package_details {
-    padding: 2rem;
+    padding: 2rem 2rem 6rem;
 }
 
 .card {
@@ -721,6 +715,43 @@ body.no-scroll {
 .section-text {
     text-align: justify;
     margin-bottom: 2rem;
+}
+
+.package_details .list,
+.package_details .itinerary,
+.visa-section .list,
+.terms-section .list {
+    list-style: disc;
+    padding-left: 2.4rem;
+    margin-bottom: 2.4rem;
+}
+
+.package_details .list li,
+.package_details .itinerary li,
+.visa-section .list li,
+.terms-section .list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+}
+
+.package_details .itinerary li strong {
+    color: var(--brand-secondary-strong);
+}
+
+.visa-section,
+.terms-section {
+    padding: 2rem 2rem 6rem;
+}
+
+.visa-link {
+    color: var(--brand-primary);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+}
+
+.visa-link:hover {
+    color: var(--brand-secondary-strong);
 }
 
 
@@ -800,11 +831,6 @@ body.no-scroll {
 .who-icon {
     width: 5rem;
     height: 5rem;
-    
-}
-
-.who-tex-box {
-    margin-bottom: 5rem;
 }
 
 .services {
@@ -813,14 +839,6 @@ body.no-scroll {
 
 .services ul {
     list-style: none;
-}
-
-.service svg {
-    display: inline;
-    width: 2.25rem;
-    height: 2.25rem;
-    vertical-align: middle;
-    margin-right: 0.5rem;
 }
 
 .services ul:last-child {
@@ -923,10 +941,6 @@ body.no-scroll {
         padding: 5rem;
     }
 
-    .contact-info p {
-        font-size: var(--font-size-contact);
-    }
-
     .footer .row {
         row-gap: 4rem;
     }
@@ -939,7 +953,7 @@ body.no-scroll {
         max-width: 54%;
     }
 
-    .service {
+    .services li {
         font-size: var(--font-size-service);
     }
 }
@@ -991,10 +1005,6 @@ body.no-scroll {
 /* X-Large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {
-    .landing-icons img {
-        width: 8.8rem;
-    }
-
     .landing .row {
         margin-bottom: 8rem;
     }
