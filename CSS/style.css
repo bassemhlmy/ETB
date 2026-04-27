@@ -410,6 +410,7 @@ body.no-scroll {
 .packages-card {
     width: 100%;
     max-width: 45rem;
+    min-width: 30rem;
     min-height: 45rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background: var(--color-card);
@@ -460,7 +461,7 @@ body.no-scroll {
     color: var(--brand-secondary-strong);
     font-weight: bold;
     margin-bottom: 2rem;
-    text-align: justify;
+    text-align: center;
 }
 
 .packages-card-text strong{
