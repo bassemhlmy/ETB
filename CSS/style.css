@@ -137,6 +137,10 @@ a {
     font-size: var(--font-size-button);
     font-weight: 600;
     text-transform: capitalize;
+    transition: 
+    transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    box-shadow 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
 }
 
 .btn:hover {
@@ -145,6 +149,8 @@ a {
     border-color: var(--color-cta-hover);
     color: var(--text-inverse);
     box-shadow: var(--shadow-button-hover);
+    transform: translateX(13px);
+  box-shadow: 0 31px 30px rgba(0, 0, 0, 0.3);
     /* Shadow grows as button lifts */
 }
 
@@ -406,7 +412,7 @@ body.no-scroll {
     row-gap: 3rem;
 }
 
-.packages .cards-container > div {
+.packages .cards-container>div {
     display: flex;
     justify-content: center;
 }
@@ -468,7 +474,7 @@ body.no-scroll {
     text-align: center;
 }
 
-.packages-card-text strong{
+.packages-card-text strong {
     background-color: var(--brand-accent-strong);
     color: var(--bg-main);
     padding: 1rem;
@@ -476,7 +482,7 @@ body.no-scroll {
 }
 
 @media (min-width: 1200px) {
-    .packages .cards-container > div {
+    .packages .cards-container>div {
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
     }
@@ -501,16 +507,17 @@ body.no-scroll {
     border-radius: var(--radius-md);
     border-left: 4px solid var(--brand-primary);
     box-shadow: var(--shadow-card);
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .value-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-card-hover);
-    transition: var(--transition-slow);
+    transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
 
-.value-card h3{
+.value-card h3 {
     font-family: var(--heading-font);
     font-size: var(--font-size-card-title);
     font-weight: 600;
@@ -618,50 +625,46 @@ body.no-scroll {
 }
 
 .glass-card {
-  width: auto;
-  height: auto;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  border-radius: 20px;
-  border: .5px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 0px 0px rgba(255, 255, 255, 0);
-  position: relative;
-  overflow: hidden;
+    width: auto;
+    height: auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 20px;
+    border: .5px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 0 0px 0px rgba(255, 255, 255, 0);
+    position: relative;
+    overflow: hidden;
 }
 
 .glass-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.8),
+            transparent);
 }
 
 .glass-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.8),
-    transparent,
-    rgba(255, 255, 255, 0.3)
-  );
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.8),
+            transparent,
+            rgba(255, 255, 255, 0.3));
 }
 
 .package_details {
@@ -672,11 +675,20 @@ body.no-scroll {
     border: none;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-card);
-    max-width: 45rem;
+    max-width: 40rem;
     min-height: 36rem;
     display: flex;
     flex-direction: column;
     margin: auto;
+    transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+ transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+
 }
 
 .section-title,
