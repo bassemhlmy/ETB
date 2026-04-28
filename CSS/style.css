@@ -1,5 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: 'Lato';
+  src: 
+    url('../fonts/Lato-Regular.woff2') format('woff2'),
+    url('../fonts/Lato-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'Lato';
+  src: 
+    url('../fonts/Lato-Italic.woff2') format('woff2'),
+    url('../fonts/Lato-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: 
+    url('../fonts/Lato-Bold.woff2') format('woff2'),
+    url('../fonts/Lato-Bold.woff') format('woff');
+  font-weight: 700; /* FIXED */
+  font-style: normal; /* FIXED */
+  font-display: swap;
+}
 :root {
     /* --- Brand palette --- */
     --brand-primary: #037fb4;
@@ -137,9 +164,9 @@ a {
     font-size: var(--font-size-button);
     font-weight: 600;
     text-transform: capitalize;
-    transition: 
-    transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-    box-shadow 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition:
+        transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        box-shadow 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 }
 
@@ -150,7 +177,7 @@ a {
     color: var(--text-inverse);
     box-shadow: var(--shadow-button-hover);
     transform: translateX(13px);
-  box-shadow: 0 31px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 31px 30px rgba(0, 0, 0, 0.3);
     /* Shadow grows as button lifts */
 }
 
@@ -507,14 +534,14 @@ body.no-scroll {
     border-radius: var(--radius-md);
     border-left: 4px solid var(--brand-primary);
     box-shadow: var(--shadow-card);
-    transition: 
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .value-card:hover {
     transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
 
 .value-card h3 {
@@ -545,126 +572,68 @@ body.no-scroll {
     font-size: clamp(1rem, 3vw, 1.75rem);
 }
 
+.banner_box {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+
+}
 
 .banner {
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 50rem;
-    padding: 3.2rem;
+    max-width:100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.banner h1 {
-    color: var(--text-inverse);
-    font-family: var(--font-heading);
-    font-size: var(--font-size-banner-title);
-    text-shadow: 4px 3px 18px #101010;
-    font-weight: 600;
-    line-height: 1.4;
-    max-width: 100rem;
-    min-width: 0;
-}
-
-/* Shared hero overlay keeps banner copy readable across package pages. */
-.banner_1,
-.banner_2,
-.banner_3,
-.banner_4,
-.banner_5 {
-    position: relative;
-    background-position: center;
-}
-
-.banner_1 {
-    background-image: url("../images/luxor_banner.webp");
-    color: #fff;
-}
-
-.banner_2 {
-    background-image: url("../images/Abu_Simbel_banner.webp");
-}
-
-
-.banner_3 {
-    background-image: url("../images/sharm-el-sheikh-banner.webp");
-}
-
-.banner_4 {
-    background-image: url("../images/pyramids.webp");
-}
-
-.banner_5 {
-    background-image: url("../images/nile_cruse.webp");
-}
-
-.banner_1::before,
-.banner_2::before,
-.banner_3::before {
+.banner_box::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    /* overlay for readability */
+     background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.3)
+    );
+    z-index: 1;
 }
 
+.banner_text {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.banner_text h1 {
+    font-family: var(--font-heading);
+    font-size:var(--font-size-hero-title);
+    font-weight: 800;
+    color:var(--bg-white);
+    margin-bottom: 1rem;
+}
+
+
 .banner-subtitle {
-    font-size: clamp(1.5rem, 2vw, 2rem);
-    font-weight: 400;
-    color: #f8faf3;
-    /* soft white (matches your palette) */
-    margin-top: 0.8rem;
-    letter-spacing: 0.5px;
-    line-height: 1.6;
+    font-family: var(--font-body);
+    font-size:var(--font-size-hero-subtitle);
+    color: var(--bg-main);
     opacity: 0.9;
 }
 
 .banner-subtitle strong {
-    color: #f5982f;
+    color: var(--bg-white);
+    background-color: var(--brand-accent-strong);
     /* Sea Buckthorn accent */
     font-weight: 800;
-}
-
-.glass-card {
-    width: auto;
-    height: auto;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    border-radius: 20px;
-    border: .5px solid rgba(255, 255, 255, 0.3);
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5),
-        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-        inset 0 0 0px 0px rgba(255, 255, 255, 0);
-    position: relative;
-    overflow: hidden;
-}
-
-.glass-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(255, 255, 255, 0.8),
-            transparent);
-}
-
-.glass-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(180deg,
-            rgba(255, 255, 255, 0.8),
-            transparent,
-            rgba(255, 255, 255, 0.3));
+    font-size: var(--font-size-section-subtitle);
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .package_details {
@@ -680,14 +649,14 @@ body.no-scroll {
     display: flex;
     flex-direction: column;
     margin: auto;
-    transition: 
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .card:hover {
- transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 
 }
 
