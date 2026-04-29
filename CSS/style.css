@@ -662,6 +662,7 @@ a {
 	);
 	z-index: 1;
 }
+
  
 .banner_text {
 	position: absolute;
@@ -675,7 +676,7 @@ a {
 	padding: 2rem;
 }
  
-.banner_text h1 {
+.banner-heading {
 	font-family: var(--font-heading);
 	font-size: var(--font-size-hero-title);
 	font-weight: 800;

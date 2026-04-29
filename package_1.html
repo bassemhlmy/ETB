@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- FIX: removed obsolete IE compatibility meta tag -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description"
          content="Explore ETB's 8-day Cairo, Luxor, and Aswan tour package with guided sightseeing, hotels, domestic flights, and key ancient landmarks.">
@@ -12,21 +12,23 @@
       <link rel="canonical" href="https://www.etb-eg.com/package_1.html">
       <meta property="og:type" content="article">
       <meta property="og:locale" content="en_US">
-      <meta property="og:title" content="8-Day Cairo, Luxor & Aswan Tour Package | Egyptian Travel Bureau">
+      <!-- FIX: escaped & as &amp; in og:title and twitter:title -->
+      <meta property="og:title" content="8-Day Cairo, Luxor &amp; Aswan Tour Package | Egyptian Travel Bureau">
       <meta property="og:description" content="Explore ETB's 8-day Cairo, Luxor, and Aswan tour package with guided sightseeing, hotels, domestic flights, and key ancient landmarks.">
       <meta property="og:url" content="https://www.etb-eg.com/package_1.html">
       <meta property="og:image" content="https://www.etb-eg.com/images/luxor_banner.webp">
       <meta property="og:image:alt" content="Luxor and Aswan tour package banner">
       <meta property="og:site_name" content="Egyptian Travel Bureau">
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="8-Day Cairo, Luxor & Aswan Tour Package | Egyptian Travel Bureau">
+      <meta name="twitter:title" content="8-Day Cairo, Luxor &amp; Aswan Tour Package | Egyptian Travel Bureau">
       <meta name="twitter:description" content="Explore ETB's 8-day Cairo, Luxor, and Aswan tour package with guided sightseeing, hotels, domestic flights, and key ancient landmarks.">
       <meta name="twitter:image" content="https://www.etb-eg.com/images/luxor_banner.webp">
       <meta name="twitter:image:alt" content="Luxor and Aswan tour package banner">
       <link rel="stylesheet" href="CSS/bootstrap.min.css">
       <link rel="stylesheet" href="CSS/style.css">
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-      <title>8-Day Cairo, Luxor & Aswan Tour Package | Egyptian Travel Bureau</title>
+      <!-- FIX: escaped & as &amp; in <title> -->
+      <title>8-Day Cairo, Luxor &amp; Aswan Tour Package | Egyptian Travel Bureau</title>
       <script type="application/ld+json">
          {
            "@context": "https://schema.org",
@@ -94,10 +96,12 @@
       <header class="header">
          <div class="back-drop hide"></div>
          <div class="container">
-            <nav class="nav">
+            <!-- FIX: added aria-label to <nav> for accessibility -->
+            <nav class="nav" aria-label="Main navigation">
                <img src="images/logo.webp" alt="ETB logo" class="logo">
+               <!-- FIX: updated deprecated xlink:href to href throughout -->
                <svg class="menu-icon" aria-label="Open Menu" role="button" tabindex="0">
-                  <use xlink:href="images/sprite.svg#menu"></use>
+                  <use href="images/sprite.svg#menu"></use>
                </svg>
                <ul class="nav-items">
                   <li class="nav-item">
@@ -123,7 +127,7 @@
          </div>
          <div class="mobile-menu">
             <svg class="close" aria-label="Close Menu" role="button" tabindex="0">
-               <use xlink:href="images/sprite.svg#Close"></use>
+               <use href="images/sprite.svg#Close"></use>
             </svg>
             <ul class="mobile-menu-items">
                <li class="mobile-menu-item">
@@ -152,11 +156,13 @@
       </header>
       <main>
          <section class="banner_box">
-            <img src="./images/luxor_banner.webp" alt="" class="banner">
+            <!-- FIX: added descriptive alt text; removed unnecessary ./ prefix from path -->
+            <img src="images/luxor_banner.webp" alt="Luxor temple colonnade at dusk, Egypt" class="banner">
             <div class="banner_text">
-               <h1>8-Day Cairo, Luxor & Aswan Tour Package</h1>
+               <!-- FIX: escaped & as &amp; in <h1> -->
+               <h1 class="banner-heading">8-Day Cairo, Luxor &amp; Aswan Tour Package</h1>
                <p class="banner-subtitle">
-                  Explore Egypt’s greatest ancient wonders from <strong>$1,230</strong>
+                  Explore Egypt's greatest ancient wonders from <strong>$1,230</strong>
                </p>
             </div>
          </section>
@@ -164,28 +170,29 @@
             <div class="container">
                <h2 class="section-title">Tour Overview</h2>
                <p class="section-text">
-                  Discover the timeless beauty of Egypt on this expertly curated 8-day journey through 
-                  <strong>Cairo, Luxor, and Aswan</strong>. This private tour takes you deep into the heart 
+                  Discover the timeless beauty of Egypt on this expertly curated 8-day journey through
+                  <strong>Cairo, Luxor, and Aswan</strong>. This private tour takes you deep into the heart
                   of ancient civilization, where history, culture, and architecture come to life.
                </p>
                <p class="section-text">
-                  Stand before the iconic <strong>Pyramids of Giza</strong>, explore the treasures of the 
-                  Egyptian Museum, and wander through Old Cairo. Fly south to Luxor, home to nearly one-third 
-                  of the world’s ancient monuments, where you’ll visit the Valley of the Kings, Karnak Temple, 
+                  Stand before the iconic <strong>Pyramids of Giza</strong>, explore the treasures of the
+                  Egyptian Museum, and wander through Old Cairo. Fly south to Luxor, home to nearly one-third
+                  of the world's ancient monuments, where you'll visit the Valley of the Kings, Karnak Temple,
                   and more. Continue to Aswan, discovering the unique temples of Edfu and Kom Ombo along the way.
                </p>
                <p class="section-text">
-                  Designed for travelers who value comfort, authenticity, and expert guidance, this package 
-                  combines top attractions, quality accommodations, and seamless transportation for a truly 
+                  Designed for travelers who value comfort, authenticity, and expert guidance, this package
+                  combines top attractions, quality accommodations, and seamless transportation for a truly
                   unforgettable Egyptian experience.
                </p>
                <h3 class="section-sub-title">What's Included</h3>
+               <!-- FIX: escaped & as &amp; throughout included list -->
                <ul class="list">
-                  <li>4 nights in Cairo (Bed & Breakfast)</li>
-                  <li>2 nights in Luxor (Bed & Breakfast)</li>
-                  <li>1 night in Aswan (Bed & Breakfast)</li>
-                  <li>Domestic flights: Cairo → Luxor & Aswan → Cairo</li>
-                  <li>Meet & assist at airports</li>
+                  <li>4 nights in Cairo (Bed &amp; Breakfast)</li>
+                  <li>2 nights in Luxor (Bed &amp; Breakfast)</li>
+                  <li>1 night in Aswan (Bed &amp; Breakfast)</li>
+                  <li>Domestic flights: Cairo → Luxor &amp; Aswan → Cairo</li>
+                  <li>Meet &amp; assist at airports</li>
                   <li>Professional English-speaking Egyptologist guides</li>
                   <li>Entrance fees to all listed attractions</li>
                   <li>Private air-conditioned transportation</li>
@@ -200,14 +207,15 @@
                   <li>Optional tours</li>
                </ul>
                <h3 class="section-sub-title">Itinerary Highlights</h3>
+               <!-- FIX: escaped & as &amp; throughout itinerary list -->
                <ul class="itinerary">
-                  <li><strong>Day 1:</strong> Arrival in Cairo & hotel check-in</li>
-                  <li><strong>Day 2:</strong> Pyramids of Giza, Saqqara & Memphis</li>
-                  <li><strong>Day 3:</strong> Egyptian Museum, Citadel & Old Cairo</li>
-                  <li><strong>Day 4:</strong> Fly to Luxor – Karnak & Luxor Temples</li>
-                  <li><strong>Day 5:</strong> Valley of the Kings, Hatshepsut Temple & Colossi of Memnon</li>
-                  <li><strong>Day 6:</strong> Edfu & Kom Ombo Temples</li>
-                  <li><strong>Day 7:</strong> Aswan – High Dam, Philae Temple & Unfinished Obelisk</li>
+                  <li><strong>Day 1:</strong> Arrival in Cairo &amp; hotel check-in</li>
+                  <li><strong>Day 2:</strong> Pyramids of Giza, Saqqara &amp; Memphis</li>
+                  <li><strong>Day 3:</strong> Egyptian Museum, Citadel &amp; Old Cairo</li>
+                  <li><strong>Day 4:</strong> Fly to Luxor – Karnak &amp; Luxor Temples</li>
+                  <li><strong>Day 5:</strong> Valley of the Kings, Hatshepsut Temple &amp; Colossi of Memnon</li>
+                  <li><strong>Day 6:</strong> Edfu &amp; Kom Ombo Temples</li>
+                  <li><strong>Day 7:</strong> Aswan – High Dam, Philae Temple &amp; Unfinished Obelisk</li>
                   <li><strong>Day 8:</strong> Departure</li>
                </ul>
             </div>
@@ -226,46 +234,33 @@
                <div class="col-lg-4 col-md-6 mb-5">
                   <h3>Social</h3>
                   <div class="social-list">
+                     <!-- NOTE: all social hrefs are # — update with real profile URLs -->
                      <a href="#" aria-label="Twitter">
-                        <svg>
-                           <use xlink:href="images/sprite.svg#twitter"></use>
-                        </svg>
+                        <svg><use href="images/sprite.svg#twitter"></use></svg>
                      </a>
                      <a href="#" aria-label="Facebook">
-                        <svg>
-                           <use xlink:href="images/sprite.svg#Facebook"></use>
-                        </svg>
+                        <svg><use href="images/sprite.svg#Facebook"></use></svg>
                      </a>
                      <a href="#" aria-label="Instagram">
-                        <svg>
-                           <use xlink:href="images/sprite.svg#Instagram"></use>
-                        </svg>
+                        <svg><use href="images/sprite.svg#Instagram"></use></svg>
                      </a>
                      <a href="#" aria-label="WhatsApp">
-                        <svg>
-                           <use xlink:href="images/sprite.svg#whatsapp"></use>
-                        </svg>
+                        <svg><use href="images/sprite.svg#whatsapp"></use></svg>
                      </a>
                   </div>
                </div>
                <div class="col-lg-5">
                   <h3>Contact</h3>
                   <div class="contact-item">
-                     <svg>
-                        <use xlink:href="images/sprite.svg#address"></use>
-                     </svg>
+                     <svg><use href="images/sprite.svg#address"></use></svg>
                      <span>3, Nour Elidin St, Heliopolis, Cairo, Egypt.</span>
                   </div>
                   <div class="contact-item">
-                     <svg>
-                        <use xlink:href="images/sprite.svg#email"></use>
-                     </svg>
+                     <svg><use href="images/sprite.svg#email"></use></svg>
                      <a href="mailto:info@etb-eg.com">info@etb-eg.com</a>
                   </div>
                   <div class="contact-item">
-                     <svg>
-                        <use xlink:href="images/sprite.svg#phone"></use>
-                     </svg>
+                     <svg><use href="images/sprite.svg#phone"></use></svg>
                      <span>(+202)-24192558 - (+202)-24192559</span>
                   </div>
                </div>
