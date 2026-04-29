@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- FIX: removed obsolete IE compatibility meta tag -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description"
          content="Discover Egypt tours, custom travel packages, visa support, and premium travel services with Egyptian Travel Bureau.">
@@ -12,7 +12,8 @@
       <link rel="canonical" href="https://www.etb-eg.com/">
       <meta property="og:type" content="website">
       <meta property="og:locale" content="en_US">
-      <meta property="og:title" content="Egypt Tours & Travel Packages | Egyptian Travel Bureau">
+      <!-- FIX: escaped & as &amp; in og:title and twitter:title -->
+      <meta property="og:title" content="Egypt Tours &amp; Travel Packages | Egyptian Travel Bureau">
       <meta property="og:description"
          content="Discover Egypt tours, custom travel packages, visa support, and premium travel services with Egyptian Travel Bureau.">
       <meta property="og:url" content="https://www.etb-eg.com/">
@@ -20,12 +21,13 @@
       <meta property="og:image:alt" content="Collection of luxury Egyptian travel services">
       <meta property="og:site_name" content="Egyptian Travel Bureau">
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="Egypt Tours & Travel Packages | Egyptian Travel Bureau">
+      <meta name="twitter:title" content="Egypt Tours &amp; Travel Packages | Egyptian Travel Bureau">
       <meta name="twitter:description"
          content="Discover Egypt tours, custom travel packages, visa support, and premium travel services with Egyptian Travel Bureau.">
       <meta name="twitter:image" content="https://www.etb-eg.com/images/Artboard1.webp">
       <meta name="twitter:image:alt" content="Collection of luxury Egyptian travel services">
-      <title>Egypt Tours & Travel Packages | Egyptian Travel Bureau</title>
+      <!-- FIX: escaped & as &amp; in <title> -->
+      <title>Egypt Tours &amp; Travel Packages | Egyptian Travel Bureau</title>
       <script type="application/ld+json">
          {
            "@context": "https://schema.org",
@@ -65,44 +67,71 @@
          }
       </script>
       <link rel="stylesheet" href="CSS/bootstrap.min.css">
-      <link rel="stylesheet" href="CSS/style.css">
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-      <link rel="stylesheet" href="CSS/Animation.css">
+      <!-- FIX: moved Font Awesome before custom stylesheets so icons load first -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+      <link rel="stylesheet" href="CSS/style.css">
+      <link rel="stylesheet" href="CSS/Animation.css">
    </head>
    <body>
       <header class="header">
          <div class="back-drop hide"></div>
          <div class="container">
-            <nav class="nav">
+            <!-- FIX: added aria-label to <nav> for accessibility -->
+            <nav class="nav" aria-label="Main navigation">
                <img src="images/logo.webp" alt="ETB logo" class="logo">
-               <svg class="menu-icon" aria-label="Open Menu" role="button">
-                  <use xlink:href="images/sprite.svg#menu"></use>
+               <!-- FIX: updated deprecated xlink:href to href -->
+               <svg class="menu-icon" aria-label="Open Menu" role="button" tabindex="0">
+                  <use href="images/sprite.svg#menu"></use>
                </svg>
                <ul class="nav-items">
-                  <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                  <li class="nav-item"><a href="#packages" class="nav-link">Packages</a></li>
-                  <li class="nav-item"><a href="#packages" class="nav-link">Tours Style</a></li>
-                  <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                  <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                  <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                  <li class="nav-item">
+                     <a href="index.html" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="index.html#packages" class="nav-link">Packages</a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="index.html#packages" class="nav-link">Tours Style</a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="index.html#services" class="nav-link">Services</a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="index.html#about" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="#contact" class="nav-link">Contact</a>
+                  </li>
                </ul>
             </nav>
          </div>
          <div class="mobile-menu">
-            <svg class="close" aria-label="Close Menu" role="button">
-               <use xlink:href="images/sprite.svg#Close"></use>
+            <svg class="close" aria-label="Close Menu" role="button" tabindex="0">
+               <use href="images/sprite.svg#Close"></use>
             </svg>
             <ul class="mobile-menu-items">
-               <li class="mobile-menu-item"><a href="index.html" class="mobile-menu-link">Home</a></li>
-               <li class="mobile-menu-item"><a href="#packages" class="mobile-menu-link">Packages</a></li>
-               <li class="mobile-menu-item"><a href="#packages" class="mobile-menu-link">Tours Style</a></li>
-               <li class="mobile-menu-item"><a href="#services" class="mobile-menu-link">Services</a></li>
-               <li class="mobile-menu-item"><a href="#about" class="mobile-menu-link">About</a></li>
-               <li class="mobile-menu-item"><a href="#contact" class="mobile-menu-link">Contact</a></li>
+               <li class="mobile-menu-item">
+                  <a href="index.html" class="mobile-menu-link">Home</a>
+               </li>
+               <li class="mobile-menu-item">
+                  <a href="index.html#packages" class="mobile-menu-link">Packages</a>
+               </li>
+               <li class="mobile-menu-item">
+                  <a href="index.html#packages" class="mobile-menu-link">Tours Style</a>
+               </li>
+               <li class="mobile-menu-item">
+                  <a href="index.html#services" class="mobile-menu-link">Services</a>
+               </li>
+               <li class="mobile-menu-item">
+                  <a href="index.html#about" class="mobile-menu-link">About</a>
+               </li>
+               <li class="mobile-menu-item">
+                  <a href="#contact" class="mobile-menu-link">Contact</a>
+               </li>
             </ul>
             <div class="logo-box">
-               <img src="images/logo.webp" alt="ETB Logo" class="mobile-menu-logo">
+               <img src="images/logo.webp" alt="ETB logo" class="logo" decoding="async">
             </div>
          </div>
       </header>
@@ -125,16 +154,16 @@
                data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
                <h2 class="section-title">Featured Egypt Tour Packages</h2>
                <div class="cards-container row">
+                  <!-- FIX: added matching AOS animation attributes to first card (was missing, others had it) -->
                   <div class="col-lg-4 mb-5 mb-lg-0">
-                     <div class="packages-card packages-img-hover">
+                     <div class="packages-card packages-img-hover" data-aos="fade-in" data-aos-duration="4000">
                         <img src="images/Luxor_Aswan.webp" alt="8 Days Cairo, Luxor, and Aswan Tour" loading="lazy" decoding="async"
                            class="packages-card-img">
                         <div class="packages-card-content">
                            <h3 class="packages-card-title"><a href="package_1.html">Cairo, Luxor &amp; Aswan Tour</a></h3>
                            <p class="packages-card-text">Price Starts From <strong>$1230</strong></p>
-                           <div class="btn btn-lg btn-success rounded-pill px-4 shadow-sm">
-                              <a href="package_1.html">View tour details &rarr;</a>
-                           </div>
+                           <!-- FIX: moved btn classes to <a> directly; <div> is not an interactive element -->
+                           <a href="package_1.html" class="btn btn-lg btn-success rounded-pill px-4 shadow-sm">View tour details &rarr;</a>
                         </div>
                      </div>
                   </div>
@@ -142,26 +171,22 @@
                      <div class="packages-card packages-img-hover" data-aos="fade-in" data-aos-duration="4000">
                         <img src="images/abu-simbel.webp" alt="Budget Tour Cairo and Abu Simbel" class="packages-card-img" loading="lazy" decoding="async">
                         <div class="packages-card-content">
-                           <h3 class="packages-card-title"><a href="package_2.html">Cairo, Aswan, Abu Simbel &amp;
-                              Luxor</a>
-                           </h3>
+                           <h3 class="packages-card-title"><a href="package_2.html">Cairo, Aswan, Abu Simbel &amp; Luxor</a></h3>
                            <p class="packages-card-text">Price Starts From <strong>$980</strong></p>
-                           <div class="btn btn-lg btn-success rounded-pill px-4 shadow-sm">
-                              <a href="package_2.html">View tour details &rarr;</a>
-                           </div>
+                           <!-- FIX: moved btn classes to <a> directly -->
+                           <a href="package_2.html" class="btn btn-lg btn-success rounded-pill px-4 shadow-sm">View tour details &rarr;</a>
                         </div>
                      </div>
                   </div>
                   <div class="col-lg-4">
-                     <div class="packages-card packages-img-hover">
+                     <div class="packages-card packages-img-hover" data-aos="fade-in" data-aos-duration="4000">
                         <img src="images/sharm-el-sheikh.webp" alt="Cairo and Sharm El Sheikh Holiday" loading="lazy" decoding="async"
                            class="packages-card-img">
                         <div class="packages-card-content">
                            <h3 class="packages-card-title"><a href="package_3.html">Cairo &amp; Sharm El Sheikh</a></h3>
                            <p class="packages-card-text">Price Starts From <strong>$995</strong></p>
-                           <div class="btn btn-lg btn-success rounded-pill px-4 shadow-sm">
-                              <a href="package_3.html">View tour details &rarr;</a>
-                           </div>
+                           <!-- FIX: moved btn classes to <a> directly -->
+                           <a href="package_3.html" class="btn btn-lg btn-success rounded-pill px-4 shadow-sm">View tour details &rarr;</a>
                         </div>
                      </div>
                   </div>
@@ -179,7 +204,7 @@
                         <div class="lower-part">
                            <div class="icon-box">
                               <svg class="icon">
-                                 <use xlink:href="images/sprite.svg#trust"></use>
+                                 <use href="images/sprite.svg#trust"></use>
                               </svg>
                            </div>
                            <p class="card-title">100% Trusted Tour Agency</p>
@@ -192,7 +217,7 @@
                         <div class="lower-part">
                            <div class="icon-box">
                               <svg class="icon">
-                                 <use xlink:href="images/sprite.svg#airport"></use>
+                                 <use href="images/sprite.svg#airport"></use>
                               </svg>
                            </div>
                            <p class="card-title">12+ Years of Travel Experience</p>
@@ -205,7 +230,7 @@
                         <div class="lower-part">
                            <div class="icon-box">
                               <svg class="icon">
-                                 <use xlink:href="images/sprite.svg#happy"></use>
+                                 <use href="images/sprite.svg#happy"></use>
                               </svg>
                            </div>
                            <p class="card-title">98% of Our Travelers are Happy</p>
@@ -237,7 +262,7 @@
                   <div class="value-card col-lg-5 mb-5 mb-lg-0">
                      <div class="d-flex align-items-center">
                         <svg class="who-icon">
-                           <use xlink:href="images/sprite.svg#rocket"></use>
+                           <use href="images/sprite.svg#rocket"></use>
                         </svg>
                         <h3 class="mx-4">Our Mission</h3>
                      </div>
@@ -248,7 +273,7 @@
                   <div class="value-card col-lg-5">
                      <div class="d-flex align-items-center">
                         <svg class="who-icon">
-                           <use xlink:href="images/sprite.svg#vision"></use>
+                           <use href="images/sprite.svg#vision"></use>
                         </svg>
                         <h3 class="mx-4">Our Vision</h3>
                      </div>
@@ -287,27 +312,19 @@
                            <ul class="list-unstyled">
                               <li class="mb-3 d-flex align-items-start">
                                  <span class="me-3 text-success"><i class="fas fa-check-circle"></i></span>
-                                 <div><strong>Nile Cruise Bookings</strong><br><small class="text-muted">Luxury river
-                                    journeys</small>
-                                 </div>
+                                 <div><strong>Nile Cruise Bookings</strong><br><small class="text-muted">Luxury river journeys</small></div>
                               </li>
                               <li class="mb-3 d-flex align-items-start">
                                  <span class="me-3 text-success"><i class="fas fa-check-circle"></i></span>
-                                 <div><strong>Custom Tours</strong><br><small class="text-muted">A La Carte & Special
-                                    Interests</small>
-                                 </div>
+                                 <div><strong>Custom Tours</strong><br><small class="text-muted">A La Carte &amp; Special Interests</small></div>
                               </li>
                               <li class="mb-3 d-flex align-items-start">
                                  <span class="me-3 text-success"><i class="fas fa-check-circle"></i></span>
-                                 <div><strong>VIP Reception</strong><br><small class="text-muted">Airport assistance & Visa
-                                    help</small>
-                                 </div>
+                                 <div><strong>VIP Reception</strong><br><small class="text-muted">Airport assistance &amp; Visa help</small></div>
                               </li>
                               <li class="mb-3 d-flex align-items-start">
                                  <span class="me-3 text-success"><i class="fas fa-check-circle"></i></span>
-                                 <div><strong>Adventure & Safari</strong><br><small class="text-muted">Diving & Desert
-                                    expeditions</small>
-                                 </div>
+                                 <div><strong>Adventure &amp; Safari</strong><br><small class="text-muted">Diving &amp; Desert expeditions</small></div>
                               </li>
                            </ul>
                         </div>
@@ -315,34 +332,26 @@
                            <ul class="list-unstyled">
                               <li class="mb-3 d-flex align-items-start">
                                  <span class="me-3 text-success"><i class="fas fa-check-circle"></i></span>
-                                 <div><strong>MICE & Corporate</strong><br><small class="text-muted">Meetings & Incentive
-                                    tours</small>
-                                 </div>
+                                 <div><strong>MICE &amp; Corporate</strong><br><small class="text-muted">Meetings &amp; Incentive tours</small></div>
                               </li>
                               <li class="mb-3 d-flex align-items-start">
                                  <span class="me-3 text-success"><i class="fas fa-check-circle"></i></span>
-                                 <div><strong>Modern Fleet</strong><br><small class="text-muted">Transport for all group
-                                    sizes</small>
-                                 </div>
+                                 <div><strong>Modern Fleet</strong><br><small class="text-muted">Transport for all group sizes</small></div>
                               </li>
                               <li class="mb-3 d-flex align-items-start">
                                  <span class="me-3 text-success"><i class="fas fa-check-circle"></i></span>
-                                 <div><strong>Global Reservations</strong><br><small class="text-muted">Hotels & Insurance
-                                    worldwide</small>
-                                 </div>
+                                 <div><strong>Global Reservations</strong><br><small class="text-muted">Hotels &amp; Insurance worldwide</small></div>
                               </li>
                               <li class="mb-3 d-flex align-items-start">
                                  <span class="me-3 text-success"><i class="fas fa-check-circle"></i></span>
-                                 <div><strong>Logistics</strong><br><small class="text-muted">Charter handling &
-                                    Transfers</small>
-                                 </div>
+                                 <div><strong>Logistics</strong><br><small class="text-muted">Charter handling &amp; Transfers</small></div>
                               </li>
                            </ul>
                         </div>
                      </div>
                      <div class="mt-4">
                         <a href="#contact" class="btn btn-lg btn-success rounded-pill px-4 shadow-sm">
-                        Explore Full Services &rarr;
+                           Explore Full Services &rarr;
                         </a>
                      </div>
                   </div>
@@ -363,46 +372,34 @@
                <div class="col-lg-4 col-md-6 mb-5">
                   <h3>Social</h3>
                   <div class="social-list">
+                     <!-- NOTE: Twitter/X href left as # — update with real profile URL -->
                      <a href="#" aria-label="Twitter">
-                        <svg>
-                           <use xlink:href="images/sprite.svg#twitter"></use>
-                        </svg>
+                        <svg><use href="images/sprite.svg#twitter"></use></svg>
                      </a>
                      <a href="https://www.facebook.com/EgyptianTravelBureau.ETB/" aria-label="Facebook">
-                        <svg>
-                           <use xlink:href="images/sprite.svg#Facebook"></use>
-                        </svg>
+                        <svg><use href="images/sprite.svg#Facebook"></use></svg>
                      </a>
+                     <!-- NOTE: Instagram and WhatsApp hrefs left as # — update with real profile URLs -->
                      <a href="#" aria-label="Instagram">
-                        <svg>
-                           <use xlink:href="images/sprite.svg#Instagram"></use>
-                        </svg>
+                        <svg><use href="images/sprite.svg#Instagram"></use></svg>
                      </a>
                      <a href="#" aria-label="WhatsApp">
-                        <svg>
-                           <use xlink:href="images/sprite.svg#whatsapp"></use>
-                        </svg>
+                        <svg><use href="images/sprite.svg#whatsapp"></use></svg>
                      </a>
                   </div>
                </div>
                <div class="col-lg-5">
                   <h3>Contact</h3>
                   <div class="contact-item">
-                     <svg>
-                        <use xlink:href="images/sprite.svg#address"></use>
-                     </svg>
+                     <svg><use href="images/sprite.svg#address"></use></svg>
                      <span>3, Nour Elidin St, Heliopolis, Cairo, Egypt.</span>
                   </div>
                   <div class="contact-item">
-                     <svg>
-                        <use xlink:href="images/sprite.svg#email"></use>
-                     </svg>
+                     <svg><use href="images/sprite.svg#email"></use></svg>
                      <a href="mailto:info@etb-eg.com">info@etb-eg.com</a>
                   </div>
                   <div class="contact-item">
-                     <svg>
-                        <use xlink:href="images/sprite.svg#phone"></use>
-                     </svg>
+                     <svg><use href="images/sprite.svg#phone"></use></svg>
                      <span>(+202)-24192558 - (+202)-24192559</span>
                   </div>
                </div>

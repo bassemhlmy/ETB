@@ -85,12 +85,12 @@
       </script>
    </head>
    <body>
-      <header class="header">
+     <header class="header">
          <div class="back-drop hide"></div>
          <div class="container">
             <nav class="nav">
                <img src="images/logo.webp" alt="ETB logo" class="logo">
-               <svg class="menu-icon" aria-label="Open Menu" role="button">
+               <svg class="menu-icon" aria-label="Open Menu" role="button" tabindex="0">
                   <use xlink:href="images/sprite.svg#menu"></use>
                </svg>
                <ul class="nav-items">
@@ -106,7 +106,9 @@
                   <li class="nav-item">
                      <a href="index.html#services" class="nav-link">Services</a>
                   </li>
-                  <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+                  <li class="nav-item">
+                     <a href="index.html#about" class="nav-link">About</a>
+                  </li>
                   <li class="nav-item">
                      <a href="#contact" class="nav-link">Contact</a>
                   </li>
@@ -114,7 +116,7 @@
             </nav>
          </div>
          <div class="mobile-menu">
-            <svg class="close" aria-label="Close Menu" role="button">
+            <svg class="close" aria-label="Close Menu" role="button" tabindex="0">
                <use xlink:href="images/sprite.svg#Close"></use>
             </svg>
             <ul class="mobile-menu-items">
@@ -138,7 +140,7 @@
                </li>
             </ul>
             <div class="logo-box">
-               <img src="images/logo.webp" alt="ETB Logo" class="mobile-menu-logo">
+               <img src="images/logo.webp" alt="ETB logo" class="logo" decoding="async">
             </div>
          </div>
       </header>

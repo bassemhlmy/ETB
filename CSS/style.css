@@ -1,3 +1,73 @@
+/* ============================================================
+   TABLE OF CONTENTS
+   1.  Fonts (@font-face)
+   2.  Custom Properties (:root)
+   3.  Reset & Base
+   4.  Typography (h1–h3, a, ul, img)
+   5.  Utility Classes (.btn, .text-center, .hide)
+   6.  Layout – Nav / Header
+   7.  Layout – Hero / Landing
+   8.  Layout – Packages Section
+   9.  Layout – About Section
+   10. Layout – Banner
+   11. Layout – Cards (generic)
+   12. Layout – Sections (shared titles, text, lists)
+   13. Layout – Who We Are
+   14. Layout – Services
+   15. Layout – Footer
+   16. Media Queries (mobile-first, 576px → 1400px)
+   ============================================================ */
+
+
+/* ============================================================
+   1. FONTS
+   ============================================================ */
+
+@font-face {
+	font-family: 'Montserrat';
+	src:
+		url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+		url('../fonts/Montserrat-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src:
+		url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+		url('../fonts/Montserrat-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src:
+		url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+		url('../fonts/Montserrat-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src:
+		url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+		url('../fonts/Montserrat-Medium.woff2') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src:
+		url('../fonts/Montserrat-Italic.woff2') format('woff2'),
+		url('../fonts/Montserrat-Italic.woff') format('woff');
+	font-weight: 400;
+	font-style:italic;
+	font-display: swap;
+}
 @font-face {
 	font-family: 'Lato';
 	src:
@@ -24,12 +94,13 @@
 		url('../fonts/Lato-Bold.woff2') format('woff2'),
 		url('../fonts/Lato-Bold.woff') format('woff');
 	font-weight: 700;
-	/* FIXED */
 	font-style: normal;
-	/* FIXED */
 	font-display: swap;
 }
-
+/* ============================================================
+   2. CUSTOM PROPERTIES
+   ============================================================ */
+ 
 :root {
 	/* --- Brand palette --- */
 	--brand-primary: #037fb4;
@@ -38,20 +109,20 @@
 	--brand-accent: #c5722e;
 	--brand-accent-strong: #ee6a0c;
 	--brand-sand: #c2ae9e;
-
+ 
 	/* --- Surfaces --- */
 	--bg-main: #f9fbfd;
 	--bg-surface: #e9f0fb;
 	--bg-surface-alt: #dae2ee;
 	--bg-white: #ffffff;
 	--bg-footer: #20313d;
-
+ 
 	/* --- Text --- */
 	--text-main: #34444f;
 	--text-muted: #84858a;
 	--text-inverse: #ffffff;
 	--text-footer: #c5def0;
-
+ 
 	/* --- Semantic usage roles --- */
 	--color-heading: var(--brand-primary);
 	--color-link: var(--brand-primary);
@@ -64,39 +135,29 @@
 	--color-footer-bg: var(--bg-footer);
 	--color-footer-text: var(--text-footer);
 	--color-footer-accent: var(--brand-accent-strong);
-
+ 
 	/* --- Typography --- */
 	--font-heading: "Montserrat", sans-serif;
 	--font-body: "Lato", sans-serif;
-
-	/* --- Legacy aliases kept for existing selectors --- */
-	--heading-font: var(--font-heading);
-	--body-font: var(--font-body);
-	--light-gray: var(--color-surface);
-	--White: var(--bg-white);
-	--Blue: var(--color-link);
-	--Dark-Blue: var(--color-link-hover);
-	--Darker-Blue: var(--brand-secondary-strong);
-	--nile-teal: var(--color-heading);
-	--dark-grey: var(--text-main);
-	--accent-orange: var(--color-price);
-	--Darker-Orange: var(--color-footer-accent);
-	--very-Dark-Gray: var(--color-footer-bg);
+ 
+	/* --- Spacing & sizing --- */
 	--footer-padding: 3rem 1rem;
-	--icon-social-size: 4rem;
-	/* Adjusted for the blue circles in your image */
-	--icon-contact-size: 3rem;
-	/* Smaller for the contact list */
+	--icon-social-size: 4rem;   /* Blue circles */
+	--icon-contact-size: 3rem;  /* Contact list */
 	--radius-md: 1.2rem;
+ 
+	/* --- Shadows --- */
 	--shadow-card: 0 0.1rem 2rem 1rem rgb(51 51 51 / 23%);
 	--shadow-card-hover: 0 4rem 8rem rgba(0, 0, 0, 0.5);
 	--shadow-image: 0.3rem 0.2rem 2rem 1rem rgb(51 51 51 / 23%);
 	--shadow-button: 0 4px 12px rgba(13, 27, 42, 0.15);
 	--shadow-button-hover: 0 12px 24px rgba(13, 27, 42, 0.25);
 	--shadow-button-active: 0 2px 6px rgba(13, 27, 42, 0.2);
+ 
+	/* --- Transitions --- */
 	--transition-base: all 0.3s ease;
 	--transition-slow: all 0.5s ease-in-out;
-
+ 
 	/* --- Fluid type scale --- */
 	--font-size-body: clamp(1.6rem, 1.45rem + 0.35vw, 2rem);
 	--font-size-button: clamp(1.3rem, 1.2rem + 0.2vw, 1.5rem);
@@ -115,99 +176,165 @@
 	--font-size-contact: clamp(1.6rem, 1.45rem + 0.5vw, 2rem);
 	--font-size-service: clamp(1.7rem, 1.55rem + 0.4vw, 2rem);
 }
-
-/* Base styles using the variables */
-
-* {
+ 
+ 
+/* ============================================================
+   3. RESET & BASE
+   ============================================================ */
+ 
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
-
-/* Quick implementation example */
-h1,
-h2,
-h3 {
-	font-family: var(--font-heading);
-	color: var(--text-main);
+ 
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%; /* 1rem = 10px */
 }
-
+ 
 body {
 	font-family: var(--font-body);
 	background-color: var(--bg-main);
 	color: var(--text-main);
 	font-size: var(--font-size-body);
 }
-
-html {
-	scroll-behavior: smooth;
-	font-size: 62.5%;
+ 
+body.no-scroll {
+	overflow: hidden;
 }
-
+ 
+ 
+/* ============================================================
+   4. TYPOGRAPHY
+   ============================================================ */
+ 
+h1,
+h2,
+h3 {
+	font-family: var(--font-heading);
+	color: var(--text-main);
+}
+ 
 img {
 	max-width: 100%;
 	height: auto;
 }
-
+ 
 ul {
 	list-style: none;
 	margin-bottom: 1rem;
 }
-
+ 
 a {
 	text-decoration: none;
 	color: inherit;
 }
-
+ 
+ 
+/* ============================================================
+   5. UTILITY CLASSES
+   ============================================================ */
+ 
+.text-center {
+	text-align: center;
+}
+ 
+.hide {
+	display: none !important;
+}
+ 
 .btn {
 	background-color: var(--bg-white);
 	border: 3px solid var(--brand-accent-strong);
 	color: var(--brand-accent-strong);
-	font-family: var(--heading-font);
+	font-family: var(--font-heading);
 	font-size: var(--font-size-button);
 	font-weight: 600;
 	text-transform: capitalize;
 	transition:
 		transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55),
 		box-shadow 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
 }
-
+ 
 .btn:hover {
-	transform: translateY(-4px);
 	background: var(--color-cta-hover);
 	border-color: var(--color-cta-hover);
 	color: var(--text-inverse);
 	box-shadow: var(--shadow-button-hover);
 	transform: translateX(13px);
-	box-shadow: 0 31px 30px rgba(0, 0, 0, 0.3);
-	/* Shadow grows as button lifts */
 }
-
+ 
 .btn:active {
-	transform: translateY(-1px) scale(0.97);
-	/* "Pushes" back down */
+	transform: translateY(-1px) scale(0.97); /* "Pushes" back down */
 	box-shadow: var(--shadow-button-active);
 }
-
-.text-center {
-	text-align: center;
-}
-
-.hide {
-	display: none !important;
-}
-
-/* ----------------------Nav-Bar------------------------- */
-
+ 
+ 
+/* ============================================================
+   6. NAV / HEADER
+   ============================================================ */
+ 
 .header {
 	background-color: var(--bg-main);
 }
-
+ 
 .container {
 	padding: 0 2rem;
 }
-
+ 
+.nav {
+	padding-top: 1.6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+}
+ 
+.nav-items {
+	display: none;
+	font-family: var(--font-heading);
+}
+ 
+.nav-item {
+	color: var(--color-link);
+}
+ 
+.nav-link {
+	display: inline-block;
+	letter-spacing: 0.16rem;
+	font-size: clamp(1.2rem, 2vw, 1.5rem);
+	color: var(--color-link);
+	font-weight: 700;
+	border-bottom: 0.4rem solid transparent;
+	transition: var(--transition-slow);
+}
+ 
+.nav-link:active,
+.nav-link:focus,
+.nav-link:visited,
+.nav-link:hover {
+	color: var(--color-link-hover);
+	border-bottom: 0.4rem solid var(--color-link-hover);
+}
+ 
+.logo {
+	width: 16rem;
+}
+ 
+.menu-icon {
+	display: block;
+	width: 5rem;
+	height: 5rem;
+	cursor: pointer;
+	margin-right: 1rem;
+}
+ 
+/* --- Mobile Menu --- */
+ 
 .back-drop {
 	position: fixed;
 	top: 0;
@@ -217,37 +344,11 @@ a {
 	background-color: rgba(0, 0, 0, 0.6);
 	z-index: 2;
 }
-
-.logo {
-	width: 16rem;
-}
-
-.menu-icon {
-	display: block;
-	width: 5rem;
-	height: 5rem;
-	cursor: pointer;
-	margin-right: 1rem;
-}
-
-.nav {
-	padding-top: 1.6rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	overflow: hidden;
-	position: relative;
-}
-
-.nav-items {
-	display: none;
-	font-family: var(--font-heading);
-}
-
+ 
 .mobile-menu {
 	width: 65%;
 	height: 100vh;
-	background: url("../images/backgroud.webp");
+	background: url("../images/background.webp");
 	background-size: cover;
 	background-position: top center;
 	position: fixed;
@@ -262,32 +363,28 @@ a {
 	transform: translateX(100%);
 	transition: all 0.3s ease;
 }
-
+ 
 .show-mobile-menu {
 	transform: translateX(0);
 	right: 0;
 }
-
-body.no-scroll {
-	overflow: hidden;
-}
-
+ 
 .close {
 	width: 2.5rem;
 	height: 2.5rem;
 	align-self: flex-end;
 	margin: 2rem 2rem 0 0;
 }
-
+ 
 .mobile-menu-items {
 	display: flex;
 	flex-direction: column;
 	row-gap: 3rem;
 	text-align: center;
-	font-family: var(--heading-font);
+	font-family: var(--font-heading);
 	color: var(--brand-secondary-strong);
 }
-
+ 
 .mobile-menu-link {
 	font-size: var(--font-size-nav-mobile);
 	font-weight: 600;
@@ -296,86 +393,40 @@ body.no-scroll {
 	padding-bottom: 0.75rem;
 	transition: var(--transition-slow);
 }
-
+ 
 .mobile-menu-link:hover {
 	color: var(--color-link-hover);
 	border-bottom: 0.4rem solid var(--color-link-hover);
 }
-
+ 
 .logo-box {
 	text-align: center;
 	margin-top: 10rem;
 }
-
+ 
 .mobile-menu-logo {
 	width: 22rem;
 	margin: 0 1rem;
 }
-
-.nav-item {
-	color: var(--color-link);
-}
-
-.nav-link {
-	display: inline-block;
-	letter-spacing: 0.16rem;
-	font-size: clamp(1.2rem, 2vw, 1.5rem);
-	color: var(--color-link);
-	font-weight: 700;
-	border-bottom: 0.4rem solid transparent;
-	transition: var(--transition-slow);
-}
-
-.nav-link:active,
-.nav-link:focus,
-.nav-link:visited,
-.nav-link:hover {
-	color: var(--color-link-hover);
-	border-bottom: 0.4rem solid var(--color-link-hover);
-}
-
-/* --------------------Home Page----------------------- */
-
-/* The Gradient Overlay */
-.landing::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	/* Adjust the '0.9' to make the left side more or less opaque */
-	/* Adjust the '50%' to control how far across the screen the white stays */
-	z-index: 1;
-}
-
-/* Ensure your content stays on top of the gradient */
-.landing .container,
-.landing .container-fluid {
-	position: relative;
-	z-index: 2;
-}
-
+ 
+ 
+/* ============================================================
+   7. HERO / LANDING
+   ============================================================ */
+ 
 .landing {
-	position: relative;
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
 	overflow: hidden;
 	min-height: calc(100vh - 9rem);
-	background-repeat: no-repeat;
-	background-position: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding-top: 2rem;
 }
-
-.hero-img {
-	display: block;
-	margin-inline: auto;
-}
-
+ 
 .landing h1 {
 	font-family: var(--font-heading);
 	font-size: var(--font-size-hero-title);
@@ -387,66 +438,71 @@ body.no-scroll {
 	text-align: center;
 	color: var(--color-heading);
 	margin: 1rem;
-	font-weight: 800;
-	text-shadow: 5px 0px 6px #b5cce6;
-	letter-spacing: 1px;
 	margin-bottom: 10px;
+	text-shadow: 5px 0px 6px #b5cce6;
 }
-
+ 
 .landing h2,
 .landing h3,
 .packages-card-title {
-	font-family: var(--body-font);
-	color: var(--dark-grey);
+	font-family: var(--font-body);
+	color: var(--text-main);
 }
-
+ 
 .landing h3 {
 	font-size: var(--font-size-hero-copy);
 	font-weight: 500;
 	text-shadow: 0.3rem 0.3rem 0.8rem rgba(150, 54, 6, 0.5);
 }
-
+ 
 .slogan-box {
 	padding-left: 20px;
-	border-left: 3px solid var(--brand-accent-strong);
-	/* Matches the orange in your ETB logo */
+	border-left: 3px solid var(--brand-accent-strong); /* Matches the orange in your ETB logo */
 	margin-top: 25px;
 	min-height: 40px;
 	display: flex;
 	align-items: center;
 }
-
+ 
 .slogan-box h2,
 .slogan-box h3 {
-	font-family: var(--body-font);
-	font-weight: 400;
-	/* Light weight for a high-end feel */
+	font-family: var(--font-body);
+	font-weight: 400; /* Light weight for a high-end feel */
 	font-size: var(--font-size-hero-subtitle);
 	line-height: 1.5;
 	margin: 0;
-	color: var(--dark-grey);
-	/* A dark grey that's easier to read than pure black */
+	color: var(--text-main); /* A dark grey that's easier to read than pure black */
 }
-
+ 
 .hero-box {
 	text-align: center;
 }
-
+ 
+.hero-img {
+	display: block;
+	margin-inline: auto;
+}
+ 
+ 
+/* ============================================================
+   8. PACKAGES SECTION
+   ============================================================ */
+ 
 .packages {
 	background-color: var(--color-surface);
 	padding-bottom: 7rem;
 }
-
+ 
 .packages .cards-container {
 	justify-content: center;
 	row-gap: 3rem;
 }
-
-.packages .cards-container>div {
+ 
+.packages .cards-container > div {
 	display: flex;
 	justify-content: center;
 }
-
+ 
 .packages-card {
 	width: 100%;
 	max-width: 45rem;
@@ -460,12 +516,12 @@ body.no-scroll {
 	overflow: hidden;
 	margin: auto;
 }
-
+ 
 .packages-card:hover {
 	transform: translateY(-0.5%);
 	box-shadow: var(--shadow-card-hover);
 }
-
+ 
 .packages-card-img {
 	display: block;
 	width: 100%;
@@ -473,11 +529,11 @@ body.no-scroll {
 	object-fit: cover;
 	transition: var(--transition-slow);
 }
-
+ 
 .packages-img-hover:hover .packages-card-img {
 	transform: scale(1.1);
 }
-
+ 
 .packages-card-content {
 	padding: 1.75rem;
 	display: flex;
@@ -485,52 +541,55 @@ body.no-scroll {
 	justify-content: flex-end;
 	align-items: center;
 }
-
+ 
 .packages-card-title {
 	display: inline-block;
 	font-size: var(--font-size-card-title);
 	line-height: 2.4rem;
-	font-weight: 700;
+	font-weight: 800;
 	text-align: center;
 	padding: 1rem 0;
 }
-
+ 
 .packages-card-text {
 	font-size: var(--font-size-card-price);
 	line-height: 1.6;
 	color: var(--brand-secondary-strong);
-	font-weight: bold;
+	font-weight: 600;
+	font-style: italic;
 	margin-bottom: 2rem;
 	text-align: center;
 }
-
+ 
 .packages-card-text strong {
 	background-color: var(--brand-accent-strong);
 	color: var(--bg-main);
 	padding: 1rem;
 	border-radius: var(--radius-md);
 }
-
-@media (min-width: 1200px) {
-	.packages .cards-container>div {
-		flex: 0 0 33.333333%;
-		max-width: 33.333333%;
-	}
-}
-
-
+ 
+ 
+/* ============================================================
+   9. ABOUT SECTION
+   ============================================================ */
+ 
 .about {
 	background-color: var(--bg-white);
 	margin-bottom: 7rem;
 }
-
-
+ 
 .about-section p {
 	font-family: var(--font-body);
 	color: var(--text-main);
 	line-height: 1.8;
 }
-
+ 
+.about-image img {
+	width: 100%;
+	height: auto;
+	filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+ 
 .value-card {
 	background: #f9f9f9;
 	padding: 2rem;
@@ -541,32 +600,31 @@ body.no-scroll {
 		transform 0.3s ease,
 		box-shadow 0.3s ease;
 }
-
+ 
 .value-card:hover {
 	transform: scale(1.05) translateY(-5px);
 	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
-
+ 
 .value-card h3 {
-	font-family: var(--heading-font);
+	font-family: var(--font-heading);
 	font-size: var(--font-size-card-title);
 	font-weight: 600;
 	color: var(--brand-secondary-strong);
 }
-
-.about-image img {
-	width: 100%;
-	height: auto;
-	filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+ 
+.offices-section {
+	margin-top: 3rem;
+	padding-left: 1rem;
 }
-
+ 
 .office-list {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
 	margin-top: 20px;
 }
-
+ 
 .office-list span {
 	background: #eee;
 	padding: 8px 15px;
@@ -574,31 +632,37 @@ body.no-scroll {
 	font-weight: bold;
 	font-size: clamp(1rem, 3vw, 1.75rem);
 }
-
+ 
+ 
+/* ============================================================
+   10. BANNER
+   ============================================================ */
+ 
 .banner_box {
 	position: relative;
 	height: 60vh;
 	overflow: hidden;
-
 }
-
+ 
 .banner {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	display: block;
 }
-
+ 
 .banner_box::before {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: linear-gradient(to bottom,
-			rgba(0, 0, 0, 0.6),
-			rgba(0, 0, 0, 0.3));
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.6),
+		rgba(0, 0, 0, 0.3)
+	);
 	z-index: 1;
 }
-
+ 
 .banner_text {
 	position: absolute;
 	inset: 0;
@@ -610,7 +674,7 @@ body.no-scroll {
 	text-align: center;
 	padding: 2rem;
 }
-
+ 
 .banner_text h1 {
 	font-family: var(--font-heading);
 	font-size: var(--font-size-hero-title);
@@ -618,29 +682,34 @@ body.no-scroll {
 	color: var(--bg-white);
 	margin-bottom: 1rem;
 }
-
-
+ 
 .banner-subtitle {
 	font-family: var(--font-body);
 	font-size: var(--font-size-hero-subtitle);
+	font-weight: 600;
+	font-style: italic;
 	color: var(--bg-main);
 	opacity: 0.9;
 }
-
+ 
 .banner-subtitle strong {
 	color: var(--bg-white);
-	background-color: var(--brand-accent-strong);
-	/* Sea Buckthorn accent */
+	background-color: var(--brand-accent-strong); /* Sea Buckthorn accent */
 	font-weight: 800;
 	font-size: var(--font-size-section-subtitle);
 	padding: 1rem;
 	margin-bottom: 1rem;
 }
-
-.package_details {
-	padding: 2rem 2rem 6rem;
+ 
+ 
+/* ============================================================
+   11. CARDS (GENERIC)
+   ============================================================ */
+ 
+.cards-container {
+	padding: 3.2rem;
 }
-
+ 
 .card {
 	border: none;
 	border-radius: var(--radius-md);
@@ -654,118 +723,32 @@ body.no-scroll {
 		transform 0.3s ease,
 		box-shadow 0.3s ease;
 }
-
+ 
 .card:hover {
 	transform: scale(1.05) translateY(-5px);
 	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-
 }
-
-.section-title,
-.section-sub-title {
-	font-family: var(--heading-font);
-	color: var(--brand-primary);
-	font-weight: 700;
-}
-
-.section-title {
-	font-size: var(--font-size-section-title);
-	text-align: center;
-	padding: 4.8rem 0;
-	position: relative;
-	width: fit-content;
-	margin: 0 auto 1.6rem;
-}
-
-.section-sub-title {
-	font-size: var(--font-size-section-subtitle);
-	text-align: left;
-	width: fit-content;
-	margin-top: 1rem;
-}
-
-.section-title::before {
-	content: "";
-	position: absolute;
-	height: 0.5rem;
-	width: 70%;
-	background-color: var(--brand-primary);
-	bottom: 3rem;
-	left: calc(15%);
-}
-
-.section-text {
-	text-align: justify;
-	margin-bottom: 2rem;
-}
-
-.package_details .list,
-.package_details .itinerary,
-.visa-section .list,
-.terms-section .list {
-	list-style: disc;
-	padding-left: 2.4rem;
-	margin-bottom: 2.4rem;
-}
-
-.package_details .list li,
-.package_details .itinerary li,
-.visa-section .list li,
-.terms-section .list li {
-	margin-bottom: 0.8rem;
-	line-height: 1.7;
-}
-
-.package_details .itinerary li strong {
-	color: var(--brand-secondary-strong);
-}
-
-.visa-section,
-.terms-section {
-	padding: 2rem 2rem 6rem;
-}
-
-.visa-link {
-	color: var(--brand-primary);
-	font-weight: 700;
-	text-decoration: underline;
-	text-underline-offset: 0.2rem;
-}
-
-.visa-link:hover {
-	color: var(--brand-secondary-strong);
-}
-
-
-.offices-section {
-	margin-top: 3rem;
-	padding-left: 1rem;
-}
-
+ 
 .card-title {
 	display: inline-block;
 	font-size: clamp(1.8rem, 3vw, 2.4rem);
 	line-height: 3.2rem;
 	font-weight: 800;
 	text-align: center;
-	padding: 6rem 1.6rem 1.6rem 1.6rem;
+	padding: 6rem 1.6rem 1.6rem;
 }
-
-.cards-container {
-	padding: 3.2rem;
-}
-
+ 
 .card-img {
 	max-width: 100%;
 	border-top-left-radius: 1.2rem;
 	border-top-right-radius: 1.2rem;
 }
-
+ 
 .lower-part {
 	position: relative;
 	text-align: center;
 }
-
+ 
 .icon-box {
 	position: absolute;
 	left: 50%;
@@ -780,63 +763,164 @@ body.no-scroll {
 	font-size: var(--font-size-icon-box);
 	box-shadow: 0 0.1rem 2rem 1rem rgb(51 51 51 / 23%);
 }
-
+ 
 .icon {
 	position: relative;
 	width: 4.8rem;
 	top: -3.2rem;
 }
-
+ 
+ 
+/* ============================================================
+   12. SHARED SECTION STYLES
+   ============================================================ */
+ 
+.section-title,
+.section-sub-title {
+	font-family: var(--font-heading);
+	color: var(--brand-primary);
+	font-weight: 700;
+}
+ 
+.section-title {
+	font-size: var(--font-size-section-title);
+	text-align: center;
+	padding: 4.8rem 0;
+	position: relative;
+	width: fit-content;
+	margin: 0 auto 1.6rem;
+}
+ 
+.section-title::before {
+	content: "";
+	position: absolute;
+	height: 0.5rem;
+	width: 70%;
+	background-color: var(--brand-primary);
+	bottom: 3rem;
+	left: calc(15%);
+}
+ 
+.section-sub-title {
+	font-size: var(--font-size-section-subtitle);
+	text-align: left;
+	width: fit-content;
+	margin-top: 1rem;
+}
+ 
+.section-text {
+	text-align: justify;
+	margin-bottom: 2rem;
+}
+ 
+/* --- Package / Visa / Terms lists --- */
+ 
+.package_details {
+	padding: 2rem 2rem 6rem;
+}
+ 
+.package_details .list,
+.package_details .itinerary,
+.visa-section .list,
+.terms-section .list {
+	list-style: disc;
+	padding-left: 2.4rem;
+	margin-bottom: 2.4rem;
+}
+ 
+.package_details .list li,
+.package_details .itinerary li,
+.visa-section .list li,
+.terms-section .list li {
+	margin-bottom: 0.8rem;
+	line-height: 1.7;
+}
+ 
+.package_details .itinerary li strong {
+	color: var(--brand-secondary-strong);
+}
+ 
+.visa-section,
+.terms-section {
+	padding: 2rem 2rem 6rem;
+}
+ 
+.visa-link {
+	color: var(--brand-primary);
+	font-weight: 700;
+	text-decoration: underline;
+	text-underline-offset: 0.2rem;
+}
+ 
+.visa-link:hover {
+	color: var(--brand-secondary-strong);
+}
+ 
+ 
+/* ============================================================
+   13. WHO WE ARE SECTION
+   ============================================================ */
+ 
 .section-who {
 	background-color: var(--color-surface);
 	padding: 3.2rem 1.6rem 8rem;
 }
-
+ 
 .section-who .heading-text {
 	font-weight: 600;
 }
-
+ 
 .section-who p {
 	margin-bottom: 1.6rem;
 }
-
+ 
 .section-who .img-box {
 	padding: 3rem;
 }
-
+ 
 .section-who img {
 	margin: auto;
 	box-shadow: var(--shadow-image);
 	border-radius: var(--radius-md);
 }
-
+ 
 .who-icon {
 	width: 5rem;
 	height: 5rem;
 }
-
+ 
+ 
+/* ============================================================
+   14. SERVICES SECTION
+   ============================================================ */
+ 
 .services {
 	padding: 3.2rem 1.6rem 8rem;
 }
-
+ 
 .services ul {
 	list-style: none;
 }
-
+ 
 .services ul:last-child {
 	margin-bottom: 3rem;
 }
-
+ 
 .services .img-box {
 	margin: 5rem;
 }
-
+ 
+ 
+/* ============================================================
+   15. FOOTER
+   ============================================================ */
+ 
 .footer {
 	background-color: var(--color-footer-bg);
 	color: var(--color-footer-text);
 	padding: var(--footer-padding);
 }
-
+ 
 /* Footer headings share one accent treatment to avoid conflicting overrides. */
 .footer h3 {
 	font-family: var(--font-heading);
@@ -847,16 +931,17 @@ body.no-scroll {
 	position: relative;
 	display: inline-block;
 	margin-bottom: 1rem;
-	padding-bottom: .5rem;
+	padding-bottom: 0.5rem;
 	border-bottom: 0.4rem solid var(--color-link-hover);
 }
-
+ 
 /* --- Branding & Links --- */
+ 
 .footer-logo {
 	max-width: 220px;
 	margin-bottom: 1.5rem;
 }
-
+ 
 .footer-links a {
 	display: block;
 	color: inherit;
@@ -864,31 +949,29 @@ body.no-scroll {
 	margin-bottom: 0.8rem;
 	transition: color 0.3s;
 }
-
-/* --- Social Icons (The Row Fix) --- */
+ 
+/* --- Social Icons --- */
+ 
 .social-list {
 	display: flex;
-	/* Forces them into a row */
-	flex-wrap: wrap;
-	/* Allows wrapping on tiny screens */
+	flex-wrap: wrap; /* Allows wrapping on tiny screens */
 	gap: 1.5rem;
-	/* Space between icons */
 	padding-top: 1rem;
 }
-
+ 
 .social-list svg {
 	width: var(--icon-social-size);
 	height: var(--icon-social-size);
-	fill: #55acee;
-	/* Match that sky blue from your image */
+	fill: #55acee; /* Sky blue */
 	transition: transform 0.3s;
 }
-
+ 
 .social-list a:hover svg {
 	transform: translateY(-5px);
 }
-
+ 
 /* --- Contact Info --- */
+ 
 .contact-item {
 	display: flex;
 	align-items: center;
@@ -896,108 +979,104 @@ body.no-scroll {
 	margin-bottom: 1.2rem;
 	font-size: var(--font-size-contact);
 }
-
+ 
 .contact-item svg {
 	width: var(--icon-contact-size);
 	height: var(--icon-contact-size);
 	fill: var(--brand-accent);
 	flex-shrink: 0;
 }
-
-/* Mobile First i.e Smaller to Larger Devices */
-
-/* X-Small devices (portrait phones, less than 576px) */
-
+ 
+ 
+/* ============================================================
+   16. MEDIA QUERIES  (mobile-first)
+   ============================================================ */
+ 
 /* Small devices (landscape phones, 576px and up) */
-
 @media (min-width: 576px) {
 	.mobile-menu-logo {
 		width: 25rem;
 	}
-
+ 
 	.hero-img {
 		max-width: 70%;
 	}
-
+ 
 	.section-who .img-box {
 		padding: 5rem;
 	}
-
+ 
 	.footer .row {
 		row-gap: 4rem;
 	}
 }
-
+ 
 /* Medium devices (tablets, 768px and up) */
-
 @media (min-width: 768px) {
 	.hero-img {
 		max-width: 54%;
 	}
-
+ 
 	.services li {
 		font-size: var(--font-size-service);
 	}
 }
-
+ 
 /* Large devices (desktops, 992px and up) */
-
 @media (min-width: 992px) {
 	.logo {
 		width: 20rem;
 	}
-
+ 
 	.hero-img {
 		max-width: 100%;
 	}
-
+ 
+	.back-drop,
 	.mobile-menu {
 		display: none;
 	}
-
-	.back-drop {
+ 
+	.menu-icon {
 		display: none;
 	}
-
+ 
 	.nav-items {
 		display: flex;
 		list-style: none;
 		column-gap: 1.5rem;
 		width: initial;
 	}
-
-	.menu-icon {
-		display: none;
-	}
-
+ 
 	.section-who .img-box {
 		padding: 4rem;
 	}
-
+ 
 	.section-who .btn,
 	.services .btn {
 		margin-left: 1rem;
 	}
-
+ 
 	.services .row {
 		margin-bottom: 5rem;
 	}
 }
-
+ 
 /* X-Large devices (large desktops, 1200px and up) */
-
 @media (min-width: 1200px) {
 	.landing .row {
 		margin-bottom: 8rem;
 	}
-
+ 
+	.packages .cards-container > div {
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+	}
 }
-
+ 
 /* XX-Large devices (larger desktops, 1400px and up) */
-
 @media (min-width: 1400px) {
 	.landing .row {
 		margin-bottom: 1rem;
 	}
-
 }

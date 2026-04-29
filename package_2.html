@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- FIX: removed obsolete IE compatibility meta tag -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description"
          content="View ETB's budget Egypt tour covering Cairo, Aswan, Abu Simbel, and Luxor with guided visits, hotels, transfers, and flights.">
@@ -12,21 +12,23 @@
       <link rel="canonical" href="https://www.etb-eg.com/package_2.html">
       <meta property="og:type" content="article">
       <meta property="og:locale" content="en_US">
-      <meta property="og:title" content="Budget Egypt Tour: Cairo, Aswan, Abu Simbel & Luxor | Egyptian Travel Bureau">
+      <!-- FIX: escaped & as &amp; in og:title and twitter:title -->
+      <meta property="og:title" content="Budget Egypt Tour: Cairo, Aswan, Abu Simbel &amp; Luxor | Egyptian Travel Bureau">
       <meta property="og:description" content="View ETB's budget Egypt tour covering Cairo, Aswan, Abu Simbel, and Luxor with guided visits, hotels, transfers, and flights.">
       <meta property="og:url" content="https://www.etb-eg.com/package_2.html">
       <meta property="og:image" content="https://www.etb-eg.com/images/Abu_Simbel_banner.webp">
       <meta property="og:image:alt" content="Abu Simbel Egypt tour package banner">
       <meta property="og:site_name" content="Egyptian Travel Bureau">
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="Budget Egypt Tour: Cairo, Aswan, Abu Simbel & Luxor | Egyptian Travel Bureau">
+      <meta name="twitter:title" content="Budget Egypt Tour: Cairo, Aswan, Abu Simbel &amp; Luxor | Egyptian Travel Bureau">
       <meta name="twitter:description" content="View ETB's budget Egypt tour covering Cairo, Aswan, Abu Simbel, and Luxor with guided visits, hotels, transfers, and flights.">
       <meta name="twitter:image" content="https://www.etb-eg.com/images/Abu_Simbel_banner.webp">
       <meta name="twitter:image:alt" content="Abu Simbel Egypt tour package banner">
       <link rel="stylesheet" href="CSS/bootstrap.min.css">
       <link rel="stylesheet" href="CSS/style.css">
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-      <title>Budget Egypt Tour: Cairo, Aswan, Abu Simbel & Luxor | Egyptian Travel Bureau</title>
+      <!-- FIX: escaped & as &amp; in <title> -->
+      <title>Budget Egypt Tour: Cairo, Aswan, Abu Simbel &amp; Luxor | Egyptian Travel Bureau</title>
       <script type="application/ld+json">
          {
            "@context": "https://schema.org",
@@ -94,10 +96,12 @@
       <header class="header">
          <div class="back-drop hide"></div>
          <div class="container">
-            <nav class="nav">
+            <!-- FIX: added aria-label to <nav> for accessibility -->
+            <nav class="nav" aria-label="Main navigation">
                <img src="images/logo.webp" alt="ETB logo" class="logo">
-               <svg class="menu-icon" aria-label="Open Menu" role="button">
-                  <use xlink:href="images/sprite.svg#menu"></use>
+               <!-- FIX: updated deprecated xlink:href to href throughout -->
+               <svg class="menu-icon" aria-label="Open Menu" role="button" tabindex="0">
+                  <use href="images/sprite.svg#menu"></use>
                </svg>
                <ul class="nav-items">
                   <li class="nav-item">
@@ -122,8 +126,8 @@
             </nav>
          </div>
          <div class="mobile-menu">
-            <svg class="close" aria-label="Close Menu" role="button">
-               <use xlink:href="images/sprite.svg#Close"></use>
+            <svg class="close" aria-label="Close Menu" role="button" tabindex="0">
+               <use href="images/sprite.svg#Close"></use>
             </svg>
             <ul class="mobile-menu-items">
                <li class="mobile-menu-item">
@@ -146,85 +150,92 @@
                </li>
             </ul>
             <div class="logo-box">
-               <img src="images/logo.webp" alt="ETB Logo" class="mobile-menu-logo">
+               <img src="images/logo.webp" alt="ETB logo" class="logo" decoding="async">
             </div>
          </div>
       </header>
       <main>
          <section class="banner_box">
-            <img src="./images/Abu_Simbel_banner.webp" alt="" class="banner">
+            <!-- FIX: added descriptive alt text to banner image -->
+            <img src="images/Abu_Simbel_banner.webp" alt="Abu Simbel temples facade at sunrise, Egypt" class="banner">
             <div class="banner_text">
-               <h1>Budget Tour: Cairo, Aswan, Abu Simbel & Luxor</h1>
+               <!-- FIX: escaped & as &amp; in <h1> -->
+               <h1>Budget Tour: Cairo, Aswan, Abu Simbel &amp; Luxor</h1>
                <p class="banner-subtitle">
-                  Experience Egypt’s iconic highlights from <strong>$980</strong>
+                  Experience Egypt's iconic highlights from <strong>$980</strong>
                </p>
             </div>
          </section>
-         <section class="package_details container">
-            <h2 class="section-title">Tour Overview</h2>
-            <p class="section-text">
-               Designed for travelers who want maximum value without compromising on experience, 
-               this budget-friendly Egypt tour takes you through the country’s most iconic destinations: 
-               <strong>Cairo, Aswan, Abu Simbel, and Luxor</strong>.
-            </p>
-            <p class="section-text">
-               Begin your journey in Cairo with visits to the <strong>Pyramids of Giza</strong>, 
-               the <strong>Sphinx</strong>, and the Egyptian Museum. Travel south via sleeper train 
-               to Aswan, where you’ll explore the High Dam, Philae Temple, and enjoy a traditional 
-               felucca ride. Continue to the magnificent <strong>Abu Simbel Temples</strong>, then 
-               head to Luxor to uncover the wonders of the East and West Banks, including the 
-               Valley of the Kings and Karnak Temple.
-            </p>
-            <p class="section-text">
-               This itinerary offers the perfect balance between guided tours and free time, 
-               allowing you to explore Egypt at your own pace while benefiting from expert planning 
-               and local insights.
-            </p>
-            <h3 class="section-sub-title">Itinerary Highlights</h3>
-            <ul class="itinerary">
-               <li><strong>Day 1:</strong> Arrival in Cairo & hotel check-in</li>
-               <li><strong>Day 2:</strong> Pyramids, Sphinx & Egyptian Museum – sleeper train to Aswan</li>
-               <li><strong>Day 3:</strong> Aswan – Philae Temple, High Dam & Felucca ride</li>
-               <li><strong>Day 4:</strong> Abu Simbel day trip</li>
-               <li><strong>Day 5:</strong> Transfer to Luxor – Karnak & Luxor Temples</li>
-               <li><strong>Day 6:</strong> Valley of the Kings, Hatshepsut Temple & Colossi of Memnon</li>
-               <li><strong>Day 7:</strong> Flight back to Cairo</li>
-            </ul>
-            <h3 class="section-sub-title">What's Included</h3>
-            <ul class="list">
-               <li>1 night in Cairo hotel (Bed & Breakfast)</li>
-               <li>1 night sleeper train (Half Board)</li>
-               <li>2 nights in Aswan hotel (Bed & Breakfast)</li>
-               <li>2 nights in Luxor hotel (Bed & Breakfast)</li>
-               <li>Private Egyptologist guide during all tours</li>
-               <li>All entrance fees as per itinerary</li>
-               <li>All transfers in private air-conditioned vehicles</li>
-               <li>Abu Simbel excursion</li>
-               <li>Aswan → Luxor private transfer</li>
-               <li>Flight from Luxor to Cairo</li>
-               <li>Meet & assist services</li>
-            </ul>
-            <h3 class="section-sub-title">What's Not Included</h3>
-            <ul class="list">
-               <li>International flights</li>
-               <li>Egypt entry visa</li>
-               <li>Personal expenses</li>
-               <li>Tipping (guides, drivers, etc.)</li>
-               <li>Any services not mentioned</li>
-            </ul>
-            <h3 class="section-sub-title">Accommodation</h3>
-            <ul class="list">
-               <li>Cairo: 4★ hotel (e.g., Barcelo Pyramids or similar)</li>
-               <li>Sleeper train: Cairo → Aswan (Half Board)</li>
-               <li>Aswan: 4★ hotel (e.g., Basma Hotel or similar)</li>
-               <li>Luxor: 4★ hotel (e.g., Iberotel or similar)</li>
-            </ul>
-            <h3 class="section-sub-title">Important Notes</h3>
-            <ul class="list">
-               <li>Prices are per person in double occupancy (USD)</li>
-               <li>All taxes and service charges included</li>
-               <li>Children policies apply (discounts available)</li>
-            </ul>
+         <!-- FIX: moved .container from <section> to inner <div> per Bootstrap conventions -->
+         <section class="package_details">
+            <div class="container">
+               <h2 class="section-title">Tour Overview</h2>
+               <p class="section-text">
+                  Designed for travelers who want maximum value without compromising on experience,
+                  this budget-friendly Egypt tour takes you through the country's most iconic destinations:
+                  <strong>Cairo, Aswan, Abu Simbel, and Luxor</strong>.
+               </p>
+               <p class="section-text">
+                  Begin your journey in Cairo with visits to the <strong>Pyramids of Giza</strong>,
+                  the <strong>Sphinx</strong>, and the Egyptian Museum. Travel south via sleeper train
+                  to Aswan, where you'll explore the High Dam, Philae Temple, and enjoy a traditional
+                  felucca ride. Continue to the magnificent <strong>Abu Simbel Temples</strong>, then
+                  head to Luxor to uncover the wonders of the East and West Banks, including the
+                  Valley of the Kings and Karnak Temple.
+               </p>
+               <p class="section-text">
+                  This itinerary offers the perfect balance between guided tours and free time,
+                  allowing you to explore Egypt at your own pace while benefiting from expert planning
+                  and local insights.
+               </p>
+               <h3 class="section-sub-title">Itinerary Highlights</h3>
+               <!-- FIX: escaped & as &amp; throughout itinerary list -->
+               <ul class="itinerary">
+                  <li><strong>Day 1:</strong> Arrival in Cairo &amp; hotel check-in</li>
+                  <li><strong>Day 2:</strong> Pyramids, Sphinx &amp; Egyptian Museum – sleeper train to Aswan</li>
+                  <li><strong>Day 3:</strong> Aswan – Philae Temple, High Dam &amp; Felucca ride</li>
+                  <li><strong>Day 4:</strong> Abu Simbel day trip</li>
+                  <li><strong>Day 5:</strong> Transfer to Luxor – Karnak &amp; Luxor Temples</li>
+                  <li><strong>Day 6:</strong> Valley of the Kings, Hatshepsut Temple &amp; Colossi of Memnon</li>
+                  <li><strong>Day 7:</strong> Flight back to Cairo</li>
+               </ul>
+               <h3 class="section-sub-title">What's Included</h3>
+               <!-- FIX: escaped & as &amp; throughout included list -->
+               <ul class="list">
+                  <li>1 night in Cairo hotel (Bed &amp; Breakfast)</li>
+                  <li>1 night sleeper train (Half Board)</li>
+                  <li>2 nights in Aswan hotel (Bed &amp; Breakfast)</li>
+                  <li>2 nights in Luxor hotel (Bed &amp; Breakfast)</li>
+                  <li>Private Egyptologist guide during all tours</li>
+                  <li>All entrance fees as per itinerary</li>
+                  <li>All transfers in private air-conditioned vehicles</li>
+                  <li>Abu Simbel excursion</li>
+                  <li>Aswan → Luxor private transfer</li>
+                  <li>Flight from Luxor to Cairo</li>
+                  <li>Meet &amp; assist services</li>
+               </ul>
+               <h3 class="section-sub-title">What's Not Included</h3>
+               <ul class="list">
+                  <li>International flights</li>
+                  <li>Egypt entry visa</li>
+                  <li>Personal expenses</li>
+                  <li>Tipping (guides, drivers, etc.)</li>
+                  <li>Any services not mentioned</li>
+               </ul>
+               <h3 class="section-sub-title">Accommodation</h3>
+               <ul class="list">
+                  <li>Cairo: 4★ hotel (e.g., Barcelo Pyramids or similar)</li>
+                  <li>Sleeper train: Cairo → Aswan (Half Board)</li>
+                  <li>Aswan: 4★ hotel (e.g., Basma Hotel or similar)</li>
+                  <li>Luxor: 4★ hotel (e.g., Iberotel or similar)</li>
+               </ul>
+               <h3 class="section-sub-title">Important Notes</h3>
+               <ul class="list">
+                  <li>Prices are per person in double occupancy (USD)</li>
+                  <li>All taxes and service charges included</li>
+                  <li>Children policies apply (discounts available)</li>
+               </ul>
+            </div>
          </section>
       </main>
       <footer class="footer">
@@ -240,46 +251,33 @@
                <div class="col-lg-4 col-md-6 mb-5">
                   <h3>Social</h3>
                   <div class="social-list">
+                     <!-- NOTE: all social hrefs are # — update with real profile URLs -->
                      <a href="#" aria-label="Twitter">
-                        <svg>
-                           <use xlink:href="images/sprite.svg#twitter"></use>
-                        </svg>
+                        <svg><use href="images/sprite.svg#twitter"></use></svg>
                      </a>
                      <a href="#" aria-label="Facebook">
-                        <svg>
-                           <use xlink:href="images/sprite.svg#Facebook"></use>
-                        </svg>
+                        <svg><use href="images/sprite.svg#Facebook"></use></svg>
                      </a>
                      <a href="#" aria-label="Instagram">
-                        <svg>
-                           <use xlink:href="images/sprite.svg#Instagram"></use>
-                        </svg>
+                        <svg><use href="images/sprite.svg#Instagram"></use></svg>
                      </a>
                      <a href="#" aria-label="WhatsApp">
-                        <svg>
-                           <use xlink:href="images/sprite.svg#whatsapp"></use>
-                        </svg>
+                        <svg><use href="images/sprite.svg#whatsapp"></use></svg>
                      </a>
                   </div>
                </div>
                <div class="col-lg-5">
                   <h3>Contact</h3>
                   <div class="contact-item">
-                     <svg>
-                        <use xlink:href="images/sprite.svg#address"></use>
-                     </svg>
+                     <svg><use href="images/sprite.svg#address"></use></svg>
                      <span>3, Nour Elidin St, Heliopolis, Cairo, Egypt.</span>
                   </div>
                   <div class="contact-item">
-                     <svg>
-                        <use xlink:href="images/sprite.svg#email"></use>
-                     </svg>
+                     <svg><use href="images/sprite.svg#email"></use></svg>
                      <a href="mailto:info@etb-eg.com">info@etb-eg.com</a>
                   </div>
                   <div class="contact-item">
-                     <svg>
-                        <use xlink:href="images/sprite.svg#phone"></use>
-                     </svg>
+                     <svg><use href="images/sprite.svg#phone"></use></svg>
                      <span>(+202)-24192558 - (+202)-24192559</span>
                   </div>
                </div>
