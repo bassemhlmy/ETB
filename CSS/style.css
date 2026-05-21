@@ -22,158 +22,178 @@
 /* ============================================================
    1. FONTS
    ============================================================ */
-
+/* Noto Serif Variable */
 @font-face {
-	font-family: 'Montserrat';
+	font-family: "Noto Serif";
 	src:
-		url('../fonts/Montserrat-Regular.woff2') format('woff2'),
-		url('../fonts/Montserrat-Regular.woff') format('woff');
-	font-weight: 400;
+		url("../fonts/NotoSerif-VariableFont_wdth,wght.woff2") format("woff2"),
+		url("../fonts/NotoSerif-VariableFont_wdth,wght.woff") format("woff");
+	font-weight: 100 900;
 	font-style: normal;
 	font-display: swap;
 }
 
+/* Noto Serif Italic Variable */
 @font-face {
-	font-family: 'Montserrat';
+	font-family: "Noto Serif";
 	src:
-		url('../fonts/Montserrat-Bold.woff2') format('woff2'),
-		url('../fonts/Montserrat-Bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Montserrat';
-	src:
-		url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
-		url('../fonts/Montserrat-ExtraBold.woff') format('woff');
-	font-weight: 800;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Montserrat';
-	src:
-		url('../fonts/Montserrat-Medium.woff2') format('woff2'),
-		/* FIX: was incorrectly pointing to .woff2 for the woff fallback */
-		url('../fonts/Montserrat-Medium.woff') format('woff');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Montserrat';
-	src:
-		url('../fonts/Montserrat-Italic.woff2') format('woff2'),
-		url('../fonts/Montserrat-Italic.woff') format('woff');
-	font-weight: 400;
-	/* FIX: added missing space after colon */
+		url("../fonts/NotoSerif-Italic-VariableFont_wdth,wght.woff2") format("woff2"),
+		url("../fonts/NotoSerif-Italic-VariableFont_wdth,wght.woff") format("woff");
+	font-weight: 100 900;
 	font-style: italic;
 	font-display: swap;
 }
 
+/* Manrope Variable */
 @font-face {
-	font-family: 'Lato';
+	font-family: "Manrope";
 	src:
-		url('../fonts/Lato-Regular.woff2') format('woff2'),
-		url('../fonts/Lato-Regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Lato';
-	src:
-		url('../fonts/Lato-Italic.woff2') format('woff2'),
-		url('../fonts/Lato-Italic.woff') format('woff');
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Lato';
-	src:
-		url('../fonts/Lato-Bold.woff2') format('woff2'),
-		url('../fonts/Lato-Bold.woff') format('woff');
-	font-weight: 700;
+		url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2"),
+		url("../fonts/Manrope-VariableFont_wght.woff") format("woff");
+	font-weight: 200 800;
 	font-style: normal;
 	font-display: swap;
 }
 
 /* ============================================================
-   2. CUSTOM PROPERTIES
+   2. CUSTOM PROPERTIES — ETB Design System (DESIGN.md)
    ============================================================ */
 
+/* Import Google Fonts for design system typography */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700&display=swap');
+
 :root {
-	/* --- Brand palette --- */
-	--brand-primary: #037fb4;
-	--brand-secondary: #0182ba;
-	--brand-secondary-strong: #025e86;
-	--brand-accent: #c5722e;
-	--brand-accent-strong: #ee6a0c;
-	--brand-sand: #c2ae9e;
+	/* --- Design System: Surface Tones --- */
+	--surface: #fcf9f8;
+	--surface-dim: #dcd9d9;
+	--surface-bright: #fcf9f8;
+	--surface-container-lowest: #ffffff;
+	--surface-container-low: #f6f3f2;
+	--surface-container: #f0eded;
+	--surface-container-high: #eae7e7;
+	--surface-container-highest: #e5e2e1;
+	--on-surface: #1c1b1b;
+	--on-surface-variant: #43474e;
+	--inverse-surface: #313030;
+	--inverse-on-surface: #f3f0ef;
+	--outline: #73777f;
+	--outline-variant: #c3c6d0;
+	--surface-tint: #3f608b;
 
-	/* --- Surfaces --- */
-	--bg-main: #f9fbfd;
-	--bg-surface: #e9f0fb;
-	--bg-surface-alt: #dae2ee;
-	--bg-white: #ffffff;
-	--bg-footer: #20313d;
-	/* FIX: added missing surface tokens used as raw hex values in rules below */
-	--bg-value-card: #f9f9f9;
-	--bg-office-tag: #eeeeee;
-	/* FIX: added missing social icon fill colour into design system */
-	--color-social-icon: #55acee;
+	/* --- Design System: Primary (Mediterranean Blue) --- */
+	--primary: #001833;
+	--on-primary: #ffffff;
+	--primary-container: #002d56;
+	--on-primary-container: #7596c4;
+	--inverse-primary: #a7c8fa;
+	--primary-fixed: #d4e3ff;
+	--primary-fixed-dim: #a7c8fa;
+	--on-primary-fixed: #001c39;
+	--on-primary-fixed-variant: #254872;
 
-	/* --- Text --- */
-	--text-main: #34444f;
-	--text-muted: #84858a;
-	--text-inverse: #ffffff;
-	--text-footer: #c5def0;
+	/* --- Design System: Secondary (Desert Gold) --- */
+	--secondary: #775a19;
+	--on-secondary: #ffffff;
+	--secondary-container: #fed488;
+	--on-secondary-container: #785a1a;
+	--secondary-fixed: #ffdea5;
+	--secondary-fixed-dim: #e9c176;
+	--on-secondary-fixed: #261900;
+	--on-secondary-fixed-variant: #5d4201;
 
-	/* --- Semantic usage roles --- */
-	--color-heading: var(--brand-primary);
-	--color-link: var(--brand-primary);
-	--color-link-hover: var(--brand-secondary);
-	--color-cta: var(--brand-accent);
-	--color-cta-hover: var(--brand-accent-strong);
-	--color-price: var(--brand-accent);
-	--color-surface: var(--bg-surface);
-	--color-card: var(--bg-white);
-	--color-footer-bg: var(--bg-footer);
-	--color-footer-text: var(--text-footer);
-	--color-footer-accent: var(--brand-accent-strong);
+	/* --- Design System: Tertiary (Dark Stone) --- */
+	--tertiary: #191813;
+	--on-tertiary: #ffffff;
+	--tertiary-container: #2e2c26;
+	--on-tertiary-container: #97938b;
+	--tertiary-fixed: #e7e2d9;
+	--tertiary-fixed-dim: #cac6be;
+	--on-tertiary-fixed: #1d1c16;
+	--on-tertiary-fixed-variant: #494740;
 
-	/* --- Typography --- */
-	--font-heading: "Montserrat", sans-serif;
-	--font-body: "Lato", sans-serif;
+	/* --- Design System: Error --- */
+	--error: #ba1a1a;
+	--on-error: #ffffff;
+	--error-container: #ffdad6;
+	--on-error-container: #93000a;
+
+	/* --- Design System: Background --- */
+	--background: #fcf9f8;
+	--on-background: #1c1b1b;
+	--surface-variant: #e5e2e1;
+
+	/* -------------------------------------------------- */
+	/* Semantic aliases — used throughout existing rules  */
+	/* -------------------------------------------------- */
+
+	/* Brand palette aliases */
+	--brand-primary: var(--primary);
+	/* deep navy */
+	--brand-secondary: var(--on-primary-container);
+	/* muted blue */
+	--brand-secondary-strong: var(--primary-container);
+	/* dark navy */
+	--brand-accent: var(--secondary);
+	/* desert gold */
+	--brand-accent-strong: var(--secondary);
+	/* desert gold */
+	--brand-sand: var(--tertiary-fixed);
+	/* warm stone */
+
+	/* Surfaces */
+	--bg-main: var(--surface);
+	--bg-surface: var(--surface-container-low);
+	--bg-surface-alt: var(--surface-container);
+	--bg-white: var(--surface-container-lowest);
+	--bg-footer: #001f3a;
+	/* warm navy — premium depth without feeling cold */
+	--bg-value-card: var(--surface-container-low);
+	--bg-office-tag: var(--surface-container-high);
+	--color-social-icon: var(--secondary-fixed-dim);
+
+	/* Text */
+	--text-main: var(--on-surface);
+	--text-muted: var(--on-surface-variant);
+	--text-inverse: var(--on-primary);
+	--text-footer: var(--primary-fixed);
+
+	/* Semantic roles */
+	--color-heading: var(--primary);
+	--color-link: var(--primary);
+	--color-link-hover: var(--secondary);
+	--color-cta: var(--secondary);
+	--color-cta-hover: var(--on-secondary-fixed-variant);
+	--color-price: var(--secondary);
+	--color-surface: var(--surface-container-low);
+	--color-card: var(--surface-container-lowest);
+	--color-footer-bg: var(--primary);
+	--color-footer-text: var(--primary-fixed);
+	--color-footer-accent: var(--secondary);
+
+	/* --- Typography (Design System) --- */
+	--font-heading: "Noto Serif", Georgia, serif;
+	--font-body: "Manrope", system-ui, sans-serif;
 
 	/* --- Spacing & sizing --- */
 	--footer-padding: 3rem 1rem;
 	--icon-social-size: 4rem;
-	/* Blue circles */
 	--icon-contact-size: 3rem;
-	/* Contact list */
-	--radius-md: 1.2rem;
+	--radius-md: 0.25rem;
+	/* Architectural: crisp 4px per design system */
 
-	/* --- Shadows --- */
-	--shadow-card: 0 0.1rem 2rem 1rem rgb(51 51 51 / 23%);
-	--shadow-card-hover: 0 4rem 8rem rgba(0, 0, 0, 0.5);
-	--shadow-image: 0.3rem 0.2rem 2rem 1rem rgb(51 51 51 / 23%);
-	--shadow-button: 0 4px 12px rgba(13, 27, 42, 0.15);
-	--shadow-button-hover: 0 12px 24px rgba(13, 27, 42, 0.25);
-	--shadow-button-active: 0 2px 6px rgba(13, 27, 42, 0.2);
+	/* --- Shadows — Tonal / Ambient (per DESIGN.md) --- */
+	--shadow-card: 0 2px 12px rgba(0, 24, 51, 0.07), 0 1px 3px rgba(0, 24, 51, 0.05);
+	--shadow-card-hover: 0 16px 40px rgba(0, 24, 51, 0.13), 0 4px 12px rgba(0, 24, 51, 0.08);
+	--shadow-image: 0 4px 24px rgba(0, 24, 51, 0.10);
+	--shadow-button: 0 4px 12px rgba(0, 24, 51, 0.12);
+	--shadow-button-hover: 0 8px 24px rgba(0, 24, 51, 0.18);
+	--shadow-button-active: 0 2px 6px rgba(0, 24, 51, 0.12);
 
 	/* --- Transitions --- */
 	--transition-base: all 0.3s ease;
 	--transition-slow: all 0.5s ease-in-out;
 
-	/* --- Fluid type scale --- */
+	/* --- Fluid type scale (unchanged metrics, updated semantics) --- */
 	--font-size-body: clamp(1.6rem, 1.45rem + 0.35vw, 2rem);
 	--font-size-button: clamp(1.3rem, 1.2rem + 0.2vw, 1.5rem);
 	--font-size-nav-mobile: clamp(2rem, 1.8rem + 0.6vw, 2.5rem);
@@ -231,9 +251,16 @@ body.no-scroll {
         updated TOC entry above from h1–h3 to h1–h4 */
 h1,
 h2,
-h3,
 h4 {
 	font-family: var(--font-heading);
+	/* Noto Serif — heritage, authority */
+	color: var(--text-main);
+}
+
+h3 {
+	font-family: var(--font-body);
+	/* Manrope — modern counterpoint, adds typographic rhythm */
+	font-weight: 600;
 	color: var(--text-main);
 }
 
@@ -275,18 +302,22 @@ a:focus-visible {
 }
 
 .btn {
-	background-color: var(--bg-white);
-	border: 3px solid var(--brand-accent-strong);
-	color: var(--brand-accent-strong);
+	background-color: var(--secondary-fixed-dim);
+	/* bright desert gold #e9c176 — readable, warm, unmistakably golden */
+	border: 1px solid var(--secondary);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), var(--shadow-button);
+	color: var(--on-secondary-fixed);
+	/* deep brown-black #261900 — maximum contrast on gold */
 
-	font-family: var(--font-heading);
+	font-family: var(--font-body);
 	font-size: var(--font-size-button);
-	font-weight: 600;
-	text-transform: capitalize;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
 
-	padding: 12px 28px;
-	border-radius: 999px;
-	/* fully rounded */
+	padding: 12px 32px;
+	border-radius: 0.5rem;
+	/* 8px — architectural yet inviting; softer than 4px without going pill */
 
 	display: inline-flex;
 	align-items: center;
@@ -295,21 +326,22 @@ a:focus-visible {
 	cursor: pointer;
 
 	transition:
-		background-color 0.4s ease,
-		color 0.4s ease,
-		border-color 0.4s ease,
-		transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-		box-shadow 0.5s ease;
+		background-color 0.3s ease,
+		color 0.3s ease,
+		border-color 0.3s ease,
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
 }
 
 .btn:hover {
-	background: var(--color-cta-hover);
-	border-color: var(--color-cta-hover);
-	color: var(--text-inverse);
+	background: var(--secondary-fixed);
+	/* slightly lighter on hover — airy gold #ffdea5 */
+	border-color: var(--secondary);
+	color: var(--on-secondary-fixed);
 
 	box-shadow: var(--shadow-button-hover);
 
-	transform: translateY(-4px) scale(1.03);
+	transform: translateY(-2px);
 }
 
 .btn:active {
@@ -322,7 +354,8 @@ a:focus-visible {
    ============================================================ */
 
 .header {
-	background-color: var(--bg-main);
+	background-color: var(--surface-container-lowest);
+	border-bottom: 1px solid var(--outline-variant);
 }
 
 .container {
@@ -366,8 +399,8 @@ a:focus-visible {
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active {
-	color: var(--color-link-hover);
-	border-bottom: 0.4rem solid var(--color-link-hover);
+	color: var(--secondary);
+	border-bottom: 0.4rem solid var(--secondary);
 }
 
 .logo {
@@ -444,8 +477,8 @@ a:focus-visible {
 }
 
 .mobile-menu-link:hover {
-	color: var(--color-link-hover);
-	border-bottom: 0.4rem solid var(--color-link-hover);
+	color: var(--secondary);
+	border-bottom: 0.4rem solid var(--secondary);
 }
 
 .logo-box {
@@ -489,7 +522,7 @@ a:focus-visible {
 	margin: 1rem;
 	/* FIX: converted 10px to rem for unit consistency (1rem = 10px) */
 	margin-bottom: 1rem;
-	text-shadow: 5px 0px 6px #b5cce6;
+	text-shadow: 2px 0px 8px rgba(0, 24, 51, 0.18);
 }
 
 .landing h2,
@@ -502,13 +535,13 @@ a:focus-visible {
 .landing h3 {
 	font-size: var(--font-size-hero-copy);
 	font-weight: 500;
-	text-shadow: 0.3rem 0.3rem 0.8rem rgba(150, 54, 6, 0.5);
+	text-shadow: 0.2rem 0.2rem 0.6rem rgba(0, 24, 51, 0.12);
 }
 
 .slogan-box {
 	/* FIX: converted px values to rem for unit consistency */
 	padding-left: 2rem;
-	border-left: 0.3rem solid var(--brand-accent-strong);
+	border-left: 0.3rem solid var(--secondary);
 	margin-top: 2.5rem;
 	min-height: 4rem;
 	display: flex;
@@ -540,13 +573,17 @@ a:focus-visible {
    ============================================================ */
 
 .packages {
-	background-color: var(--color-surface);
-	padding-bottom: 7rem;
+	background-color: var(--surface-container-low);
+	padding-top: 4.8rem;
+	/* 48px — design system lg */
+	padding-bottom: 8rem;
+	/* 80px — design system xl */
 }
 
 .packages .cards-container {
 	justify-content: center;
-	row-gap: 3rem;
+	row-gap: 4rem;
+	/* increased from 3rem for more breathing room */
 }
 
 .packages .cards-container>div {
@@ -559,13 +596,15 @@ a:focus-visible {
 	max-width: 45rem;
 	min-width: 30rem;
 	min-height: 40rem;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	background: var(--color-card);
+	box-shadow: var(--shadow-card);
+	background: var(--surface-container-lowest);
+	border: 1px solid var(--outline-variant);
 	transition: var(--transition-slow);
 	cursor: pointer;
 	user-select: none;
 	overflow: hidden;
 	margin: auto;
+	border-radius: var(--radius-md);
 }
 
 .packages-card:hover {
@@ -613,10 +652,11 @@ a:focus-visible {
 }
 
 .packages-card-text strong {
-	background-color: var(--brand-accent-strong);
-	color: var(--bg-main);
-	padding: 1rem;
+	background-color: var(--secondary);
+	color: var(--on-secondary);
+	padding: 0.6rem 1.2rem;
 	border-radius: var(--radius-md);
+	font-style: normal;
 }
 
 
@@ -626,7 +666,9 @@ a:focus-visible {
 
 .about {
 	background-color: var(--bg-white);
-	margin-bottom: 7rem;
+	padding-top: 4.8rem;
+	padding-bottom: 4.8rem;
+	margin-bottom: 8rem;
 }
 
 .about-section p {
@@ -646,7 +688,7 @@ a:focus-visible {
 	background: var(--bg-value-card);
 	padding: 2rem;
 	border-radius: var(--radius-md);
-	border-left: 4px solid var(--brand-primary);
+	border-left: 4px solid var(--secondary);
 	box-shadow: var(--shadow-card);
 	transition:
 		transform 0.3s ease,
@@ -747,12 +789,14 @@ a:focus-visible {
 }
 
 .banner-subtitle strong {
-	color: var(--bg-white);
-	background-color: var(--brand-accent-strong);
-	font-weight: 800;
+	color: var(--on-secondary);
+	background-color: var(--secondary);
+	font-weight: 700;
 	font-size: var(--font-size-section-subtitle);
-	padding: 1rem;
+	padding: 0.6rem 1.4rem;
 	margin-bottom: 1rem;
+	border-radius: var(--radius-md);
+	letter-spacing: 0.04em;
 }
 
 
@@ -761,11 +805,12 @@ a:focus-visible {
    ============================================================ */
 
 .cards-container {
-	padding: 3.2rem;
+	padding: 4rem 3.2rem;
+	/* more vertical breathing room */
 }
 
 .card {
-	border: none;
+	border: 1px solid var(--outline-variant);
 	border-radius: var(--radius-md);
 	box-shadow: var(--shadow-card);
 	max-width: 40rem;
@@ -842,21 +887,22 @@ a:focus-visible {
 .section-title {
 	font-size: var(--font-size-section-title);
 	text-align: center;
-	padding: 4.8rem 0;
+	padding: 5.6rem 0 5.6rem;
+	/* 56px top/bottom — generous editorial space */
 	position: relative;
 	width: fit-content;
-	margin: 0 auto 1.6rem;
+	margin: 0 auto 2.4rem;
 }
 
 .section-title::before {
 	content: "";
 	position: absolute;
-	height: 0.5rem;
+	height: 0.3rem;
 	width: 70%;
-	background-color: var(--brand-primary);
+	background: linear-gradient(90deg, var(--secondary), var(--secondary-fixed-dim));
 	bottom: 3rem;
-	/* FIX: removed redundant calc() wrapper — calc(15%) is just 15% */
 	left: 15%;
+	border-radius: 2px;
 }
 
 .section-sub-title {
@@ -868,14 +914,16 @@ a:focus-visible {
 
 .section-text {
 	text-align: justify;
-	margin-bottom: 2rem;
-	line-height: 1.7;
+	margin-bottom: 2.4rem;
+	line-height: 1.8;
+	/* slightly more open line-height for luxury feel */
 }
 
 /* --- Package / Visa / Terms lists --- */
 
 .package_details {
-	padding: 2rem 2rem 6rem;
+	padding: 4.8rem 2rem 8rem;
+	/* 48px top, 80px bottom — design system lg/xl */
 }
 
 .package_details .list,
@@ -884,24 +932,26 @@ a:focus-visible {
 .terms-section .list {
 	list-style: disc;
 	padding-left: 2.4rem;
-	margin-bottom: 2.4rem;
+	margin-bottom: 3.2rem;
+	/* increased for more breathing room */
 }
 
 .package_details .list li,
 .package_details .itinerary li,
 .visa-section .list li,
 .terms-section .list li {
-	margin-bottom: 0.8rem;
-	line-height: 1.7;
+	margin-bottom: 1.2rem;
+	/* up from 0.8rem — luxury of space */
+	line-height: 1.8;
 }
 
 .package_details .itinerary li strong {
-	color: var(--brand-secondary-strong);
+	color: var(--primary-container);
 }
 
 .visa-section,
 .terms-section {
-	padding: 2rem 2rem 6rem;
+	padding: 4.8rem 2rem 8rem;
 }
 
 .visa-link {
@@ -922,7 +972,8 @@ a:focus-visible {
 
 .section-who {
 	background-color: var(--color-surface);
-	padding: 3.2rem 1.6rem 8rem;
+	padding: 4.8rem 1.6rem 8rem;
+	/* top: 48px lg, bottom: 80px xl */
 }
 
 .section-who .heading-text {
@@ -954,7 +1005,8 @@ a:focus-visible {
    ============================================================ */
 
 .services {
-	padding: 3.2rem 1.6rem 8rem;
+	padding: 4.8rem 1.6rem 8rem;
+	/* top: 48px lg, bottom: 80px xl */
 }
 
 .services ul {
@@ -984,14 +1036,14 @@ a:focus-visible {
 .footer h3 {
 	font-family: var(--font-heading);
 	font-size: var(--font-size-footer-title);
-	color: var(--text-footer);
-	font-weight: 700;
+	color: var(--primary-fixed);
+	font-weight: 600;
 	text-transform: capitalize;
 	position: relative;
 	display: inline-block;
 	margin-bottom: 1rem;
 	padding-bottom: 0.5rem;
-	border-bottom: 0.4rem solid var(--color-link-hover);
+	border-bottom: 0.3rem solid var(--secondary);
 }
 
 /* --- Branding & Links --- */
@@ -1043,7 +1095,7 @@ a:focus-visible {
 .contact-item svg {
 	width: var(--icon-contact-size);
 	height: var(--icon-contact-size);
-	fill: var(--brand-accent);
+	fill: var(--secondary-fixed-dim);
 	flex-shrink: 0;
 }
 
