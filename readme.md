@@ -75,11 +75,15 @@ The result is a layout that feels **intentional, not decorative**.
 ```bash
 ETB/
 ├── index.html
-├── css/
+├── CSS/
+│   ├── normalize.css
+│   ├── Animation.css
+│   ├── bootstrap-grid.min.css
 │   └── style.css
+├── fonts/
 ├── images/
-├── assets/
-└── js/ (optional)
+└── JS/
+    └── script.js
 ```
 
 ---
