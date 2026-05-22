@@ -413,6 +413,12 @@ a:focus-visible {
 	height: 5rem;
 	cursor: pointer;
 	margin-right: 1rem;
+	fill: var(--primary);
+	transition: fill 0.3s ease;
+}
+
+.menu-icon:hover {
+	fill: var(--secondary);
 }
 
 /* --- Mobile Menu --- */
@@ -430,9 +436,9 @@ a:focus-visible {
 .mobile-menu {
 	width: 65%;
 	height: 100vh;
-	background: url("../images/background.webp");
-	background-size: cover;
-	background-position: top center;
+	background: var(--primary);
+	border-left: 1px solid var(--primary-container);
+	box-shadow: var(--shadow-card-hover);
 	position: fixed;
 	z-index: 99;
 	top: 0;
@@ -443,7 +449,7 @@ a:focus-visible {
 	justify-content: flex-start;
 	align-items: center;
 	transform: translateX(100%);
-	transition: all 0.3s ease;
+	transition: transform 0.3s ease;
 }
 
 .show-mobile-menu {
@@ -456,6 +462,14 @@ a:focus-visible {
 	height: 2.5rem;
 	align-self: flex-end;
 	margin: 2rem 2rem 0 0;
+	cursor: pointer;
+	fill: var(--on-primary);
+	transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.close:hover {
+	fill: var(--secondary-fixed-dim);
+	transform: rotate(90deg);
 }
 
 .mobile-menu-items {
@@ -464,21 +478,21 @@ a:focus-visible {
 	row-gap: 3rem;
 	text-align: center;
 	font-family: var(--font-heading);
-	color: var(--brand-secondary-strong);
+	color: var(--on-primary);
 }
 
 .mobile-menu-link {
 	font-size: var(--font-size-nav-mobile);
-	font-weight: 600;
-	color: var(--brand-secondary-strong);
-	border-bottom: 0.3rem solid #1d4b7900;
+	font-weight: 700;
+	color: var(--on-primary);
+	border-bottom: 0.3rem solid transparent;
 	padding-bottom: 0.75rem;
 	transition: var(--transition-slow);
 }
 
 .mobile-menu-link:hover {
-	color: var(--secondary);
-	border-bottom: 0.4rem solid var(--secondary);
+	color: var(--secondary-fixed-dim);
+	border-bottom: 0.3rem solid var(--secondary-fixed-dim);
 }
 
 .logo-box {
@@ -786,17 +800,33 @@ a:focus-visible {
 	font-style: italic;
 	color: var(--bg-main);
 	opacity: 0.9;
+	line-height: 1.8;
 }
 
 .banner-subtitle strong {
+	display: inline-block;
 	color: var(--on-secondary);
 	background-color: var(--secondary);
 	font-weight: 700;
 	font-size: var(--font-size-section-subtitle);
 	padding: 0.6rem 1.4rem;
-	margin-bottom: 1rem;
+	margin: 0.4rem 0.2rem;
 	border-radius: var(--radius-md);
 	letter-spacing: 0.04em;
+	vertical-align: middle;
+	line-height: 1.2;
+}
+
+@media (max-width: 576px) {
+	.banner-subtitle {
+		line-height: 2.0;
+	}
+
+	.banner-subtitle strong {
+		padding: 0.4rem 1.0rem;
+		font-size: 1.4rem;
+		margin: 0.3rem 0.1rem;
+	}
 }
 
 
@@ -909,7 +939,7 @@ a:focus-visible {
 	font-size: var(--font-size-section-subtitle);
 	text-align: left;
 	width: fit-content;
-	margin-top: 1rem;
+	margin: 1rem;
 }
 
 .section-text {
