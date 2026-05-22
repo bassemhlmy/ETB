@@ -58,134 +58,65 @@
 /* ============================================================
    2. CUSTOM PROPERTIES — ETB Design System (DESIGN.md)
    ============================================================ */
-
-/* Import Google Fonts for design system typography */
-
-
 :root {
-	/* --- Design System: Surface Tones --- */
-	--surface: #fcf9f8;
-	--surface-dim: #dcd9d9;
-	--surface-bright: #fcf9f8;
-	--surface-container-lowest: #ffffff;
-	--surface-container-low: #f6f3f2;
-	--surface-container: #f0eded;
-	--surface-container-high: #eae7e7;
-	--surface-container-highest: #e5e2e1;
-	--on-surface: #1c1b1b;
-	--on-surface-variant: #43474e;
-	--inverse-surface: #313030;
-	--inverse-on-surface: #f3f0ef;
-	--outline: #73777f;
-	--outline-variant: #c3c6d0;
-	--surface-tint: #3f608b;
+	/* --- Palette: Surface --- */
+	--surface:                  #fcf9f8;  /* page background          */
+	--surface-container-lowest: #ffffff;  /* cards, modals            */
+	--surface-container-low:    #f6f3f2;  /* subtle panels            */
+	--surface-container:        #f0eded;  /* mid-tone panels          */
+	--surface-container-high:   #eae7e7;  /* tags, chips              */
+	--surface-dim:              #dcd9d9;  /* muted / disabled         */
+	--on-surface:               #1c1b1b;  /* primary body text        */
+	--on-surface-variant:       #43474e;  /* secondary / muted text   */
+	--outline-variant:          #c3c6d0;  /* borders, dividers        */
 
-	/* --- Design System: Primary (Mediterranean Blue) --- */
-	--primary: #001833;
-	--on-primary: #ffffff;
-	--primary-container: #002d56;
-	--on-primary-container: #7596c4;
-	--inverse-primary: #a7c8fa;
-	--primary-fixed: #d4e3ff;
-	--primary-fixed-dim: #a7c8fa;
-	--on-primary-fixed: #001c39;
-	--on-primary-fixed-variant: #254872;
+	/* --- Palette: Primary (Mediterranean Blue) --- */
+	--primary:           #001833;  /* deep navy — headings, links, footer bg */
+	--primary-container: #002d56;  /* dark navy — strong accents             */
+	--on-primary:        #ffffff;  /* text on navy surfaces                  */
+	--on-primary-container: #7596c4; /* muted blue — card subtitles          */
+	--primary-fixed:     #d4e3ff;  /* pale blue — footer text                */
 
-	/* --- Design System: Secondary (Desert Gold) --- */
-	--secondary: #775a19;
-	--on-secondary: #ffffff;
-	--secondary-container: #fed488;
-	--on-secondary-container: #785a1a;
-	--secondary-fixed: #ffdea5;
-	--secondary-fixed-dim: #e9c176;
-	--on-secondary-fixed: #261900;
-	--on-secondary-fixed-variant: #5d4201;
+	/* --- Palette: Secondary (Desert Gold) --- */
+	--secondary:         #775a19;  /* desert gold — CTAs, accents            */
+	--secondary-fixed:   #ffdea5;  /* light gold — button hover              */
+	--secondary-fixed-dim: #e9c176; /* warm gold — social icons, close hover */
+	--on-secondary:      #ffffff;  /* text on gold backgrounds               */
+	--on-secondary-fixed: #261900; /* deep brown — text on gold buttons      */
 
-	/* --- Design System: Tertiary (Dark Stone) --- */
-	--tertiary: #191813;
-	--on-tertiary: #ffffff;
-	--tertiary-container: #2e2c26;
-	--on-tertiary-container: #97938b;
-	--tertiary-fixed: #e7e2d9;
-	--tertiary-fixed-dim: #cac6be;
-	--on-tertiary-fixed: #1d1c16;
-	--on-tertiary-fixed-variant: #494740;
-
-	/* --- Design System: Error --- */
-	--error: #ba1a1a;
-	--on-error: #ffffff;
-	--error-container: #ffdad6;
-	--on-error-container: #93000a;
-
-	/* --- Design System: Background --- */
-	--background: #fcf9f8;
-	--on-background: #1c1b1b;
-	--surface-variant: #e5e2e1;
-
-	/* -------------------------------------------------- */
-	/* Semantic aliases — used throughout existing rules  */
-	/* -------------------------------------------------- */
-
-	/* Brand palette aliases */
-	--brand-primary: var(--primary);
-	/* deep navy */
-	--brand-secondary: var(--on-primary-container);
-	/* muted blue */
-	--brand-secondary-strong: var(--primary-container);
-	/* dark navy */
-	--brand-accent: var(--secondary);
-	/* desert gold */
-	--brand-accent-strong: var(--secondary);
-	/* desert gold */
-	--brand-sand: var(--tertiary-fixed);
-	/* warm stone */
-
-	/* Surfaces */
-	--bg-main: var(--surface);
-	--bg-surface: var(--surface-container-low);
-	--bg-surface-alt: var(--surface-container);
-	--bg-white: var(--surface-container-lowest);
-	--bg-footer: #001f3a;
-	/* warm navy — premium depth without feeling cold */
-	--bg-value-card: var(--surface-container-low);
-	--bg-office-tag: var(--surface-container-high);
-	--color-social-icon: var(--secondary-fixed-dim);
+	/* --- Semantic Aliases --- */
+	/* These map design intent to palette values used in component rules. */
 
 	/* Text */
-	--text-main: var(--on-surface);
-	--text-muted: var(--on-surface-variant);
-	--text-inverse: var(--on-primary);
-	--text-footer: var(--primary-fixed);
+	--text-main:    var(--on-surface);          /* body copy              */
+	--text-muted:   var(--on-surface-variant);  /* captions, meta         */
 
-	/* Semantic roles */
-	--color-heading: var(--primary);
-	--color-link: var(--primary);
-	--color-link-hover: var(--secondary);
-	--color-cta: var(--secondary);
-	--color-cta-hover: var(--on-secondary-fixed-variant);
-	--color-price: var(--secondary);
-	--color-surface: var(--surface-container-low);
-	--color-card: var(--surface-container-lowest);
-	--color-footer-bg: var(--primary);
-	--color-footer-text: var(--primary-fixed);
-	--color-footer-accent: var(--secondary);
+	/* Surfaces */
+	--bg-main:       var(--surface);                  /* <body> background  */
+	--bg-white:      var(--surface-container-lowest); /* cards, modals      */
+	--bg-value-card: var(--surface-container-low);    /* value card panels  */
+	--bg-office-tag: var(--surface-container-high);   /* office pill tags   */
 
-	/* --- Typography (Design System) --- */
+	/* Brand roles (used by nav, sections, footer) */
+	--brand-primary:        var(--primary);              /* deep navy          */
+	--brand-secondary:      var(--on-primary-container); /* muted blue         */
+	--brand-secondary-strong: var(--primary-container);  /* dark navy          */
+
+	/* --- Typography --- */
 	--font-heading: "Noto Serif", Georgia, serif;
-	--font-body: "Manrope", system-ui, sans-serif;
+	--font-body:    "Manrope", system-ui, sans-serif;
 
-	/* --- Spacing & sizing --- */
-	--footer-padding: 3rem 1rem;
-	--icon-social-size: 4rem;
+	/* --- Spacing & Sizing --- */
+	--footer-padding:    3rem 1rem;
+	--icon-social-size:  4rem;
 	--icon-contact-size: 3rem;
-	--radius-md: 0.25rem;
-	/* Architectural: crisp 4px per design system */
+	--radius-md:         0.25rem; /* 4px — architectural, per design system */
 
-	/* --- Shadows — Tonal / Ambient (per DESIGN.md) --- */
-	--shadow-card: 0 2px 12px rgba(0, 24, 51, 0.07), 0 1px 3px rgba(0, 24, 51, 0.05);
-	--shadow-card-hover: 0 16px 40px rgba(0, 24, 51, 0.13), 0 4px 12px rgba(0, 24, 51, 0.08);
-	--shadow-image: 0 4px 24px rgba(0, 24, 51, 0.10);
-	--shadow-button: 0 4px 12px rgba(0, 24, 51, 0.12);
+	/* --- Shadows --- */
+	--shadow-card:         0 2px 12px rgba(0, 24, 51, 0.07), 0 1px 3px rgba(0, 24, 51, 0.05);
+	--shadow-card-hover:   0 16px 40px rgba(0, 24, 51, 0.13), 0 4px 12px rgba(0, 24, 51, 0.08);
+	--shadow-image:        0 4px 24px rgba(0, 24, 51, 0.10);
+	--shadow-button:       0 4px 12px rgba(0, 24, 51, 0.12);
 	--shadow-button-hover: 0 8px 24px rgba(0, 24, 51, 0.18);
 	--shadow-button-active: 0 2px 6px rgba(0, 24, 51, 0.12);
 
@@ -193,23 +124,23 @@
 	--transition-base: all 0.3s ease;
 	--transition-slow: all 0.5s ease-in-out;
 
-	/* --- Fluid type scale (unchanged metrics, updated semantics) --- */
-	--font-size-body: clamp(1.6rem, 1.45rem + 0.35vw, 2rem);
-	--font-size-button: clamp(1.3rem, 1.2rem + 0.2vw, 1.5rem);
-	--font-size-nav-mobile: clamp(2rem, 1.8rem + 0.6vw, 2.5rem);
-	--font-size-hero-title: clamp(2rem, 1.5rem + 1.8vw, 3.4rem);
-	--font-size-hero-subtitle: clamp(1.5rem, 1.3rem + 0.7vw, 2.2rem);
-	--font-size-hero-copy: clamp(2.2rem, 1.9rem + 0.9vw, 3rem);
-	--font-size-card-title: clamp(1.9rem, 1.6rem + 0.9vw, 2.3rem);
-	--font-size-card-price: clamp(1.8rem, 1.55rem + 0.8vw, 2.25rem);
-	--font-size-banner-title: clamp(2.6rem, 2rem + 1.8vw, 4rem);
-	--font-size-section-title: clamp(2.4rem, 2rem + 1vw, 3rem);
-	--font-size-section-subtitle: clamp(1.8rem, 1.65rem + 0.5vw, 2.2rem);
-	--font-size-icon-box: clamp(3.2rem, 2.8rem + 1vw, 4rem);
-	--font-size-footer-title: clamp(1.9rem, 1.75rem + 0.5vw, 2.2rem);
-	--font-size-footer-link: clamp(1.4rem, 1.3rem + 0.3vw, 1.6rem);
-	--font-size-contact: clamp(1.6rem, 1.45rem + 0.5vw, 2rem);
-	--font-size-service: clamp(1.7rem, 1.55rem + 0.4vw, 2rem);
+	/* --- Fluid Type Scale --- */
+	--font-size-body:            clamp(1.6rem,  1.45rem + 0.35vw, 2rem);
+	--font-size-button:          clamp(1.3rem,  1.2rem  + 0.2vw,  1.5rem);
+	--font-size-nav-mobile:      clamp(2rem,    1.8rem  + 0.6vw,  2.5rem);
+	--font-size-hero-title:      clamp(2rem,    1.5rem  + 1.8vw,  3.4rem);
+	--font-size-hero-subtitle:   clamp(1.5rem,  1.3rem  + 0.7vw,  2.2rem);
+	--font-size-hero-copy:       clamp(2.2rem,  1.9rem  + 0.9vw,  3rem);
+	--font-size-card-title:      clamp(1.9rem,  1.6rem  + 0.9vw,  2.3rem);
+	--font-size-card-price:      clamp(1.8rem,  1.55rem + 0.8vw,  2.25rem);
+	--font-size-banner-title:    clamp(2.6rem,  2rem    + 1.8vw,  4rem);
+	--font-size-section-title:   clamp(2.4rem,  2rem    + 1vw,    3rem);
+	--font-size-section-subtitle: clamp(1.8rem, 1.65rem + 0.5vw,  2.2rem);
+	--font-size-icon-box:        clamp(3.2rem,  2.8rem  + 1vw,    4rem);
+	--font-size-footer-title:    clamp(1.9rem,  1.75rem + 0.5vw,  2.2rem);
+	--font-size-footer-link:     clamp(1.4rem,  1.3rem  + 0.3vw,  1.6rem);
+	--font-size-contact:         clamp(1.6rem,  1.45rem + 0.5vw,  2rem);
+	--font-size-service:         clamp(1.7rem,  1.55rem + 0.4vw,  2rem);
 }
 
 
@@ -377,14 +308,14 @@ a:focus-visible {
 }
 
 .nav-item {
-	color: var(--color-link);
+	color: var(--primary);
 }
 
 .nav-link {
 	display: inline-block;
 	letter-spacing: 0.16rem;
 	font-size: clamp(1.2rem, 2vw, 1.5rem);
-	color: var(--color-link);
+	color: var(--primary);
 	font-weight: 700;
 	border-bottom: 0.4rem solid transparent;
 	transition: var(--transition-slow);
@@ -393,7 +324,7 @@ a:focus-visible {
 /* FIX: separated :visited from :hover/:active to follow correct LVHA order.
         :visited only changes colour; hover/focus/active handle interaction states. */
 .nav-link:visited {
-	color: var(--color-link);
+	color: var(--primary);
 }
 
 .nav-link:hover,
@@ -532,7 +463,7 @@ a:focus-visible {
 	letter-spacing: -0.2rem;
 	word-spacing: 0.6rem;
 	text-align: center;
-	color: var(--color-heading);
+	color: var(--primary);
 	margin: 1rem;
 	/* FIX: converted 10px to rem for unit consistency (1rem = 10px) */
 	margin-bottom: 1rem;
@@ -1001,7 +932,7 @@ a:focus-visible {
    ============================================================ */
 
 .section-who {
-	background-color: var(--color-surface);
+	background-color: var(--surface-container-low);
 	padding: 4.8rem 1.6rem 8rem;
 	/* top: 48px lg, bottom: 80px xl */
 }
@@ -1057,8 +988,8 @@ a:focus-visible {
    ============================================================ */
 
 .footer {
-	background-color: var(--color-footer-bg);
-	color: var(--color-footer-text);
+	background-color: var(--primary);
+	color: var(--primary-fixed);
 	padding: var(--footer-padding);
 }
 
@@ -1104,7 +1035,7 @@ a:focus-visible {
 	width: var(--icon-social-size);
 	height: var(--icon-social-size);
 	/* FIX: replaced hardcoded #55acee with CSS variable */
-	fill: var(--color-social-icon);
+	fill: var(--secondary-fixed-dim);
 	transition: transform 0.3s;
 }
 
