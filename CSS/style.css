@@ -60,63 +60,92 @@
    ============================================================ */
 :root {
 	/* --- Palette: Surface --- */
-	--surface:                  #fcf9f8;  /* page background          */
-	--surface-container-lowest: #ffffff;  /* cards, modals            */
-	--surface-container-low:    #f6f3f2;  /* subtle panels            */
-	--surface-container:        #f0eded;  /* mid-tone panels          */
-	--surface-container-high:   #eae7e7;  /* tags, chips              */
-	--surface-dim:              #dcd9d9;  /* muted / disabled         */
-	--on-surface:               #1c1b1b;  /* primary body text        */
-	--on-surface-variant:       #43474e;  /* secondary / muted text   */
-	--outline-variant:          #c3c6d0;  /* borders, dividers        */
+	--surface: #fcf9f8;
+	/* page background          */
+	--surface-container-lowest: #ffffff;
+	/* cards, modals            */
+	--surface-container-low: #f6f3f2;
+	/* subtle panels            */
+	--surface-container: #f0eded;
+	/* mid-tone panels          */
+	--surface-container-high: #eae7e7;
+	/* tags, chips              */
+	--surface-dim: #dcd9d9;
+	/* muted / disabled         */
+	--on-surface: #1c1b1b;
+	/* primary body text        */
+	--on-surface-variant: #43474e;
+	/* secondary / muted text   */
+	--outline-variant: #c3c6d0;
+	/* borders, dividers        */
 
 	/* --- Palette: Primary (Mediterranean Blue) --- */
-	--primary:           #001833;  /* deep navy — headings, links, footer bg */
-	--primary-container: #002d56;  /* dark navy — strong accents             */
-	--on-primary:        #ffffff;  /* text on navy surfaces                  */
-	--on-primary-container: #7596c4; /* muted blue — card subtitles          */
-	--primary-fixed:     #d4e3ff;  /* pale blue — footer text                */
+	--primary: #001833;
+	/* deep navy — headings, links, footer bg */
+	--primary-container: #002d56;
+	/* dark navy — strong accents             */
+	--on-primary: #ffffff;
+	/* text on navy surfaces                  */
+	--on-primary-container: #7596c4;
+	/* muted blue — card subtitles          */
+	--primary-fixed: #d4e3ff;
+	/* pale blue — footer text                */
 
 	/* --- Palette: Secondary (Desert Gold) --- */
-	--secondary:         #775a19;  /* desert gold — CTAs, accents            */
-	--secondary-fixed:   #ffdea5;  /* light gold — button hover              */
-	--secondary-fixed-dim: #e9c176; /* warm gold — social icons, close hover */
-	--on-secondary:      #ffffff;  /* text on gold backgrounds               */
-	--on-secondary-fixed: #261900; /* deep brown — text on gold buttons      */
+	--secondary: #775a19;
+	/* desert gold — CTAs, accents            */
+	--secondary-fixed: #ffdea5;
+	/* light gold — button hover              */
+	--secondary-fixed-dim: #e9c176;
+	/* warm gold — social icons, close hover */
+	--on-secondary: #ffffff;
+	/* text on gold backgrounds               */
+	--on-secondary-fixed: #261900;
+	/* deep brown — text on gold buttons      */
 
 	/* --- Semantic Aliases --- */
 	/* These map design intent to palette values used in component rules. */
 
 	/* Text */
-	--text-main:    var(--on-surface);          /* body copy              */
-	--text-muted:   var(--on-surface-variant);  /* captions, meta         */
+	--text-main: var(--on-surface);
+	/* body copy              */
+	--text-muted: var(--on-surface-variant);
+	/* captions, meta         */
 
 	/* Surfaces */
-	--bg-main:       var(--surface);                  /* <body> background  */
-	--bg-white:      var(--surface-container-lowest); /* cards, modals      */
-	--bg-value-card: var(--surface-container-low);    /* value card panels  */
-	--bg-office-tag: var(--surface-container-high);   /* office pill tags   */
+	--bg-main: var(--surface);
+	/* <body> background  */
+	--bg-white: var(--surface-container-lowest);
+	/* cards, modals      */
+	--bg-value-card: var(--surface-container-low);
+	/* value card panels  */
+	--bg-office-tag: var(--surface-container-high);
+	/* office pill tags   */
 
 	/* Brand roles (used by nav, sections, footer) */
-	--brand-primary:        var(--primary);              /* deep navy          */
-	--brand-secondary:      var(--on-primary-container); /* muted blue         */
-	--brand-secondary-strong: var(--primary-container);  /* dark navy          */
+	--brand-primary: var(--primary);
+	/* deep navy          */
+	--brand-secondary: var(--on-primary-container);
+	/* muted blue         */
+	--brand-secondary-strong: var(--primary-container);
+	/* dark navy          */
 
 	/* --- Typography --- */
 	--font-heading: "Noto Serif", Georgia, serif;
-	--font-body:    "Manrope", system-ui, sans-serif;
+	--font-body: "Manrope", system-ui, sans-serif;
 
 	/* --- Spacing & Sizing --- */
-	--footer-padding:    3rem 1rem;
-	--icon-social-size:  4rem;
+	--footer-padding: 3rem 1rem;
+	--icon-social-size: 4rem;
 	--icon-contact-size: 3rem;
-	--radius-md:         0.25rem; /* 4px — architectural, per design system */
+	--radius-md: 0.25rem;
+	/* 4px — architectural, per design system */
 
 	/* --- Shadows --- */
-	--shadow-card:         0 2px 12px rgba(0, 24, 51, 0.07), 0 1px 3px rgba(0, 24, 51, 0.05);
-	--shadow-card-hover:   0 16px 40px rgba(0, 24, 51, 0.13), 0 4px 12px rgba(0, 24, 51, 0.08);
-	--shadow-image:        0 4px 24px rgba(0, 24, 51, 0.10);
-	--shadow-button:       0 4px 12px rgba(0, 24, 51, 0.12);
+	--shadow-card: 0 2px 12px rgba(0, 24, 51, 0.07), 0 1px 3px rgba(0, 24, 51, 0.05);
+	--shadow-card-hover: 0 16px 40px rgba(0, 24, 51, 0.13), 0 4px 12px rgba(0, 24, 51, 0.08);
+	--shadow-image: 0 4px 24px rgba(0, 24, 51, 0.10);
+	--shadow-button: 0 4px 12px rgba(0, 24, 51, 0.12);
 	--shadow-button-hover: 0 8px 24px rgba(0, 24, 51, 0.18);
 	--shadow-button-active: 0 2px 6px rgba(0, 24, 51, 0.12);
 
@@ -125,22 +154,22 @@
 	--transition-slow: all 0.5s ease-in-out;
 
 	/* --- Fluid Type Scale --- */
-	--font-size-body:            clamp(1.6rem,  1.45rem + 0.35vw, 2rem);
-	--font-size-button:          clamp(1.3rem,  1.2rem  + 0.2vw,  1.5rem);
-	--font-size-nav-mobile:      clamp(2rem,    1.8rem  + 0.6vw,  2.5rem);
-	--font-size-hero-title:      clamp(2rem,    1.5rem  + 1.8vw,  3.4rem);
-	--font-size-hero-subtitle:   clamp(1.5rem,  1.3rem  + 0.7vw,  2.2rem);
-	--font-size-hero-copy:       clamp(2.2rem,  1.9rem  + 0.9vw,  3rem);
-	--font-size-card-title:      clamp(1.9rem,  1.6rem  + 0.9vw,  2.3rem);
-	--font-size-card-price:      clamp(1.8rem,  1.55rem + 0.8vw,  2.25rem);
-	--font-size-banner-title:    clamp(2.6rem,  2rem    + 1.8vw,  4rem);
-	--font-size-section-title:   clamp(2.4rem,  2rem    + 1vw,    3rem);
-	--font-size-section-subtitle: clamp(1.8rem, 1.65rem + 0.5vw,  2.2rem);
-	--font-size-icon-box:        clamp(3.2rem,  2.8rem  + 1vw,    4rem);
-	--font-size-footer-title:    clamp(1.9rem,  1.75rem + 0.5vw,  2.2rem);
-	--font-size-footer-link:     clamp(1.4rem,  1.3rem  + 0.3vw,  1.6rem);
-	--font-size-contact:         clamp(1.6rem,  1.45rem + 0.5vw,  2rem);
-	--font-size-service:         clamp(1.7rem,  1.55rem + 0.4vw,  2rem);
+	--font-size-body: clamp(1.6rem, 1.45rem + 0.35vw, 2rem);
+	--font-size-button: clamp(1.3rem, 1.2rem + 0.2vw, 1.5rem);
+	--font-size-nav-mobile: clamp(2rem, 1.8rem + 0.6vw, 2.5rem);
+	--font-size-hero-title: clamp(2rem, 1.5rem + 1.8vw, 3.4rem);
+	--font-size-hero-subtitle: clamp(1.5rem, 1.3rem + 0.7vw, 2.2rem);
+	--font-size-hero-copy: clamp(2.2rem, 1.9rem + 0.9vw, 3rem);
+	--font-size-card-title: clamp(1.9rem, 1.6rem + 0.9vw, 2.3rem);
+	--font-size-card-price: clamp(1.8rem, 1.55rem + 0.8vw, 2.25rem);
+	--font-size-banner-title: clamp(2.6rem, 2rem + 1.8vw, 4rem);
+	--font-size-section-title: clamp(2.4rem, 2rem + 1vw, 3rem);
+	--font-size-section-subtitle: clamp(1.8rem, 1.65rem + 0.5vw, 2.2rem);
+	--font-size-icon-box: clamp(3.2rem, 2.8rem + 1vw, 4rem);
+	--font-size-footer-title: clamp(1.9rem, 1.75rem + 0.5vw, 2.2rem);
+	--font-size-footer-link: clamp(1.4rem, 1.3rem + 0.3vw, 1.6rem);
+	--font-size-contact: clamp(1.6rem, 1.45rem + 0.5vw, 2rem);
+	--font-size-service: clamp(1.7rem, 1.55rem + 0.4vw, 2rem);
 }
 
 
@@ -484,13 +513,16 @@ a:focus-visible {
 }
 
 .slogan-box {
-	/* FIX: converted px values to rem for unit consistency */
-	padding-left: 2rem;
-	border-left: 0.3rem solid var(--secondary);
 	margin-top: 2.5rem;
 	min-height: 4rem;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	border-top: 1px solid var(--secondary);
+	border-bottom: 1px solid var(--secondary);
+	padding: 1rem 0;
+	width: fit-content;
+	margin-inline: auto;
 }
 
 .slogan-box h2,
@@ -501,6 +533,7 @@ a:focus-visible {
 	line-height: 1.5;
 	margin: 0;
 	color: var(--text-main);
+	text-align: center;
 }
 
 .hero-box {
@@ -511,6 +544,116 @@ a:focus-visible {
 	display: block;
 	margin-inline: auto;
 }
+
+
+.parent {
+	position: relative;
+	width: 100%;
+	min-height: clamp(420px, 55vw, 680px);
+	overflow: hidden;
+	background: transparent;
+}
+
+/* shared style */
+.parent .card {
+	position: absolute;
+	overflow: hidden;
+
+	border-radius: 16px;
+	border: 4px solid var(--surface-container-lowest);
+
+	box-shadow:
+		0 10px 30px rgba(0, 24, 51, 0.12);
+
+	transition: .35s ease;
+}
+
+.parent .card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.parent .card:hover {
+	transform: scale(1.06) rotate(0deg) !important;
+	z-index: 100;
+	box-shadow: 0 15px 35px rgba(0, 24, 51, 0.2);
+}
+
+/* ===== Desktop Layout =====
+   All sizes/positions use % so they scale with the col-lg-6 container,
+   not the full viewport width. */
+
+.div1 {
+	width: 28%;
+	height: 75%;
+
+	left: 0%;
+	top: 2%;
+
+	z-index: 1;
+	transform: rotate(-2deg);
+}
+
+.div2 {
+	width: 38%;
+	height: 24%;
+
+	left: 22%;
+	top: 3%;
+
+	z-index: 5;
+	transform: rotate(1deg);
+}
+
+.div3 {
+	width: 34%;
+	height: 22%;
+
+	left: 58%;
+	top: 2%;
+
+	z-index: 6;
+	transform: rotate(2deg);
+}
+
+.div4 {
+	width: 34%;
+	height: 20%;
+
+	left: 58%;
+	top: 26%;
+
+	z-index: 4;
+	transform: rotate(-1deg);
+}
+
+.div5 {
+	width: 42%;
+	height: 30%;
+
+	left: 22%;
+	top: 30%;
+
+	z-index: 10;
+	transform: rotate(2deg);
+}
+
+.div6 {
+	width: 36%;
+	height: 38%;
+
+	right: 2%;
+	top: 50%;
+
+	z-index: 3;
+	transform: rotate(4deg);
+}
+
+/* ===== Mobile ===== */
+
+
 
 
 /* ============================================================
@@ -1097,6 +1240,28 @@ a:focus-visible {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+	.landing h1 {
+		text-align: left;
+		margin: 0;
+		margin-bottom: 2rem;
+	}
+
+	.slogan-box {
+		justify-content: flex-start;
+		border-top: none;
+		border-bottom: none;
+		border-left: 0.3rem solid var(--secondary);
+		padding: 0;
+		padding-left: 2rem;
+		margin-inline: 0;
+		width: 100%;
+	}
+
+	.slogan-box h2,
+	.slogan-box h3 {
+		text-align: left;
+	}
+
 	.logo {
 		width: 20rem;
 	}
@@ -1151,5 +1316,33 @@ a:focus-visible {
 @media (min-width: 1400px) {
 	.landing .row {
 		margin-bottom: 1rem;
+	}
+}
+
+
+@media (max-width: 768px) {
+
+	.parent {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		min-height: auto;
+		background: transparent;
+		padding: 2rem 1rem;
+		overflow: visible;
+	}
+
+	.parent .card {
+		position: relative;
+		width: 100% !important;
+		height: auto !important;
+		aspect-ratio: 4 / 3;
+		left: auto !important;
+		right: auto !important;
+		top: auto !important;
+		transform: none !important;
+		border: 3px solid var(--surface-container-lowest);
+		border-radius: 12px;
+		box-shadow: 0 4px 15px rgba(0, 24, 51, 0.08);
 	}
 }
