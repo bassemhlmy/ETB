@@ -549,7 +549,9 @@ a:focus-visible {
 .parent {
 	position: relative;
 	width: 100%;
-	min-height: clamp(420px, 55vw, 680px);
+	max-width: 580px;
+	aspect-ratio: 1 / 1;
+	margin-inline: auto;
 	overflow: hidden;
 	background: transparent;
 }
@@ -1303,7 +1305,7 @@ a:focus-visible {
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 	.landing .row {
-		margin-bottom: 8rem;
+		margin-bottom: 0;
 	}
 
 	.packages .cards-container>div {
@@ -1315,7 +1317,7 @@ a:focus-visible {
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
 	.landing .row {
-		margin-bottom: 1rem;
+		margin-bottom: 0;
 	}
 }
 
@@ -1324,6 +1326,7 @@ a:focus-visible {
 
 	.parent {
 		display: grid;
+		aspect-ratio: auto !important;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1.5rem;
 		min-height: auto;
